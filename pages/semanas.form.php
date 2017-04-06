@@ -3,6 +3,7 @@
 template_getHeader();
 
 $form = new girafaFORM('Semanas', 'semanas.action.php', 'Semanas', 'Data');
+$form->class = 'form_semana';
 
 /* DADOS PESSOAIS */
 $box = new girafaFORM_box('Dados Gerias');
@@ -11,7 +12,7 @@ $box = new girafaFORM_box('Dados Gerias');
 //Data
 $html  = '<label class="col-sm-2 control-label">Semana</label>';
 //$html .= '<div class="col-sm-4"><div class="input-group date"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="week" id="calendarioSemanas" placeholder="Select Week" /></div></div>';
-$html .= '<div class="col-sm-4">' . form_field_date('Data', @$form->reg->Data, '2017-04-01', true, 'week') . '</div>';
+$html .= '<div class="col-sm-4">' . form_field_date('Data', @$form->reg->Data, null, true, 'week') . '</div>';
 $box->AddContent($html);
 
 $box->AddContentBreakLine();
@@ -174,7 +175,7 @@ if(!empty($form->reg->ID)) {
 
                                 <tfoot>
                                     <tr>
-                                        <td><strong>Saldo do Dia</strong></td>
+                                        <td><strong>Saldo da Semana</strong></td>
                                        <td></td>
                                        <td><span class="label label-primary">R$ ' . number_format($jornada_saldo, 2, ',', '.') . '</span></td>
                                     </tr>
@@ -289,8 +290,7 @@ if(!empty($form->reg->ID)) {
           if(semanasJaCadastradas.indexOf(d) > -1) {
             console.log(' ---- ' + d + ' ---- Semana já cadastrada');
             return {
-              enabled: false,
-              tooltip: "Essa semana já está cadastrada"
+              enabled: false
             }
           }
 
@@ -330,8 +330,9 @@ if(!empty($form->reg->ID)) {
       })
 
       var date = $('.input-group.date.week').datepicker("getDate");
-      GetDateDisplay(date);
 
+      if(date != 'Invalid Date')
+        GetDateDisplay(date);
 
     })
 
@@ -346,6 +347,25 @@ if(!empty($form->reg->ID)) {
   }
 
     $('.input-group.date.week input').attr('readonly', 'true').keydown(function(){ return false; });
+
+
+
+  $('.form_semana').submit(function(){
+
+    var date = $('.input-group.date.week').datepicker("getDate");
+    if(date == 'Invalid Date'){
+
+      alert('Você precisa especificar qual a semana a qual deseja controlar.');
+      $('.input-group.date.week').datepicker('show');
+
+      var deslocamento = $('.input-group.date.week').offset().top - 200;
+      $('html, body').animate({ scrollTop: deslocamento }, 'slow');
+
+
+      return false;
+    }
+
+  });
 
 </script>
 

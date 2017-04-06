@@ -13,6 +13,7 @@ class girafaFORM{
   public $isEdit = false;
   public $linkVoltar;
   public $linkNovo;
+  public $class = null;
 
   function girafaFORM($title, $script_action, $table, $fieldLegend){
     global $login, $db;
@@ -88,7 +89,7 @@ class girafaFORM{
     // Content..
     $html  = "<div class=\"wrapper wrapper-content animated fadeInRight\">";
     $html .= "  <div class=\"row\">";
-    $html .= "    <form method=\"post\" class=\"form-horizontal\" action=\"" . get_config('SITE_URL') . "/script/" . $this->script_action . "\">";
+    $html .= "    <form method=\"post\" class=\"$this->class form-horizontal\" action=\"" . get_config('SITE_URL') . "/script/" . $this->script_action . "\">";
 
     //Se for edição, adiciona campo oculto com ID
     if(isset($this->reg->ID)){
