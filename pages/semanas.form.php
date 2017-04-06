@@ -11,7 +11,7 @@ $box = new girafaFORM_box('Dados Gerias');
 //Data
 $html  = '<label class="col-sm-2 control-label">Semana</label>';
 //$html .= '<div class="col-sm-4"><div class="input-group date"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="week" id="calendarioSemanas" placeholder="Select Week" /></div></div>';
-$html .= '<div class="col-sm-4">' . form_field_date('Data', @$form->reg->Data, 'NOW', true, 'week') . '</div>';
+$html .= '<div class="col-sm-4">' . form_field_date('Data', @$form->reg->Data, '2017-04-01', true, 'week') . '</div>';
 $box->AddContent($html);
 
 $box->AddContentBreakLine();
@@ -242,15 +242,54 @@ if(!empty($form->reg->ID)) {
 <script>
     $(document).ready(function() {
 
-      var startDate, endDate;
+      var startDate
+      var endDate;
+
+      <?
+      $sql  = 'SELECT Data FROM Semanas WHERE Usuario = ' . $login->user_id;
+
+      if($form->isEdit)
+        $sql .= ' AND ID <> ' . $form->reg->ID;
+
+      $semanas = $db->LoadObjects($sql);
+
+      $dias = array();
+
+      foreach($semanas as $semana){
+
+        $data = new girafaDate($semana->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
+
+          $dias[] = '"' . $data->GetDate('d/m/Y') . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +1 day')) . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +2 day')) . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +3 day')) . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +4 day')) . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +5 day')) . '"';
+          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +6 day')) . '"';
+
+      }
+      ?>
+      var semanasJaCadastradas = [<?= implode(', ', $dias); ?>];
 
 
       $('.input-group.date.week').datepicker('remove');
       $('.input-group.date.week').datepicker({
-        weekStart: 1,
         autoclose: true,
+        weekStart: 1,
         format: "dd/MM/yyyy",
         forceParse: false,
+        beforeShowDay: function (day) {
+
+          var d = forceZeros(day.getDate(),2) + '/' + forceZeros(day.getMonth() +1,2) + '/' + forceZeros(day.getFullYear(),4);
+          if(semanasJaCadastradas.indexOf(d) > -1) {
+            console.log(' ---- ' + d + ' ---- Semana já cadastrada');
+            return {
+              enabled: false,
+              tooltip: "Essa semana já está cadastrada"
+            }
+          }
+
+        },
 
         todayBtn: "linked",
         keyboardNavigation: false,
@@ -273,10 +312,21 @@ if(!empty($form->reg->ID)) {
         if($('.datepicker .day.active')){
           $('.datepicker .day.active').parent().find('.day').addClass('active');
         }
+
+        //verifica se essa semana (atual) já está utilizada e desativa o botão "HOJE"
+        if(semanasJaCadastradas.indexOf('<?= date('d/m/Y'); ?>') > -1) {
+          $('.datepicker th.today').click(function(){
+            alert('A semana atual já está cadastrada.');
+            return false;
+          });
+        }
+
+
       })
 
       var date = $('.input-group.date.week').datepicker("getDate");
       GetDateDisplay(date);
+
 
     })
 
@@ -289,6 +339,8 @@ if(!empty($form->reg->ID)) {
     $('.input-group.date.week').datepicker('update', startDate);
     $('.input-group.date.week input').val(forceZeros(startDate.getDate(), 2) + '/' + forceZeros(startDate.getMonth() + 1, 2) + '/' + forceZeros(startDate.getFullYear(), 4) + ' até ' + forceZeros(endDate.getDate(), 2) + '/' + forceZeros(endDate.getMonth() + 1, 2) + '/' + forceZeros(endDate.getFullYear(), 4));
   }
+
+    $('.input-group.date.week input').attr('readonly', 'true').keydown(function(){ return false; });
 
 </script>
 

@@ -10,6 +10,7 @@ class girafaFORM{
   private $fieldLegend;
 
   public $reg;
+  public $isEdit = false;
   public $linkVoltar;
   public $linkNovo;
 
@@ -31,6 +32,7 @@ class girafaFORM{
       }
 
       $this->reg = $res[0];
+      $this->isEdit;
     }
 
     //Título

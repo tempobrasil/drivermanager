@@ -111,7 +111,7 @@ $post->AddFieldInteger('TotalCorridas',             $TotalCorridas);
 $post->AddFieldString('TotalGanhos',                $TotalGanhos);
 
 $sql = $post->GetSql();
-//die($sql);
+
 $db->Execute($sql);
 
 if(!isset($id)){

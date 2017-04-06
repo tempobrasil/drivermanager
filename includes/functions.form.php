@@ -122,7 +122,7 @@ function form_field_number($name, $value, $default = null, $min = 0.00, $max = 9
 
 function form_field_date($name, $value, $default = null, $required = true, $class = null){
 
-  if($default = 'TODAY' || $default = 'NOW')
+  if($default == 'TODAY' || $default == 'NOW')
     $default = date('Y-m-d');
 
   $html  = '<div class="input-group date ' . $class . '">';
