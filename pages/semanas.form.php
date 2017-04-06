@@ -59,7 +59,7 @@ if(!empty($form->reg->ID)) {
     $html .= '<tfoot>';
     $html .= '<tr>';
     $html .= '    <td style="padding-top: 15px;text-align: center;"><strong>TOTAL</strong></td>';
-    $html .= '    <td style="padding-top: 15px; text-align: right"><span class="label label-default">R$ ' . number_format($form->reg->TotalKms, 2, ',', '.') . '</span></td>';
+    $html .= '    <td style="padding-top: 15px; text-align: right"><span class="label label-default">' . number_format($form->reg->TotalKms, 2, ',', '.') . 'km</span></td>';
     $html .= '    <td style="padding-top: 15px; text-align: right"><span class="label label-default">' . intval($form->reg->TotalCorridas) . '</span></td>';
     $html .= '    <td style="padding-top: 15px; text-align: right"><span class="label label-default">' . semanas_intToTime($form->reg->TotalTempo) . '</span></td>';
     $html .= '    <td style="padding-top: 15px; text-align: right"><span class="label label-default">R$ ' . number_format($form->reg->TotalGanhos, 2, ',', '.') . '</span></td>';
@@ -90,7 +90,12 @@ $html .= '<div class="col-sm-3">' . form_field_number('DespesasExtrasValor', @$f
 $box->AddContent($html);
 
 $form->AddBox($box);
-/*
+
+
+
+/* Estatísticas */
+
+
 if(!empty($form->reg->ID)) {
 
 
@@ -109,11 +114,11 @@ if(!empty($form->reg->ID)) {
 
     $html .= '<tr><td>Ganhos do UBER</td>
                 <td></td>
-                <td> <span class="label label-success">R$ ' . number_format(decimalFromDB($form->reg->Ganhos), 2, ',', '.') . '</span></td>
+                <td> <span class="label label-success">R$ ' . number_format(decimalFromDB($form->reg->TotalGanhos), 2, ',', '.') . '</span></td>
             </tr>';
 
-    $combustivel_lts = carro_consumo_combustivel_litros($form->reg->Kms);
-    $combustivel_valor = carro_consumo_combustivel_valor($form->reg->Kms);
+    $combustivel_lts = carro_consumo_combustivel_litros($form->reg->TotalKms);
+    $combustivel_valor = carro_consumo_combustivel_valor($form->reg->TotalKms);
     $html .= '<tr><td>Combustível</td>
                 <td> ' . number_format($combustivel_lts, 2, ',', '.') . ' litros</td>
                 <td> <span class="label label-danger">R$ ' . number_format($combustivel_valor, 2, ',', '.') . '</span></td>
@@ -142,26 +147,26 @@ if(!empty($form->reg->ID)) {
 
     $html .= '<tr><td>Óleo + Filtro</td>
                 <td></td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_oleo_valor($form->reg->Kms), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_oleo_valor($form->reg->TotalKms), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Pneus</td>
                 <td>O jogo</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_pneus_valor($form->reg->Kms), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_pneus_valor($form->reg->TotalKms), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Pastilhas de Freio</td>
                 <td>O jogo</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_pastilhas_valor($form->reg->Kms), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_pastilhas_valor($form->reg->TotalKms), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Discos de Freio</td>
                 <td>O jogo</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_discos_valor($form->reg->Kms), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_consumo_discos_valor($form->reg->TotalKms), 2, ',', '.') . '</span></td>
              </tr>';
 
     $jornada_saldo = carro_jornada_saldo($form->reg->ID);
-    $jornada_provisoes = carro_jornada_provisoes($form->reg->Kms);
+    $jornada_provisoes = carro_jornada_provisoes($form->reg->TotalKms);
 
 
     $html .= '
@@ -199,7 +204,7 @@ if(!empty($form->reg->ID)) {
     $form->AddBox($box);
 
 }
-*/
+
 $form->PrintHTML();
 
 template_getFooter();
@@ -215,15 +220,15 @@ if(!empty($form->reg->ID)) {
                 data: {
                     columns: [
                         ['Lucro', <?= carro_jornada_saldo($form->reg->ID); ?>],
-                        ['Combustível', <?= carro_consumo_combustivel_valor($form->reg->Kms); ?>],
+                        ['Combustível', <?= carro_consumo_combustivel_valor($form->reg->TotalKms); ?>],
                         ['Documentação', <?= carro_media_documentacao_dia(); ?>],
                         ['Seguro', <?= carro_media_seguro_dia(); ?>],
                         ['Lavação', <?= carro_media_lavacao_dia(); ?>],
                         ['Depreciação', <?= carro_media_depreciacao_dia(); ?>],
-                        ['Óleo', <?= carro_consumo_oleo_valor($form->reg->Kms); ?>],
-                        ['Pneus', <?= carro_consumo_pneus_valor($form->reg->Kms); ?>],
-                        ['Pastilhas', <?= carro_consumo_pastilhas_valor($form->reg->Kms); ?>],
-                        ['Discos', <?= carro_consumo_discos_valor($form->reg->Kms); ?>]
+                        ['Óleo', <?= carro_consumo_oleo_valor($form->reg->TotalKms); ?>],
+                        ['Pneus', <?= carro_consumo_pneus_valor($form->reg->TotalKms); ?>],
+                        ['Pastilhas', <?= carro_consumo_pastilhas_valor($form->reg->TotalKms); ?>],
+                        ['Discos', <?= carro_consumo_discos_valor($form->reg->TotalKms); ?>]
                     ],
 
                     type: 'pie'

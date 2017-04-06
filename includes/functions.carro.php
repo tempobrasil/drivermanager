@@ -205,13 +205,13 @@ function carro_jornada_provisoes($kms){
   return $saldo;
 }
 
-function carro_jornada_saldo($jornadaID){
-  $jornada_db = LoadRecord('Jornadas', $jornadaID);
+function carro_jornada_saldo($semanaID){
+  $semana_db = LoadRecord('Semanas', $semanaID);
 
-  $ganho = $jornada_db->Ganhos;
-  $provisoes = carro_jornada_provisoes($jornada_db->Kms);
+  $ganhos = $semana_db->TotalGanhos;
+  $provisoes = carro_jornada_provisoes($semana_db->TotalKms);
 
-  return floatval($ganho - $provisoes);
+  return floatval($ganhos - $provisoes);
 }
 
 function carro_ID(){
