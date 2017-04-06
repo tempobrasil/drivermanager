@@ -118,6 +118,11 @@ if(!empty($form->reg->ID)) {
                 <td> <span class="label label-success">R$ ' . number_format(decimalFromDB($form->reg->TotalGanhos), 2, ',', '.') . '</span></td>
             </tr>';
 
+  $html .= '<tr><td>Despesas Extra da Semana</td>
+                <td></td>
+                <td><span class="label label-danger">R$ ' . number_format($form->reg->DespesasExtrasValor, 2, ',', '.') . '</span></td>
+            </tr>';
+
     $combustivel_lts = carro_consumo_combustivel_litros($form->reg->TotalKms);
     $combustivel_valor = carro_consumo_combustivel_valor($form->reg->TotalKms);
     $html .= '<tr><td>Combustível</td>
@@ -167,7 +172,7 @@ if(!empty($form->reg->ID)) {
              </tr>';
 
     $jornada_saldo = carro_jornada_saldo($form->reg->ID);
-    $jornada_provisoes = carro_jornada_provisoes($form->reg->TotalKms);
+    $jornada_provisoes = carro_jornada_provisoes($form->reg->ID);
 
 
     $html .= '
@@ -229,7 +234,8 @@ if(!empty($form->reg->ID)) {
                         ['Óleo', <?= carro_consumo_oleo_valor($form->reg->TotalKms); ?>],
                         ['Pneus', <?= carro_consumo_pneus_valor($form->reg->TotalKms); ?>],
                         ['Pastilhas', <?= carro_consumo_pastilhas_valor($form->reg->TotalKms); ?>],
-                        ['Discos', <?= carro_consumo_discos_valor($form->reg->TotalKms); ?>]
+                        ['Discos', <?= carro_consumo_discos_valor($form->reg->TotalKms); ?>],
+                        ['Extras', <?= floatval($form->reg->DespesasExtrasValor); ?>]
                     ],
 
                     type: 'pie'

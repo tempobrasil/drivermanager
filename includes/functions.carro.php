@@ -190,9 +190,18 @@ function carro_consumo_discos_valor($km){
   return floatval(carro_media_discos_km() * $km);
 }
 
-function carro_jornada_provisoes($kms){
+function carro_jornada_provisoes($semanaID){
+
+  $semana_db = LoadRecord('Semanas', $semanaID);
+  $kms = $semana_db->TotalKms;
+
+
+
   $saldo = 0.00;
   $saldo += carro_consumo_combustivel_valor($kms);
+
+  $saldo += floatval($semana_db->DespesasExtrasValor); //Extras
+
   $saldo += carro_media_documentacao_dia();
   $saldo += carro_media_seguro_dia();
   $saldo += carro_media_lavacao_dia();
@@ -209,7 +218,7 @@ function carro_jornada_saldo($semanaID){
   $semana_db = LoadRecord('Semanas', $semanaID);
 
   $ganhos = $semana_db->TotalGanhos;
-  $provisoes = carro_jornada_provisoes($semana_db->TotalKms);
+  $provisoes = carro_jornada_provisoes($semanaID);
 
   return floatval($ganhos - $provisoes);
 }
