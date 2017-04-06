@@ -1,0 +1,144 @@
+form{
+
+
+    & > div{
+      margin-bottom: 10px;
+    }
+
+    label.control-label,
+    select.form-control,
+    input.form-control,
+    .chosen-container,
+    .input-group.date{
+      margin-bottom: 10px;
+    }
+
+    input.form-control,
+    select.form-control,
+    textarea.form-control{
+
+      &:required{
+
+        background-color: lighten(#1ab394, 55%);
+      }
+
+    }
+
+
+  .btn-actions{
+    margin-right: 15px;
+  }
+
+  /* Campo SELECT chosen */
+  .chosen-select{
+    display: block!important;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    z-index: -9999;
+    margin-left: 15px;
+  }
+  .chosen-container{
+
+    &.chosen-container-active{
+      .chosen-single {
+        border-color: #1ab394;
+        background: none;
+      }
+    }
+
+    .chosen-single {
+      background: none;
+      border: 1px solid #e5e6e7;
+      border-radius: 1px;
+      font-size: 14px;
+      line-height: 27px;
+      cursor: pointer;
+
+      abbr{
+        top: 9px;
+      }
+
+      div b{
+        background-position-y: 5px;
+      }
+
+
+    }
+
+    .chosen-drop{
+      border-color: #1ab394;
+
+      .chosen-results{
+
+        li.highlighted{
+          background: none;
+          background-color: #1ab394;
+        }
+      }
+    }
+  }
+  .field_list_required{
+    .chosen-single{
+      background-color: #eafcf8;
+    }
+  }
+
+  /* Data */
+  .input-group.date{
+
+    .input-group-addon{
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 20px;
+
+      .form-control {
+        margin-bottom: 0 !important;
+      }
+
+    }
+
+  }
+
+  .field_number{
+    text-align: right;
+  }
+
+}
+
+.msg-form{
+  padding: 5px 10px;
+  margin-top: 15px;
+
+  .alert{
+    margin: 0;
+
+  }
+
+}
+
+small.label{
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  font-size: 12px;
+
+  i{
+    font-size: 15px!important;
+  }
+}
+
+
+.baixar-lancamento {
+  cursor: pointer;
+  opacity: 0.3;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+
+  &[pago=sim]{
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    color: #337ab7!important;
+  }
+
+}

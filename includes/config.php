@@ -1,0 +1,130 @@
+<?
+function set_config($key, $val){
+  $GLOBALS[$key] = $val;
+}
+
+function get_config($key){
+  return $GLOBALS[$key];
+}
+
+
+/* Caminhos */
+if( $_SERVER['HTTP_HOST'] == 'localhost'){
+
+  set_config('SITE_URL'         , 'http://localhost/github/drivermanager/');
+  set_config('SITE_PATH'        , 'D:/github/drivermanager/');
+
+} else {
+
+  set_config('SITE_URL'         , 'http://drivermanager.zbraestudio.com.br/');
+  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/drivermanager/');
+
+}
+
+set_config('TITLE',                   '');
+set_config('SYSTEM_TITLE',            'Driver Manager [for UBER]');
+set_config('FOOTER_TEXT',            '<strong>Driver Manager [for UBER]</strong> v1 - &copy; 2017 - Todos os Direitos Reservados.');
+
+/* Banco de Dados */
+if( $_SERVER['HTTP_HOST'] == 'localhost')
+  set_config('DB_HOST'          , 'nbz.net.br');
+else
+  set_config('DB_HOST'          , 'localhost');
+
+set_config('DB_USER'          , 'root');
+set_config('DB_PASS'          , 'polly');
+set_config('DB_DB'            , 'zbraestudio.com.br_drivermanager');
+
+
+
+
+$options_carros = array(
+                        'Acura' => 'Acura',
+                        'Agrale' => 'Agrale',
+                        'Alfa Romeo' => 'Alfa Romeo',
+                        'AM Gen' => 'AM Gen',
+                        'Asia Motors' => 'Asia Motors',
+                        'ASTON MARTIN' => 'ASTON MARTIN',
+                        'Audi' => 'Audi',
+                        'BMW' => 'BMW',
+                        'BRM' => 'BRM',
+                        'Buggy' => 'Buggy',
+                        'Bugre' => 'Bugre',
+                        'Cadillac' => 'Cadillac',
+                        'CBT Jipe' => 'CBT Jipe',
+                        'CHANA' => 'CHANA',
+                        'CHANGAN' => 'CHANGAN',
+                        'CHERY' => 'CHERY',
+                        'Chrysler' => 'Chrysler',
+                        'Citroën' => 'Citroën',
+                        'Cross Lander' => 'Cross Lander',
+                        'Daewoo' => 'Daewoo',
+                        'Daihatsu' => 'Daihatsu',
+                        'Dodge' => 'Dodge',
+                        'EFFA' => 'EFFA',
+                        'Engesa' => 'Engesa',
+                        'Envemo' => 'Envemo',
+                        'Ferrari' => 'Ferrari',
+                        'Fiat' => 'Fiat',
+                        'Fibravan' => 'Fibravan',
+                        'Ford' => 'Ford',
+                        'FOTON' => 'FOTON',
+                        'Fyber' => 'Fyber',
+                        'GEELY' => 'GEELY',
+                        'GM - Chevrolet' => 'GM - Chevrolet',
+                        'GREAT WALL' => 'GREAT WALL',
+                        'Gurgel' => 'Gurgel',
+                        'HAFEI' => 'HAFEI',
+                        'Honda' => 'Honda',
+                        'Hyundai' => 'Hyundai',
+                        'Isuzu' => 'Isuzu',
+                        'JAC' => 'JAC',
+                        'Jaguar' => 'Jaguar',
+                        'Jeep' => 'Jeep',
+                        'JINBEI' => 'JINBEI',
+                        'JPX' => 'JPX',
+                        'Kia Motors' => 'Kia Motors',
+                        'Lada' => 'Lada',
+                        'LAMBORGHINI' => 'LAMBORGHINI',
+                        'Land Rover' => 'Land Rover',
+                        'Lexus' => 'Lexus',
+                        'LIFAN' => 'LIFAN',
+                        'LOBINI' => 'LOBINI',
+                        'Lotus' => 'Lotus',
+                        'Mahindra' => 'Mahindra',
+                        'Maserati' => 'Maserati',
+                        'Matra' => 'Matra',
+                        'Mazda' => 'Mazda',
+                        'Mercedes-Benz' => 'Mercedes-Benz',
+                        'Mercury' => 'Mercury',
+                        'MG' => 'MG',
+                        'MINI' => 'MINI',
+                        'Mitsubishi' => 'Mitsubishi',
+                        'Miura' => 'Miura',
+                        'Nissan' => 'Nissan',
+                        'Peugeot' => 'Peugeot',
+                        'Plymouth' => 'Plymouth',
+                        'Pontiac' => 'Pontiac',
+                        'Porsche' => 'Porsche',
+                        'RAM' => 'RAM',
+                        'RELY' => 'RELY',
+                        'Renault' => 'Renault',
+                        'Rolls-Royce' => 'Rolls-Royce',
+                        'Rover' => 'Rover',
+                        'Saab' => 'Saab',
+                        'Saturn' => 'Saturn',
+                        'Seat' => 'Seat',
+                        'SHINERAY' => 'SHINERAY',
+                        'smart' => 'smart',
+                        'SSANGYONG' => 'SSANGYONG',
+                        'Subaru' => 'Subaru',
+                        'Suzuki' => 'Suzuki',
+                        'TAC' => 'TAC',
+                        'Toyota' => 'Toyota',
+                        'Troller' => 'Troller',
+                        'Volvo' => 'Volvo',
+                        'VW - VolksWagen' => 'VW - VolksWagen',
+                        'Wake' => 'Wake',
+                        'Walk' => 'Walk'
+
+);

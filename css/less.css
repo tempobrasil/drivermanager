@@ -1,0 +1,136 @@
+.clearboth {
+  clear: both;
+}
+.table-header .btn-novo {
+  margin-top: 20px;
+}
+table.table .grid_action a {
+  padding: 5px;
+}
+table.table .grid_action a i {
+  font-size: 13px;
+}
+table.table .confirmation h3 {
+  font-size: 10px;
+  line-height: 16px;
+}
+table.table .confirmation .btn-group a.btn {
+  padding: 5px 12px;
+}
+table.table .confirmation .btn-group a.btn i {
+  font-size: 10px;
+}
+.grid .input-sm {
+  border: 1px solid red;
+  height: 30px;
+  padding: 0 5px;
+  font-size: 11px;
+  border-color: #e5e6e7;
+}
+.grid .filters {
+  margin-right: 15px;
+}
+.grid label .input-sm {
+  margin-left: 5px;
+}
+form {
+  /* Campo SELECT chosen */
+  /* Data */
+}
+form > div {
+  margin-bottom: 10px;
+}
+form label.control-label,
+form select.form-control,
+form input.form-control,
+form .chosen-container,
+form .input-group.date {
+  margin-bottom: 10px;
+}
+form input.form-control:required,
+form select.form-control:required,
+form textarea.form-control:required {
+  background-color: #eafcf8;
+}
+form .btn-actions {
+  margin-right: 15px;
+}
+form .chosen-select {
+  display: block!important;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  z-index: -9999;
+  margin-left: 15px;
+}
+form .chosen-container.chosen-container-active .chosen-single {
+  border-color: #1ab394;
+  background: none;
+}
+form .chosen-container .chosen-single {
+  background: none;
+  border: 1px solid #e5e6e7;
+  border-radius: 1px;
+  font-size: 14px;
+  line-height: 27px;
+  cursor: pointer;
+}
+form .chosen-container .chosen-single abbr {
+  top: 9px;
+}
+form .chosen-container .chosen-single div b {
+  background-position-y: 5px;
+}
+form .chosen-container .chosen-drop {
+  border-color: #1ab394;
+}
+form .chosen-container .chosen-drop .chosen-results li.highlighted {
+  background: none;
+  background-color: #1ab394;
+}
+form .field_list_required .chosen-single {
+  background-color: #eafcf8;
+}
+form .input-group.date .input-group-addon {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 20px;
+}
+form .input-group.date .input-group-addon .form-control {
+  margin-bottom: 0 !important;
+}
+form .field_number {
+  text-align: right;
+}
+.msg-form {
+  padding: 5px 10px;
+  margin-top: 15px;
+}
+.msg-form .alert {
+  margin: 0;
+}
+small.label {
+  line-height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  font-size: 12px;
+}
+small.label i {
+  font-size: 15px!important;
+}
+.baixar-lancamento {
+  cursor: pointer;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* For IE8 and earlier */
+}
+.baixar-lancamento[pago=sim] {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+  color: #337ab7!important;
+}
+body.pg_login img.logo {
+  margin: 50px 0;
+}
