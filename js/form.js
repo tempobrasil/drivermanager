@@ -45,7 +45,7 @@ $(document).ready(function(){
     boostat: 5,
     maxboostedstep: 10,
     buttondown_class: 'btn btn-white',
-    buttonup_class: 'btn btn-white',
+    buttonup_class: 'btn btn-white'
 
   }).focusout(function(){
     var val = $(this).val();

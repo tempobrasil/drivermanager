@@ -90,6 +90,7 @@
     <script src="<?= get_config('SITE_URL'); ?>js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
 
 
+    <script src="<?= get_config('SITE_URL'); ?>js/base.js"></script>
     <script src="<?= get_config('SITE_URL'); ?>js/form.js"></script>
     <script src="<?= get_config('SITE_URL'); ?>js/grid.js"></script>
 

@@ -125,13 +125,13 @@ function form_field_date($name, $value, $default = null, $required = true, $clas
   if($default = 'TODAY' || $default = 'NOW')
     $default = date('Y-m-d');
 
-  $html  = '<div class="input-group date">';
+  $html  = '<div class="input-group date ' . $class . '">';
   $html .= '  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>';
   $html .= '    <input type="text" ';
 
   $html .= ' name="' . $name . '"';
 
-  $html .= ' class="form-control ' . $class . '"';
+  $html .= ' class="form-control"';
 
 
   if(GetParam(GetParamsCount()-1) == 'add')

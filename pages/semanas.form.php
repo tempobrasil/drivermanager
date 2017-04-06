@@ -242,35 +242,53 @@ if(!empty($form->reg->ID)) {
 <script>
     $(document).ready(function() {
 
+      var startDate, endDate;
 
 
-        var startDate,
-            endDate;
+      $('.input-group.date.week').datepicker('remove');
+      $('.input-group.date.week').datepicker({
+        weekStart: 1,
+        autoclose: true,
+        format: "dd/MM/yyyy",
+        forceParse: false,
 
-        $('.input-group.date.week').datepicker({
-            autoclose: true,
-            format :'dd/mm/yyyy',
-            forceParse :false,
-            todayBtn: "linked",
-            keyboardNavigation: false,
-            calendarWeeks: true,
-            currentText: 'Hoje',
-            language: "pt-BR",
-            selectWeek:true,
-        }).on("changeDate", function(e) {
-            //console.log(e.date);
-            var date = e.date;
-            startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay());
-            endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay()+6);
-            //$('#weekpicker').datepicker("setDate", startDate);
-            $('.input-group.date.week').datepicker('update', startDate);
-            $('.input-group.date.week').val((startDate.getDate() + 1) + '/' + startDate.getMonth() + '/' +  startDate.getFullYear() + ' até ' + (endDate.getDate() + 1) + '/' + endDate.getMonth() + '/' +  endDate.getFullYear());
-        }).on('show', function(e){
+        todayBtn: "linked",
+        keyboardNavigation: false,
+        calendarWeeks: true,
+        currentText: 'Hoje',
+        language: "pt-BR"
 
-            $('.datepicker').find('.active').parent().addClass('active');
-        })
 
-     })
+      }).on("changeDate", function (e) {
+        var date = e.date;
+
+        GetDateDisplay(date);
+
+      }).on("onSelect", function (e) {
+
+        console.log(' >>>>>>>>>> OnSelect');
+
+      }).on('show', function (e) {
+        $('.datepicker').find('.active').parent().addClass('active');
+        if($('.datepicker .day.active')){
+          $('.datepicker .day.active').parent().find('.day').addClass('active');
+        }
+      })
+
+      var date = $('.input-group.date.week').datepicker("getDate");
+      GetDateDisplay(date);
+
+    })
+
+  function GetDateDisplay(date){
+
+
+    startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay()+1);
+    endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 7);
+
+    $('.input-group.date.week').datepicker('update', startDate);
+    $('.input-group.date.week input').val(forceZeros(startDate.getDate(), 2) + '/' + forceZeros(startDate.getMonth() + 1, 2) + '/' + forceZeros(startDate.getFullYear(), 4) + ' até ' + forceZeros(endDate.getDate(), 2) + '/' + forceZeros(endDate.getMonth() + 1, 2) + '/' + forceZeros(endDate.getFullYear(), 4));
+  }
 
 </script>
 
@@ -282,15 +300,3 @@ if(!empty($form->reg->ID)) {
         background-color: #3276b1;
     }
 </style>
-
-
-/*
-.datepicker({
-todayBtn: "linked",
-keyboardNavigation: false,
-forceParse: false,
-calendarWeeks: true,
-autoclose: true,
-currentText: 'Hoje',
-language: "pt-BR"
-});*/

@@ -2,9 +2,13 @@
 include('../includes/autoload.php');
 
 //print_r($_POST);exit;
+
 $login->verify();
 
-$Data                       = dataDDMMYYYYtoYYYYMMDD($_POST['Data']);
+$Data                       = $_POST['Data'];
+$d = explode(' ', $Data);
+$Data = $d[0];
+$Data                       = dataDDMMYYYYtoYYYYMMDD($Data);
 
 $SegKms                     = decimalToDB($_POST['SegKms']);
 $SegCorridas                = integerToDB($_POST['SegCorridas']);
