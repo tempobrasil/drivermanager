@@ -1,7 +1,7 @@
 
 <div class="footer">
     <div class="pull-right">
-        10GB of <strong>250GB</strong> Free.
+        Desenvolvido por <a href="http://www.zbraestudio.com.br">Z.BRA Estúdio</a>
     </div>
     <div>
         <?= get_config('FOOTER_TEXT'); ?>
