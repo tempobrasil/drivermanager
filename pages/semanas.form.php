@@ -299,4 +299,7 @@ if(!empty($form->reg->ID)) {
     .datepicker  table tbody tr.active {
         background-color: #3276b1;
     }
+    .datepicker  table tbody tr.active td {
+      border-radius: 0 !important;
+    }
 </style>
