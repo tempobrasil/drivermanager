@@ -64,7 +64,7 @@ $html  = '<label class="col-sm-2 control-label">Depreciação (%)</label>';
 $html .= '<div class="col-sm-2">' . form_field_number('DepreciacaoAnual', @$form->reg->DepreciacaoAnual, 10) . '</div>';
 $box->AddContent($html);
 
-$html = '<div class="col-sm-8"> * A Taxa de Depreciação Anual é o percentual médio de desvalorização do valor do carro a cada ano.</div>';
+$html = '<div class="col-sm-8"> * A Taxa de Depreciação Anual é o percentual médio de desvalorização do valor do carro a cada ano.<br>Veja nosso manual de <a href="http://wiki.zbraestudio.com.br/index.php/Publico/DriverManager/carro_taxa_depreciacao_anual" target="_blank">como descobrir a Taxa Anual de Depreciação do seu carro</a>.</div>';
 $box->AddContent($html);
 
 
