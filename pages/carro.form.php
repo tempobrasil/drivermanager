@@ -32,7 +32,7 @@ $box->AddContent($html);
 //Valor FIPE
 $html  = '<label class="col-sm-2 control-label">Valor FIPE</label>';
 $html .= '<div class="col-sm-2">' . form_field_number('ValorFIPE', @$form->reg->ValorFIPE);
-$html .= '<small>Consulte seu carro na <a href="http://veiculos.fipe.org.br/" target="_blank">Tabela FIPE</a>';
+$html .= '<small>Consulte seu carro na <a href="http://veiculos.fipe.org.br/" target="_blank">Tabela FIPE</a></small>';
 $html .= '</div>';
 $box->AddContent($html);
 
