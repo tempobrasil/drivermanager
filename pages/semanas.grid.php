@@ -3,6 +3,25 @@ template_getHeader();
 
 $grid = new girafaGRID('Semanas', 'Semanas');
 
+$sql  = 'SELECT Data FROM Semanas GROUP BY YEAR(Data), MONTH(Data)';
+$meses = $db->LoadObjects($sql);
+
+$mesAtual = false;
+foreach($meses as $mes) {
+    $mesObj = new girafaDate($mes->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
+    $mesSeguinteObj = strtotime($mesObj->GetDate('Y-m') . '-1 +1 month');
+
+    if($mesObj->GetDate('Y-m') == date('Y-m'))
+        $mesAtual = true;
+    $grid->AddFilter('Semanas de ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y'), "Data >= '" . $mesObj->GetDate('Y-m')  . "-01' AND Data < '" . date('Y-m-d', $mesSeguinteObj) . "'", $mesAtual);
+}
+
+//caso não tenha registro ainda desse mês, adiciona
+if(!$mesAtual) {
+    $mesObj = new girafaDate(date('Y-m-d'), ENUM_DATE_FORMAT::YYYY_MM_DD);
+    $mesSeguinteObj = strtotime($mesObj->GetDate('Y-m') . '-1 +1 month');
+    $grid->AddFilter('Semanas de ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y'), "Data >= '" . $mesObj->GetDate('Y-m') . "-01' AND Data < '" . date('Y-m-d', $mesSeguinteObj) . "'", true);
+}
 $field_data = new girafaGRID_field('SEMANA', 'Semana');
 $field_data->isCustom();
 
