@@ -10,6 +10,7 @@ $Modelo                 = $_POST['Modelo'];
 $Ano                    = $_POST['Ano'];
 $Placa                  = $_POST['Placa'];
 $Renavam                = $_POST['Renavam'];
+$UF                     = $_POST['UF'];
 $ValorFIPE              = decimalToDB($_POST['ValorFIPE']);
 $DepreciacaoAnual       = decimalToDB($_POST['DepreciacaoAnual']);
 $OleoValor              = decimalToDB($_POST['OleoValor']);
@@ -37,9 +38,10 @@ if(isset($_POST['id']) > 0){
 
 $post->AddFieldString('Marca',                  $Marca);
 $post->AddFieldString('Modelo',                 $Modelo);
-$post->AddFieldString('Ano',                   $Ano);
-$post->AddFieldString('Placa',                 $Placa);
-$post->AddFieldInteger('Renavam',               $Renavam);
+$post->AddFieldString('Ano',                    $Ano);
+$post->AddFieldString('Placa',                  $Placa);
+$post->AddFieldString('Renavam',               $Renavam);
+$post->AddFieldString('UF',                    $UF);
 $post->AddFieldString('ValorFIPE',              $ValorFIPE);
 $post->AddFieldString('DepreciacaoAnual',       $DepreciacaoAnual);
 $post->AddFieldString('OleoValor',              $OleoValor);

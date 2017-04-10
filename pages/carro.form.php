@@ -49,11 +49,25 @@ $html  = '<label class="col-sm-2 control-label">Renavam</label>';
 $html .= '<div class="col-sm-2">' . form_field_string('Renavam', @$form->reg->Renavam, 9, null, true, '999999999') .'</div>';
 $box->AddContent($html);
 
-if($form->isEdit) {
-  $box->AddContentBreakLine();
 
-  $html = '<div class="col-sm-offset-2 col-sm-10"><small>Consulte a <a href="http://consultas.detrannet.sc.gov.br/servicos/consultaveiculo.asp?placa=' . $form->reg->Placa . '&renavam=' . $form->reg->Renavam . '" target="_blank">documentação do seu carro</a></small></div>';
-  $box->AddContent($html);
+//UF
+$html  = '<label class="col-sm-2 control-label">Estado de Registro</label>';
+global $options_ufs;
+$html .= '<div class="col-sm-2">' . form_field_list('UF', $options_ufs, @$form->reg->UF) .'</div>';
+$box->AddContent($html);
+
+if($form->isEdit) {
+
+  if($form->reg->UF == 'SC')
+    $detranURL = 'http://consultas.detrannet.sc.gov.br/servicos/consultaveiculo.asp?placa=' . $form->reg->Placa . '&renavam=' . $form->reg->Renavam;
+
+  if(!empty($detranURL)) {
+
+    $box->AddContentBreakLine();
+
+    $html = '<div class="col-sm-offset-2 col-sm-10"><small>Consulte a <a href="' . $detranURL . '" target="_blank">documentação do seu carro</a></small></div>';
+    $box->AddContent($html);
+  }
 }
 
 $box->AddContentBreakLine();
