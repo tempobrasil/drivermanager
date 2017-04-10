@@ -33,7 +33,7 @@ class girafaFORM{
       }
 
       $this->reg = $res[0];
-      $this->isEdit;
+      $this->isEdit = true;
     }
 
     //Título

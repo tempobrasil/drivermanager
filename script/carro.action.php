@@ -8,6 +8,8 @@ $login->verify();
 $Marca                  = $_POST['Marca'];
 $Modelo                 = $_POST['Modelo'];
 $Ano                    = $_POST['Ano'];
+$Placa                  = $_POST['Placa'];
+$Renavam                = $_POST['Renavam'];
 $ValorFIPE              = decimalToDB($_POST['ValorFIPE']);
 $DepreciacaoAnual       = decimalToDB($_POST['DepreciacaoAnual']);
 $OleoValor              = decimalToDB($_POST['OleoValor']);
@@ -35,7 +37,9 @@ if(isset($_POST['id']) > 0){
 
 $post->AddFieldString('Marca',                  $Marca);
 $post->AddFieldString('Modelo',                 $Modelo);
-$post->AddFieldInteger('Ano',                   $Ano);
+$post->AddFieldString('Ano',                   $Ano);
+$post->AddFieldString('Placa',                 $Placa);
+$post->AddFieldInteger('Renavam',               $Renavam);
 $post->AddFieldString('ValorFIPE',              $ValorFIPE);
 $post->AddFieldString('DepreciacaoAnual',       $DepreciacaoAnual);
 $post->AddFieldString('OleoValor',              $OleoValor);

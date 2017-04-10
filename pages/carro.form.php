@@ -31,8 +31,30 @@ $box->AddContent($html);
 
 //Valor FIPE
 $html  = '<label class="col-sm-2 control-label">Valor FIPE</label>';
-$html .= '<div class="col-sm-2">' . form_field_number('ValorFIPE', @$form->reg->ValorFIPE) .' Consulte a <a href="http://veiculos.fipe.org.br/" target="_blank">Tabela FIPE</a></div>';
+$html .= '<div class="col-sm-2">' . form_field_number('ValorFIPE', @$form->reg->ValorFIPE);
+$html .= '<small>Consulte seu carro na <a href="http://veiculos.fipe.org.br/" target="_blank">Tabela FIPE</a>';
+$html .= '</div>';
 $box->AddContent($html);
+
+$box->AddContentBreakLine();
+$box->AddContentLine();
+
+//Placa
+$html  = '<label class="col-sm-2 control-label">Placa</label>';
+$html .= '<div class="col-sm-2">' . form_field_string('Placa', @$form->reg->Placa, 7, null, true, 'AAA9999') .'</div>';
+$box->AddContent($html);
+
+//Renavam
+$html  = '<label class="col-sm-2 control-label">Renavam</label>';
+$html .= '<div class="col-sm-2">' . form_field_string('Renavam', @$form->reg->Renavam, 9, null, true, '999999999') .'</div>';
+$box->AddContent($html);
+
+if($form->isEdit) {
+  $box->AddContentBreakLine();
+
+  $html = '<div class="col-sm-offset-2 col-sm-10"><small>Consulte a <a href="http://consultas.detrannet.sc.gov.br/servicos/consultaveiculo.asp?placa=' . $form->reg->Placa . '&renavam=' . $form->reg->Renavam . '" target="_blank">documentação do seu carro</a></small></div>';
+  $box->AddContent($html);
+}
 
 $box->AddContentBreakLine();
 $box->AddContentLine();
