@@ -74,7 +74,9 @@ $mpdf->WriteHTML($stylesheet, 1);
 
 $tpl = new girafaTpl('mensal.tpl');
 
-$tpl->setValue('%%PAGE_TITLE%%', mb_strtoupper('Relatório do mês ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y'),'UTF-8'));
+$titulo = 'Relatório do mês ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y');
+
+$tpl->setValue('%%PAGE_TITLE%%', mb_strtoupper($titulo,'UTF-8'));
 $tpl->setValue('%%CARRO%%', carro_Descricao());
 $tpl->setValue('%%CARRO_PLACA%%', carro_Placa());
 
@@ -132,5 +134,5 @@ $tpl->setValue('%%PROVISAO%%', number_format($provisao, 2, ',', '.'));
 //die($tpl->GetHtml());
 $mpdf->WriteHTML($tpl->GetHtml());
 
-$mpdf->Output();
+$mpdf->Output('drivermanagar_' . GeraLinkAmigavel($titulo) . '.pdf', 'D');
 ?>
