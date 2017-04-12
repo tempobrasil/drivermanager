@@ -141,7 +141,7 @@ if(!empty($form->reg->ID)) {
              </tr>';
 
     $html .= '<tr><td>Lavação do Carro</td>
-                <td>Semanal</td>
+                <td>' . carro_lavacaofrequencia_string() . '</td>
                 <td><span class="label label-danger">R$ ' . number_format(carro_media_lavacao_dia($form->reg->TotalDiasTrabalhados), 2, ',', '.') . '</span></td>
              </tr>';
 
@@ -227,10 +227,10 @@ if(!empty($form->reg->ID)) {
                     columns: [
                         ['Lucro', <?= carro_jornada_saldo($form->reg->ID); ?>],
                         ['Combustível', <?= carro_consumo_combustivel_valor($form->reg->TotalKms); ?>],
-                        ['Documentação', <?= carro_media_documentacao_dia(); ?>],
-                        ['Seguro', <?= carro_media_seguro_dia(); ?>],
-                        ['Lavação', <?= carro_media_lavacao_dia(); ?>],
-                        ['Depreciação', <?= carro_media_depreciacao_dia(); ?>],
+                        ['Documentação', <?= carro_media_documentacao_dia($form->reg->TotalDiasTrabalhados); ?>],
+                        ['Seguro', <?= carro_media_seguro_dia($form->reg->TotalDiasTrabalhados); ?>],
+                        ['Lavação', <?= carro_media_lavacao_dia($form->reg->TotalDiasTrabalhados); ?>],
+                        ['Depreciação', <?= carro_media_depreciacao_dia($form->reg->TotalDiasTrabalhados); ?>],
                         ['Óleo', <?= carro_consumo_oleo_valor($form->reg->TotalKms); ?>],
                         ['Pneus', <?= carro_consumo_pneus_valor($form->reg->TotalKms); ?>],
                         ['Pastilhas', <?= carro_consumo_pastilhas_valor($form->reg->TotalKms); ?>],

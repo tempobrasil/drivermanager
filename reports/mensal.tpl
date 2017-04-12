@@ -1,6 +1,9 @@
 ﻿{{TEMPLATE}}
 <content>
 
+  <p>%%CARRO%% - Placa %%CARRO_PLACA%%</p>
+  <hr>
+
   <h2>Ganhos</h2>
   <p>Confira abaixo o relatório mensal das corridas feitas pelos aplicativos.</p>
 
@@ -22,7 +25,7 @@
   </table>
 
   <h2>Despesas</h2>
-  <p>Confira abaixoo detalhamento do custo do seu mês.</p>
+  <p>Confira abaixo detalhamento do custo do seu mês.</p>
   <table width="800" border="0" cellspacing="5">
     <thead>
       <tr>
@@ -34,63 +37,63 @@
     <tr>
       <td>Ganhos do UBER</td>
       <td align="center">&nbsp;</td>
-      <td align="right">R$ 20.564,00</td>
+      <td align="right">R$ %%DESPESA_GANHOS%%</td>
     </tr>
     <tr>
       <td>Despesas Extras</td>
       <td align="center">&nbsp;</td>
-      <td align="right"> (-) R$ 20.564,00</td>
+      <td align="right"> (-) R$ %%DESPESA_EXTRAS%%</td>
     </tr>
     <tr>
       <td>Combustível</td>
-      <td align="center">&nbsp;</td>
-      <td align="right"> (-) R$ 20.564,00</td>
+      <td align="center">%%DESPESA_COMBUSTIVEL_LITROS%% lts</td>
+      <td align="right"> (-) R$ %%DESPESA_COMBUSTIVEL%%</td>
     </tr>
     <tr>
       <td>Documentação do Carro <sup>1</sup></td>
       <td align="center">&nbsp;</td>
-      <td align="right"> (-) R$ 4,11</td>
+      <td align="right"> (-) R$ %%DESPESA_DOCUMENTACAO%%</td>
     </tr>
     <tr>
       <td>Seguro do Carro <sup>1</sup></td>
       <td align="center"></td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="right">(-) R$ %%DESPESA_SEGURO%%</td>
     </tr>
     <tr>
       <td>Lavação do Carro</td>
-      <td align="center">Semanal</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="center">%%DESPESA_LAVACAO_FREQUENCIA%%</td>
+      <td align="right">(-) R$ %%DESPESA_LAVACAO%%</td>
     </tr>
     <tr>
       <td>Depreciação do carro <sup>1</sup></td>
-      <td align="center">7,0% a.a.</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="center">%%DESPESA_DEPRECIACAO_TAXA%% a.a.</td>
+      <td align="right">(-) R$ %%DESPESA_DEPRECIACAO%%</td>
     </tr>
     <tr>
       <td>Óleo + Filtro</td>
       <td align="center">&nbsp;</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="right">(-) R$ %%DESPESA_OLEO%%</td>
     </tr>
     <tr>
       <td>Pneus</td>
       <td align="center">o jogo</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="right">(-) R$ %%DESPESA_PNEUS%%</td>
     </tr>
     <tr>
       <td>Pastilhas de Freio</td>
       <td align="center">o jogo</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="right">(-) R$ %%DESPESA_PASTILHAS%%</td>
     </tr>
     <tr>
       <td>Discos de Freio</td>
       <td align="center">o jogo</td>
-      <td align="right">(-) R$ 4,11</td>
+      <td align="right">(-) R$ %%DESPESA_DISCOS%%</td>
     </tr>
     <tfoot>
         <tr>
           <td>Saldo da Semana</td>
           <td align="center">&nbsp;</td>
-          <td align="right">R$ 10.123,40</td>
+          <td align="right">R$ %%SALDO_SEMANA%%</td>
         </tr>
     </tfoot>
   </table>
@@ -100,8 +103,8 @@
 
   <h2>Resumo do mês</h2>
 
-  <p>Provisão do carro: R$2.654,10</p>
-  <p style="font-size: 18px;">Lucro do motorista: <strong>R$4.654,10</strong></p>
+  <p>Provisão do carro: R$%%PROVISAO%%</p>
+  <p style="font-size: 18px;">Lucro do motorista: <strong>R$ %%LUCRO%%</strong></p>
 
   <hr>
 

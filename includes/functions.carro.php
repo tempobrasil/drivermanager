@@ -200,6 +200,7 @@ function carro_jornada_provisoes($semanaID){
 
   $semana_db = LoadRecord('Semanas', $semanaID);
   $kms = $semana_db->TotalKms;
+  $dias = $semana_db->TotalDiasTrabalhados;
 
 
 
@@ -208,10 +209,10 @@ function carro_jornada_provisoes($semanaID){
 
   $saldo += floatval($semana_db->DespesasExtrasValor); //Extras
 
-  $saldo += carro_media_documentacao_dia();
-  $saldo += carro_media_seguro_dia();
-  $saldo += carro_media_lavacao_dia();
-  $saldo += carro_media_depreciacao_dia();
+  $saldo += carro_media_documentacao_dia($dias);
+  $saldo += carro_media_seguro_dia($dias);
+  $saldo += carro_media_lavacao_dia($dias);
+  $saldo += carro_media_depreciacao_dia($dias);
   $saldo += carro_consumo_oleo_valor($kms);
   $saldo += carro_consumo_pneus_valor($kms);
   $saldo += carro_consumo_pastilhas_valor($kms);
@@ -234,4 +235,31 @@ function carro_ID(){
   carro_load();
 
   return $carro_db->ID;
+}
+
+function carro_lavacaofrequencia_string(){
+
+  global $carro_db;
+  carro_load();
+  
+  switch($carro_db->LavacaoFrequencia){
+    case 'DIA': return 'Todo dia';
+    case 'SEM': return '1x por semana';
+    case '2XS': return '2x por semana';
+    case 'MES': return '1x por mês';
+  }
+
+}
+
+function carro_Placa(){
+  global $carro_db;
+  carro_load();
+
+  return $carro_db->Placa;
+}
+function carro_Descricao(){
+  global $carro_db;
+  carro_load();
+
+  return $carro_db->Marca . ' ' . $carro_db->Modelo . ' ' . $carro_db->Ano;
 }

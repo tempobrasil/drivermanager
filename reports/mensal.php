@@ -7,8 +7,9 @@ if(!isset($_POST['MES']))
   die('Erro ao emitir relatório!');
 
 $mes = $_POST['MES'];
+$mesObj = new girafaDate($mes . '-01', ENUM_DATE_FORMAT::YYYY_MM_DD);
 
-//$reg_carro = LoadRecord('Carros', $login->user_id, 'Usuario');
+$reg_carro = LoadRecord('Carros', $login->user_id, 'Usuario');
 
 $sql  = 'SELECT * FROM Semanas';
 $sql .= " WHERE DATE_FORMAT(Data, '%Y-%m') = '" . $mes . "'";
@@ -37,11 +38,12 @@ foreach($semanas as $semana){
   $semanas_lista .= $html;
 
 
-  $total_ganhos     += floatval($semana->TotalGanhos);
-  $total_corridas   += intval($semana->TotalCorridas);
-  $total_tempo      += intval($semana->TotalTempo);
-  $total_kms        += floatval($semana->TotalKms);
-  $total_dias       += intval($semana->TotalDiasTrabalhados);
+  $total_ganhos           += floatval($semana->TotalGanhos);
+  $total_corridas         += intval($semana->TotalCorridas);
+  $total_tempo            += intval($semana->TotalTempo);
+  $total_kms              += floatval($semana->TotalKms);
+  $total_dias             += intval($semana->TotalDiasTrabalhados);
+  $total_despesasExtras   += floatval($semana->DespesasExtrasValor);
 
 }
 
@@ -58,6 +60,11 @@ $semanas_lista_footer = '<tfoot>
     </tfoot>';
 
 
+//Estatísticas
+
+
+
+/* PDF */
 
 $mpdf=new mPDF('', 'A4', 10, 'Tahoma, Helvetica, sans-serif',15, 15, 40, 16);
 $mpdf->SetDisplayMode('fullpage');
@@ -66,11 +73,62 @@ $stylesheet = file_get_contents(get_config('SITE_PATH') . 'reports/reports.css')
 $mpdf->WriteHTML($stylesheet, 1);
 
 $tpl = new girafaTpl('mensal.tpl');
-$tpl->setValue('%%PAGE_TITLE%%', mb_strtoupper('Relatório do mês Março de 2017','UTF-8'));
+
+$tpl->setValue('%%PAGE_TITLE%%', mb_strtoupper('Relatório do mês ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y'),'UTF-8'));
+$tpl->setValue('%%CARRO%%', carro_Descricao());
+$tpl->setValue('%%CARRO_PLACA%%', carro_Placa());
+
 $tpl->setValue('%%SEMANAS_LISTA%%', $semanas_lista);
 $tpl->setValue('%%SEMANAS_LISTA_FOOTER%%', $semanas_lista_footer);
 
-//die($tpl->GetHtml());
+
+$consumo_combustivel_lts = carro_consumo_combustivel_litros($total_kms);
+$consumo_combustivel = carro_consumo_combustivel_valor($total_kms);
+$consumo_documentacao = carro_media_documentacao_dia($total_dias);
+$consumo_seguro = carro_media_seguro_dia($total_dias);
+$consumo_lavacao = carro_media_lavacao_dia($total_dias);
+$consumo_depreciacao = carro_media_depreciacao_dia($total_dias);
+$consumo_oleo = carro_consumo_oleo_valor($total_kms);
+$consumo_pneus = carro_consumo_pneus_valor($total_kms);
+$consumo_pastilhas = carro_consumo_pastilhas_valor($total_kms);
+$consumo_discos = carro_consumo_discos_valor($total_kms);
+
+//$provisao
+$provisao = 0.00;
+$provisao += $consumo_combustivel;
+$provisao += $total_despesasExtras;
+$provisao += $consumo_documentacao;
+$provisao += $consumo_seguro;
+$provisao += $consumo_lavacao;
+$provisao += $consumo_depreciacao;
+$provisao += $consumo_oleo;
+$provisao += $consumo_pneus;
+$provisao += $consumo_pastilhas;
+$provisao += $consumo_discos;
+
+$saldo_semana = floatval($total_ganhos - $provisao);
+
+$tpl->setValue('%%DESPESA_GANHOS%%', number_format($total_ganhos, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_EXTRAS%%', number_format($total_despesasExtras, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_COMBUSTIVEL_LITROS%%', number_format($consumo_combustivel_lts, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_COMBUSTIVEL%%', number_format($consumo_combustivel, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_DOCUMENTACAO%%', number_format($consumo_documentacao, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_SEGURO%%', number_format($consumo_seguro, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_LAVACAO%%', number_format($consumo_lavacao, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_LAVACAO_FREQUENCIA%%', carro_lavacaofrequencia_string());
+$tpl->setValue('%%DESPESA_DEPRECIACAO_TAXA%%', number_format($reg_carro->DepreciacaoAnual, 1, ',', '.'));
+$tpl->setValue('%%DESPESA_DEPRECIACAO%%', number_format($consumo_depreciacao, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_OLEO%%', number_format($consumo_oleo, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_PNEUS%%', number_format($consumo_pneus, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_PASTILHAS%%', number_format($consumo_pastilhas, 2, ',', '.'));
+$tpl->setValue('%%DESPESA_DISCOS%%', number_format($consumo_discos, 2, ',', '.'));
+
+
+$tpl->setValue('%%SALDO_SEMANA%%', number_format($saldo_semana, 2, ',', '.'));
+$tpl->setValue('%%LUCRO%%', number_format($saldo_semana, 2, ',', '.'));
+$tpl->setValue('%%PROVISAO%%', number_format($provisao, 2, ',', '.'));
+
+
 
 $mpdf->WriteHTML($tpl->GetHtml());
 

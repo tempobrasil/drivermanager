@@ -14,7 +14,7 @@
 </htmlpageheader>
 <sethtmlpageheader name="myHTMLHeader1" page="O" value="on" show-this-page="1" />
 
-<pagefooter name="MyFooter1" content-left="{DATE j-m-Y}" content-center="Página {PAGENO} de {nbpg}" content-right="%%PAGE_TITLE%%" footer-style="font-size: 11px;"/>
+<pagefooter name="MyFooter1" content-left="{DATE j/m/Y}" content-center="Página {PAGENO} de {nbpg}" content-right="%%PAGE_TITLE%%" footer-style="font-size: 11px;"/>
 <setpagefooter name="MyFooter1"  page="O" value="on" show-this-page="1" />
 
 
