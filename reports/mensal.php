@@ -129,7 +129,7 @@ $tpl->setValue('%%LUCRO%%', number_format($saldo_semana, 2, ',', '.'));
 $tpl->setValue('%%PROVISAO%%', number_format($provisao, 2, ',', '.'));
 
 
-
+die($tpl->GetHtml());
 $mpdf->WriteHTML($tpl->GetHtml());
 
 $mpdf->Output();
