@@ -54,6 +54,24 @@ $TotalTempo                 = intval($SegTempo) + intval($TerTempo) + intval($Qu
 $TotalGanhos                = floatval($SegGanhos) + floatval($TerGanhos) + floatval($QuaGanhos) + floatval($QuiGanhos) + floatval($SexGanhos) + floatval($SabGanhos) + floatval($DomGanhos);
 
 
+//calcula Dias Trabalhados..
+$diasTrabalhados = 0;
+
+if($SegKms > 0)
+  $diasTrabalhados++;
+if($TerKms > 0)
+  $diasTrabalhados++;
+if($QuaKms > 0)
+  $diasTrabalhados++;
+if($QuiKms > 0)
+  $diasTrabalhados++;
+if($SexKms > 0)
+  $diasTrabalhados++;
+if($SabKms > 0)
+  $diasTrabalhados++;
+if($DomKms > 0)
+  $diasTrabalhados++;
+
 $post = new girafaTablePost();
 $post->table = 'Semanas';
 
@@ -105,10 +123,11 @@ $post->AddFieldString('DomGanhos',                $DomGanhos);
 $post->AddFieldString('DespesasExtrasDescricao',  $DespesasExtrasDescricao);
 $post->AddFieldString('DespesasExtrasValor',      $DespesasExtrasValor);
 
-$post->AddFieldString('TotalKms',                   $TotalKms);
-$post->AddFieldInteger('TotalTempo',                $TotalTempo);
-$post->AddFieldInteger('TotalCorridas',             $TotalCorridas);
-$post->AddFieldString('TotalGanhos',                $TotalGanhos);
+$post->AddFieldString('TotalKms',                 $TotalKms);
+$post->AddFieldInteger('TotalTempo',              $TotalTempo);
+$post->AddFieldInteger('TotalCorridas',           $TotalCorridas);
+$post->AddFieldString('TotalGanhos',              $TotalGanhos);
+$post->AddFieldInteger('TotalDiasTrabalhados',    $diasTrabalhados);
 
 $sql = $post->GetSql();
 

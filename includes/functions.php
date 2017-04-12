@@ -126,6 +126,7 @@ function LoadRecord($table, $value, $fieldName = 'ID'){
 
   $sql = 'SELECT * FROM ' . $table;
   $sql .= " WHERE Usuario = '" . $login->user_id . "' AND " . $fieldName . " = '" . $value . "'";
+  //die($sql);
   $res = $db->LoadObjects($sql);
 
   if(count($res) <= 0)

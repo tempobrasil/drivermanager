@@ -27,33 +27,34 @@ function carro_load(){
   }
 }
 
-function carro_media_documentacao_dia(){
+function carro_media_documentacao_dia($dias = 1){
 
   global $carro_db;
   carro_load();
 
   $valor = $carro_db->DocumentacaoValor;
   $valor = floatval($valor / 365);
-
+  $valor = floatval($valor * $dias);
 
   return decimalFromDB($valor);
 
 }
 
-function carro_media_seguro_dia(){
+function carro_media_seguro_dia($dias = 1){
 
   global $carro_db;
   carro_load();
 
   $valor = $carro_db->SeguroValor;
   $valor = floatval($valor / 365);
+  $valor = floatval($valor * $dias);
 
 
   return decimalFromDB($valor);
 
 }
 
-function carro_media_lavacao_dia(){
+function carro_media_lavacao_dia($dias = 1){
 
   global $carro_db;
   carro_load();
@@ -74,8 +75,26 @@ function carro_media_lavacao_dia(){
 
   }
 
+  $valor = floatval($valor * $dias);
+
 
     return decimalFromDB($valor);
+
+}
+
+function carro_media_depreciacao_dia($dias = 1){
+
+  global $carro_db;
+  carro_load();
+
+  $valor = $carro_db->ValorFIPE;
+  $taxa = $carro_db->DepreciacaoAnual;
+  $valorAno = (($valor / 100) * $taxa);
+  $valorDia = floatval($valorAno / 365);
+
+  $valorDia = floatval($valorDia * $dias);
+
+  return $valorDia;
 
 }
 
@@ -138,20 +157,7 @@ function carro_media_pneus_km(){
 
 }
 
-function carro_media_depreciacao_dia(){
 
-  global $carro_db;
-  carro_load();
-
-  $valor = $carro_db->ValorFIPE;
-  $taxa = $carro_db->DepreciacaoAnual;
-  $valorAno = (($valor / 100) * $taxa);
-  $valorDia = floatval($valorAno / 365);
-
-
-  return $valorDia;
-
-}
 
 function carro_consumo_combustivel_litros($km){
   global $carro_db;

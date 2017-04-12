@@ -132,22 +132,22 @@ if(!empty($form->reg->ID)) {
 
     $html .= '<tr><td>Documentação do Carro</td>
                 <td>Anual</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_media_documentacao_dia(), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_media_documentacao_dia($form->reg->TotalDiasTrabalhados), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Seguro do Carro</td>
                 <td>Anual</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_media_seguro_dia(), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_media_seguro_dia($form->reg->TotalDiasTrabalhados), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Lavação do Carro</td>
                 <td>Semanal</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_media_lavacao_dia(), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_media_lavacao_dia($form->reg->TotalDiasTrabalhados), 2, ',', '.') . '</span></td>
              </tr>';
 
     $html .= '<tr><td>Depreciação</td>
                 <td>' . number_format($carro_db->DepreciacaoAnual, 1, ',', '.') . '% a.a.</td>
-                <td><span class="label label-danger">R$ ' . number_format(carro_media_depreciacao_dia(), 2, ',', '.') . '</span></td>
+                <td><span class="label label-danger">R$ ' . number_format(carro_media_depreciacao_dia($form->reg->TotalDiasTrabalhados), 2, ',', '.') . '</span></td>
             </tr>';
 
 

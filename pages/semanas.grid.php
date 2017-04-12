@@ -35,13 +35,18 @@ $field_tempo->alignCenter();
 $field_corridas = new girafaGRID_field('TotalCorridas', 'Corridas');
 $field_corridas->isInteger();
 $field_corridas->alignCenter();
-$field_corridas->width = 100;
+$field_corridas->width = 85;
+
+$field_dias = new girafaGRID_field('TotalDiasTrabalhados', 'Dias Trab.');
+$field_dias->isInteger();
+$field_dias->alignCenter();
+$field_dias->width = 85;
 
 $field_ganhos = new girafaGRID_field('TotalGanhos', 'Ganhos');
 $field_ganhos->isMoney();
 
 
-$grid->addFields(array($field_data, $field_kms, $field_tempo, $field_corridas, $field_ganhos));
+$grid->addFields(array($field_data, $field_kms, $field_tempo, $field_corridas, $field_dias, $field_ganhos));
 
 $grid->PrintHTML();
 
@@ -55,12 +60,7 @@ function macro_grid_before($fieldname, $reg){
     }
 
     if($fieldname == 'SEMANA'){
-        $inicio_time = strtotime($reg->Data);
-        $seg = StartOfDayWeek(date('W', $inicio_time), date('Y', $inicio_time), true);
-
-        $dom = strtotime(date('Y-m-d', $seg) .  ' + 6 day');
-
-        return date('d/m/Y', $seg)  . ' à ' . date('d/m/Y', $dom);
+        return semana_getString($reg->Data);
     }
 
 }

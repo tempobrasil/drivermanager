@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i');
+body{
+  font-family: Tahoma, Helvetica, sans-serif;
+
+}
+.page_title{
+  font-family: 'Open Sans', sans-serif;
+  font-size:20px;
+  font-weight: 700;
+  text-align:center;
+  color: #000;
+}
+header{
+  margin-bottom: 50px;
+}
+h2{
+  font-size:18px;
+  margin: 5px 0;
+}
+.page_subtitle{
+  text-align: center;
+  font-size: 12px;
+}
+p{
+  margin: 0;
+  margin-bottom: 5px;
+}
+hr {
+  width: 100%;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #000;
+}
+table{
+  margin-bottom: 10px;
+}
+
+table th,
+table td{
+  padding: 2px 5px;
+}
+table thead tr th{
+  background-color: #000;
+  color: #FFF;
+}
+
+table tfoot tr td{
+  background-color: #CCC;
+}
+
+p.small{
+  font-size: 10px;
+  line-height: 15px;
+}

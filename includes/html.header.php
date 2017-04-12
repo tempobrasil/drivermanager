@@ -57,9 +57,14 @@ $login->verify();
           <a href="<?= GetLink('dashboard'); ?>" title="Custos Gerais"><i class="fa fa-money"></i> <span class="nav-label">Custos Gerais</span></a>
         </li>
 
-        <li <?= GetPage() == 'relatorios'?'class="active"':null; ?>>
-          <a href="<?= GetLink('em-breve'); ?>" title="Painel"><i class="fa fa-th-large"></i> <span class="nav-label">Relatórios</span></a>
+        <li <?= GetPage() == 'relatorio'?'class="active"':null; ?>>
+          <a href="<?= GetLink('semanas'); ?>"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="nav-label">Relatórios</span> <span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li><a href="<?= GetLink('relatorio/mensal'); ?>"><i class="fa fa-file-o" aria-hidden="true"></i> Balanço Mensal</a></li>
+          </ul>
         </li>
+
+
 
       </ul>
 

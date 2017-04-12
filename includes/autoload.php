@@ -2,6 +2,8 @@
 session_start();
 date_default_timezone_set('America/Sao_Paulo');
 
+include('mpdf60/mpdf.php');
+
 include('config.php');
 include('functions.php');
 include('functions.form.php');
@@ -15,6 +17,8 @@ include('girafa.date.php');
 
 include('obj.grid.php');
 include('obj.form.php');
+include('obj.reports.php');
+include('obj.tpl.php');
 
 /* Objetos Girafa */
 $db = new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('DB_USER'), get_config('DB_PASS'));
