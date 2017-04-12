@@ -4,7 +4,7 @@
     <header>
       <table width="100%" border="0" cellspacing="5">
         <tr>
-          <td width="180px"><img src="%%SITE_URL%%/img/resports_logo.png" width="180px"></td>
+          <td width="180px"><img src="%%SITE_URL%%img/resports_logo.png" width="180px"></td>
           <td class="page_title" align="right" valign="middle">%%PAGE_TITLE%%</td>
         </tr>
       </table>
