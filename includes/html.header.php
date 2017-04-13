@@ -53,14 +53,27 @@ $login->verify();
           <a href="<?= GetLink('carro'); ?>" title="Informações do Seu Carro"><i class="fa fa-car"></i> <span class="nav-label">Carro</span></a>
         </li>
 
-        <li <?= GetPage() == 'custos'?'class="active"':null; ?>>
-          <a href="<?= GetLink('dashboard'); ?>" title="Custos Gerais"><i class="fa fa-money"></i> <span class="nav-label">Custos Gerais</span></a>
-        </li>
-
         <li <?= GetPage() == 'relatorio'?'class="active"':null; ?>>
           <a href="<?= GetLink('semanas'); ?>"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="nav-label">Relatórios</span> <span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
             <li><a href="<?= GetLink('relatorio/mensal'); ?>"><i class="fa fa-file-o" aria-hidden="true"></i> Balanço Mensal</a></li>
+          </ul>
+        </li>
+
+
+        <li <?= GetPage() == 'relatorio'?'class="active"':null; ?>>
+          <a href="<?= GetLink('semanas'); ?>"><i class="fa fa-calculator" aria-hidden="true"></i> <span class="nav-label">Servicos</span> <span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li>
+
+              <a href="#" id="damian">UBER <span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+
+              <li><a href="https://www.uber.com/pt-BR/fare-estimate" target="_blank">Estimativa de viagem</a></li>
+
+          </ul>
+
+        </li>
           </ul>
         </li>
 
