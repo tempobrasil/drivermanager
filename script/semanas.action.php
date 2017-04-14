@@ -9,6 +9,7 @@ $Data                       = $_POST['Data'];
 $d = explode(' ', $Data);
 $Data = $d[0];
 $Data                       = dataDDMMYYYYtoYYYYMMDD($Data);
+$Servico                    = trim($_POST['Servico']);
 
 $SegKms                     = decimalToDB($_POST['SegKms']);
 $SegCorridas                = integerToDB($_POST['SegCorridas']);
@@ -83,7 +84,8 @@ if(isset($_POST['id']) > 0){
 $post->AddFieldInteger('Usuario',     $login->user_id);
 $post->AddFieldInteger('Carro',       carro_ID());
 
-$post->AddFieldString('Data',         $Data);
+$post->AddFieldString('Data',                     $Data);
+$post->AddFieldString('Servico',                  $Servico);
 
 $post->AddFieldString('SegKms',                   $SegKms);
 $post->AddFieldInteger('SegTempo',                $SegTempo);
@@ -130,6 +132,8 @@ $post->AddFieldString('TotalGanhos',              $TotalGanhos);
 $post->AddFieldInteger('TotalDiasTrabalhados',    $diasTrabalhados);
 
 $sql = $post->GetSql();
+
+//die($sql);
 
 $db->Execute($sql);
 

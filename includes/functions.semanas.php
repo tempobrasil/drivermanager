@@ -26,13 +26,24 @@ function semanas_timeToInt($str){
   return $minutos;
 }
 
-function semana_getString($date){
+function semana_getString($date, $labelShow = true){
+
+  if(empty($date))
+    return null;
+
   $inicio_time = strtotime($date);
   $seg = StartOfDayWeek(date('W', $inicio_time), date('Y', $inicio_time), true);
 
   $dom = strtotime(date('Y-m-d', $seg) .  ' + 6 day');
 
-  return date('d/m/Y', $seg)  . ' à ' . date('d/m/Y', $dom) . ((StartOfDayWeek(date('W'), date('Y'), true) == $seg)?' <span class="label label-info">semana atual</span>':null);
+  $str  =  date('d/m/Y', $seg)  . ' à ' . date('d/m/Y', $dom);
+
+  if($labelShow){
+    if(StartOfDayWeek(date('W'), date('Y'), true) == $seg)
+      $str .= ' <span class="label label-info">semana atual</span>';
+  }
+
+  return $str;
 }
 
 ?>

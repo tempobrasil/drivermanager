@@ -16,7 +16,7 @@ $options_servicos = array(
     'UBR' => array('legend' => 'Uber',       'disabled' => (!carro_AtendeUber()))
 );
 
-$html .= '<div class="col-sm-4">' . form_field_list('Serviço', $options_servicos, @$form->reg->Servico, null, true) . '</div>';
+$html .= '<div class="col-sm-4">' . form_field_list('Servico', $options_servicos, @$form->reg->Servico, null, true, 'select_servico') . '</div>';
 $box->AddContent($html);
 
 
@@ -262,113 +262,132 @@ if(!empty($form->reg->ID)) {
 
 
 <script>
+
+  function carregaSemanas(val, callback){
+
+    $('.input-group.date.week').datepicker('remove');
+    //$('.input-group.date.week input').val('<?= semana_getString(@$form->reg->Data, false); ?>');
+    $('.input-group.date.week input').val('');
+
+
+    semanasJaCadastradas = new Array();
+
+    if(val.length > 0) {
+
+      $.ajax({
+        url: "<?= get_config('SITE_URL'); ?>script/ajax.semanas.jaCadastradas.php",
+        type: "POST",
+        data: {
+          "Servico": val
+        },
+        success: function (msg) {
+
+          console.log(msg);
+          semanasJaCadastradas = msg.split('|');
+
+
+          $('.input-group.date.week').datepicker({
+            autoclose: true,
+            weekStart: 1,
+            format: "dd/MM/yyyy",
+            forceParse: false,
+            beforeShowDay: function (day) {
+
+              console.log('--- datepicker beforeShowDay');
+
+              var d = forceZeros(day.getDate(),2) + '/' + forceZeros(day.getMonth() +1,2) + '/' + forceZeros(day.getFullYear(),4);
+
+              if(semanasJaCadastradas.indexOf(d) > -1) {
+                console.log(' ---- ' + d + ' ---- Semana já cadastrada');
+                return {
+                  enabled: false
+                }
+              }
+
+            },
+
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            calendarWeeks: true,
+            currentText: 'Hoje',
+            language: "pt-BR"
+
+
+          }).on("changeDate", function (e) {
+            console.log('--- datepicker changeDate');
+
+            var date = e.date;
+
+            GetDateDisplay(date);
+
+          }).on('show', function (e) {
+            console.log('--- datepicker show');
+
+            $('.datepicker').find('.active').parent().addClass('active');
+            if($('.datepicker .day.active')){
+              $('.datepicker .day.active').parent().find('.day').addClass('active');
+            }
+
+            //verifica se essa semana (atual) já está utilizada e desativa o botão "HOJE"
+            if(semanasJaCadastradas.indexOf('<?= date('d/m/Y'); ?>') > -1) {
+              $('.datepicker th.today').click(function(){
+                alert('A semana atual já está cadastrada.');
+                return false;
+              });
+            }
+
+
+          })
+
+
+          callback();
+        }
+      });
+
+    }
+
+  }
+
+
     $(document).ready(function() {
 
-      var startDate
-      var endDate;
-
+      var servicoVal = $('.select_servico').val();
+      carregaSemanas(servicoVal
       <?
-      $sql  = 'SELECT Data FROM Semanas WHERE Usuario = ' . $login->user_id;
-
-      if($form->isEdit)
-        $sql .= ' AND ID <> ' . $form->reg->ID;
-
-      $semanas = $db->LoadObjects($sql);
-
-      $dias = array();
-
-      foreach($semanas as $semana){
-
-        $data = new girafaDate($semana->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
-
-          $dias[] = '"' . $data->GetDate('d/m/Y') . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +1 day')) . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +2 day')) . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +3 day')) . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +4 day')) . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +5 day')) . '"';
-          $dias[] = '"' . date('d/m/Y', strtotime($data->GetDate('Y-m-d') . ' +6 day')) . '"';
-
-      }
+        if($form->isEdit){
+        $dataAtual = new girafaDate($form->reg->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
       ?>
-      var semanasJaCadastradas = [<?= implode(', ', $dias); ?>];
-
-
-      $('.input-group.date.week').datepicker('remove');
-      $('.input-group.date.week').datepicker({
-        autoclose: true,
-        weekStart: 1,
-        format: "dd/MM/yyyy",
-        forceParse: false,
-        beforeShowDay: function (day) {
-
-          var d = forceZeros(day.getDate(),2) + '/' + forceZeros(day.getMonth() +1,2) + '/' + forceZeros(day.getFullYear(),4);
-          if(semanasJaCadastradas.indexOf(d) > -1) {
-            console.log(' ---- ' + d + ' ---- Semana já cadastrada');
-            return {
-              enabled: false
-            }
-          }
-
-        },
-
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        calendarWeeks: true,
-        currentText: 'Hoje',
-        language: "pt-BR"
-
-
-      }).on("changeDate", function (e) {
-        var date = e.date;
-
-        GetDateDisplay(date);
-
-      }).on("onSelect", function (e) {
-
-        console.log(' >>>>>>>>>> OnSelect');
-
-      }).on('show', function (e) {
-        $('.datepicker').find('.active').parent().addClass('active');
-        if($('.datepicker .day.active')){
-          $('.datepicker .day.active').parent().find('.day').addClass('active');
+      , function(){
+          GetDateDisplay(new Date("<?= $dataAtual->GetDate('Y'); ?>", "<?= ($dataAtual->GetDate('m')-1); ?>", "<?= $dataAtual->GetDate('d'); ?>"));
         }
-
-        //verifica se essa semana (atual) já está utilizada e desativa o botão "HOJE"
-        if(semanasJaCadastradas.indexOf('<?= date('d/m/Y'); ?>') > -1) {
-          $('.datepicker th.today').click(function(){
-            alert('A semana atual já está cadastrada.');
-            return false;
-          });
+      <?
         }
+      ?>);
 
-
-      })
-
-      var date = $('.input-group.date.week').datepicker("getDate");
-
-      if(date != 'Invalid Date')
-        GetDateDisplay(date);
+      $('.select_servico').change(function(){
+        carregaSemanas($(this).val());
+      });
 
     })
 
   function GetDateDisplay(date){
 
-
     startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay()+1);
     endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 7);
 
     $('.input-group.date.week').datepicker('update', startDate);
-    $('.input-group.date.week input').val(forceZeros(startDate.getDate(), 2) + '/' + forceZeros(startDate.getMonth() + 1, 2) + '/' + forceZeros(startDate.getFullYear(), 4) + ' até ' + forceZeros(endDate.getDate(), 2) + '/' + forceZeros(endDate.getMonth() + 1, 2) + '/' + forceZeros(endDate.getFullYear(), 4));
+    $('.input-group.date.week input').val(forceZeros(startDate.getDate(), 2) + '/' + forceZeros(startDate.getMonth() + 1, 2) + '/' + forceZeros(startDate.getFullYear(), 4) + ' à ' + forceZeros(endDate.getDate(), 2) + '/' + forceZeros(endDate.getMonth() + 1, 2) + '/' + forceZeros(endDate.getFullYear(), 4));
+
   }
 
-    $('.input-group.date.week input').attr('readonly', 'true').keydown(function(){ return false; });
-
+  //não permite ser digitado no campo de Semana
+  $('.input-group.date.week input').attr('readonly', 'true').keydown(function(){ return false; });
 
 
   $('.form_semana').submit(function(){
 
     var date = $('.input-group.date.week').datepicker("getDate");
+
     if(date == 'Invalid Date'){
 
       alert('Você precisa especificar qual a semana a qual deseja controlar.');
@@ -376,7 +395,6 @@ if(!empty($form->reg->ID)) {
 
       var deslocamento = $('.input-group.date.week').offset().top - 200;
       $('html, body').animate({ scrollTop: deslocamento }, 'slow');
-
 
       return false;
     }
