@@ -190,4 +190,27 @@ function form_field_hidden($name, $value){
   return $html;
 
 }
+
+function form_field_check($name, $value, $default = 'N', $class = null){
+
+  $html = '<input type="checkbox" ';
+
+  $html .= ' name="' . trim($name) . '"';
+
+  $html .= ' class="i-checks ' . $class . (!empty($mask)?' mask':null) .'"';
+
+  $html .= ' value="S"';
+
+  if(GetParam(GetParamsCount()-1) == 'add')
+    $value = $default;
+
+  if($value == 'S')
+    $html .= ' checked';
+
+
+  $html .= ' >';
+
+  return $html;
+
+}
 ?>

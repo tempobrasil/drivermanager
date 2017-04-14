@@ -27,6 +27,8 @@ $LavacaoValor           = decimalToDB($_POST['LavacaoValor']);
 $LavacaoFrequencia      = $_POST['LavacaoFrequencia'];
 $SeguroValor            = decimalToDB($_POST['SeguroValor']);
 $DocumentacaoValor      = decimalToDB($_POST['DocumentacaoValor']);
+$AtendeParticular       = (@$_POST['AtendeParticular'] == 'S'?'S':'N');
+$AtendeUber             = (@$_POST['AtendeUber'] == 'S'?'S':'N');
 
 $post = new girafaTablePost();
 $post->table = 'Carros';
@@ -58,6 +60,8 @@ $post->AddFieldString('LavacaoValor',           $LavacaoValor);
 $post->AddFieldString('LavacaoFrequencia',      $LavacaoFrequencia);
 $post->AddFieldString('SeguroValor',            $SeguroValor);
 $post->AddFieldString('DocumentacaoValor',      $DocumentacaoValor);
+$post->AddFieldString('AtendeParticular',       $AtendeParticular);
+$post->AddFieldString('AtendeUber',             $AtendeUber);
 
 $sql = $post->GetSql();
 //die($sql);

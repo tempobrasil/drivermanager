@@ -192,6 +192,17 @@ $box->AddContent($html);
 
 $form->AddBox($box);
 
+/* Atendimento */
+$box = new girafaFORM_box('Serviços', 'Especifiquei quais atendimentos vocês fazer hoje', 6);
+
+$html  = '<label class="col-sm-4 control-label">' . form_field_check('AtendeParticular', @$form->reg->AtendeParticular) . ' Particular</label>';
+$box->AddContent($html);
+
+$html  = '<label class="col-sm-4 control-label">' . form_field_check('AtendeUber', @$form->reg->AtendeUber) . ' Uber</label>';
+$box->AddContent($html);
+
+$form->AddBox($box);
+
 $form->PrintHTML();
 
 template_getFooter();
