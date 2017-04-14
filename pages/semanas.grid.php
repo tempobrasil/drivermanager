@@ -2,6 +2,7 @@
 template_getHeader();
 
 $grid = new girafaGRID('Semanas', 'Semanas');
+$grid->sqlOrders = 'Data DESC';
 
 $sql  = 'SELECT Data FROM Semanas GROUP BY YEAR(Data), MONTH(Data)';
 $meses = $db->LoadObjects($sql);
@@ -25,6 +26,9 @@ if(!$mesAtual) {
 $field_data = new girafaGRID_field('SEMANA', 'Semana');
 $field_data->isCustom();
 
+$field_servico = new girafaGRID_field('SERVICO', 'Serviço');
+$field_servico->isCustom();
+
 $field_kms = new girafaGRID_field('TotalKms', 'Kms');
 $field_kms->isDecimal();
 
@@ -46,7 +50,7 @@ $field_ganhos = new girafaGRID_field('TotalGanhos', 'Ganhos');
 $field_ganhos->isMoney();
 
 
-$grid->addFields(array($field_data, $field_kms, $field_tempo, $field_corridas, $field_dias, $field_ganhos));
+$grid->addFields(array($field_data, $field_servico, $field_kms, $field_tempo, $field_corridas, $field_dias, $field_ganhos));
 
 $grid->PrintHTML();
 
@@ -61,6 +65,14 @@ function macro_grid_before($fieldname, $reg){
 
     if($fieldname == 'SEMANA'){
         return semana_getString($reg->Data);
+    }
+
+    if($fieldname == 'SERVICO'){
+
+        switch($reg->Servico){
+            case 'PAR': return 'Particular';
+            case 'UBR': return 'Uber';
+        }
     }
 
 }

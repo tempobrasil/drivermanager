@@ -166,7 +166,20 @@ function form_field_list($name, $options = array(), $value, $default = null, $re
   $html .= '<option value=""></option>';
 
   foreach($options as $k=>$otp){
-    $html .= '<option value="' . $k . '" ' . (($value == $k)?'selected':null) . '>' . $otp . '</option>';
+
+    if(is_string($otp)){
+      $legend = $otp;
+      $disabled = false;
+
+    } else if(is_array($otp)){
+
+      $legend = $otp['legend'];
+
+      if(isset($otp['disabled']))
+        $disabled = $otp['disabled'];
+    }
+
+    $html .= '<option value="' . $k . '" ' . (($value == $k)?'selected':null) . ' ' . (($disabled)?'disabled':null) . '>' . $legend . '</option>';
   }
 
 

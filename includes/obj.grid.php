@@ -13,6 +13,7 @@ class girafaGRID
   public $filters = array();
 
   public $sqlWheres = null;
+  public $sqlOrders = null;
 
   function girafaGRID($table, $title){
     $this->table = $table;
@@ -78,11 +79,14 @@ class girafaGRID
 
     }
 
+    if(!empty($this->sqlOrders))
+      array_unshift($o,$this->sqlOrders);
+
     if(count($o) > 0)
       $sql .= ' ORDER BY ' . implode($o, ', ');
 
 
-    //echo($sql);
+    //  echo($sql);
 
     $this->reg = $db->LoadObjects($sql);
 

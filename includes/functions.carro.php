@@ -263,3 +263,16 @@ function carro_Descricao(){
 
   return $carro_db->Marca . ' ' . $carro_db->Modelo . ' ' . $carro_db->Ano;
 }
+
+function carro_AtendeUber(){
+  global $carro_db;
+  carro_load();
+
+  return ($carro_db->AtendeUber == 'S');
+}
+function carro_AtendeParticular(){
+  global $carro_db;
+  carro_load();
+
+  return ($carro_db->AtendeParticular == 'S');
+}

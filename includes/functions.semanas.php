@@ -32,7 +32,7 @@ function semana_getString($date){
 
   $dom = strtotime(date('Y-m-d', $seg) .  ' + 6 day');
 
-  return date('d/m/Y', $seg)  . ' à ' . date('d/m/Y', $dom);
+  return date('d/m/Y', $seg)  . ' à ' . date('d/m/Y', $dom) . ((StartOfDayWeek(date('W'), date('Y'), true) == $seg)?' <span class="label label-info">semana atual</span>':null);
 }
 
 ?>

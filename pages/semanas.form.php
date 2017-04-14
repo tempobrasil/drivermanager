@@ -9,9 +9,19 @@ $form->class = 'form_semana';
 $box = new girafaFORM_box('Dados Gerias');
 
 
+//Serviço
+$html  = '<label class="col-sm-2 control-label">Serviços</label>';
+$options_servicos = array(
+    'PAR' => array('legend' => 'Particular', 'disabled' => (!carro_AtendeParticular())),
+    'UBR' => array('legend' => 'Uber',       'disabled' => (!carro_AtendeUber()))
+);
+
+$html .= '<div class="col-sm-4">' . form_field_list('Serviço', $options_servicos, @$form->reg->Servico, null, true) . '</div>';
+$box->AddContent($html);
+
+
 //Data
 $html  = '<label class="col-sm-2 control-label">Semana</label>';
-//$html .= '<div class="col-sm-4"><div class="input-group date"><span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="week" id="calendarioSemanas" placeholder="Select Week" /></div></div>';
 $html .= '<div class="col-sm-4">' . form_field_date('Data', @$form->reg->Data, null, true, 'week') . '</div>';
 $box->AddContent($html);
 
