@@ -53,8 +53,6 @@ $form->PrintHTML();
         $('.download').val('VIW');
       }
 
-      alert($('form.form_relatorio').attr('target'));
-
     });
 
   });
