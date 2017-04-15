@@ -1,5 +1,6 @@
 <?
 $form = new girafaREPORTFORM('Balanço Mensal', 'mensal.php');
+$form->class = 'form_relatorio';
 
 
 $box = new girafaFORM_box('Filtros');
@@ -45,12 +46,14 @@ $form->PrintHTML();
 
       if ($(this).is(':checked')) {
 
-        $('form.form-report').attr('target', '');
+        $('form.form_relatorio').attr('target', '');
         $('.download').val('DOW');
       } else {
-        $('form.form-report').attr('target', '_blank');
+        $('form.form_relatorio').attr('target', '_blank');
         $('.download').val('VIW');
       }
+
+      alert($('form.form_relatorio').attr('target'));
 
     });
 
