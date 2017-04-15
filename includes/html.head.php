@@ -99,4 +99,8 @@
         var site_url = '<?= get_config('SITE_URL'); ?>';
     </script>
 
+
+    <link href="<?= get_config('SITE_URL'); ?>bower_components/bootstrap-device-debug/bootstrap-device-debug.css" rel="stylesheet">
+    <script src="<?= get_config('SITE_URL'); ?>bower_components/bootstrap-device-debug/bootstrap-device-debug.js"></script>
+
 </head>
