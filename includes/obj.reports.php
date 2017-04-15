@@ -62,7 +62,7 @@ class girafaREPORTFORM{
     // Content..
     $html  = "<div class=\"wrapper wrapper-content animated fadeInRight\">";
     $html .= "  <div class=\"row\">";
-    $html .= "    <form method=\"post\" class=\"$this->class form-horizontal\" action=\"" . get_config('SITE_URL') . "/reports/" . $this->script_action . "\">";
+    $html .= "    <form method=\"post\" class=\"$this->class form-report\" action=\"" . get_config('SITE_URL') . "/reports/" . $this->script_action . "\">";
 
     //Se for edição, adiciona campo oculto com ID
     if(isset($this->reg->ID)){

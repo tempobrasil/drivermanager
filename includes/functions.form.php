@@ -190,13 +190,14 @@ function form_field_list($name, $options = array(), $value, $default = null, $re
 
 }
 
-function form_field_hidden($name, $value){
+function form_field_hidden($name, $value, $class){
 
   $html = '<input type="hidden" ';
 
   $html .= ' name="' . trim($name) . '"';
 
-  $html .= ' value="' . $value . '"';
+  if(!empty($class))
+    $html .= ' class="' . $class . '"';
 
   $html .= ' >';
 

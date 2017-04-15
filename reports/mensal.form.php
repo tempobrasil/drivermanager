@@ -23,10 +23,37 @@ foreach($meses as $mes) {
 $html .= '<div class="col-sm-4">' . form_field_list('MES', $meses_array, null, date('Y-m')) . '</div>';
 $box->AddContent($html);
 
+$box->AddContentBreakLine();
+
+$html  = '<label class="col-sm-3 col-sm-offset-2 control-label">' . form_field_check('DOW', 'Y', 'N', 'download') . ' Baixar PDF</label>';
+$box->AddContent($html);
+
+$box->AddContent(form_field_hidden('Action', 'DOW', 'download'));
+
+
 $form->AddBox($box);
-
-
 
 $form->PrintHTML();
 
 ?>
+
+<script>
+
+  $(document).ready(function(){
+
+    $('.download').click(function(){
+
+      if ($(this).is(':checked')) {
+
+        $('form.form-report').attr('target', '');
+        $('.download').val('DOW');
+      } else {
+        $('form.form-report').attr('target', '_blank');
+        $('.download').val('VIW');
+      }
+
+    });
+
+  });
+
+</script>

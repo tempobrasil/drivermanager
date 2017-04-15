@@ -134,5 +134,8 @@ $tpl->setValue('%%PROVISAO%%', number_format($provisao, 2, ',', '.'));
 //die($tpl->GetHtml());
 $mpdf->WriteHTML($tpl->GetHtml());
 
-$mpdf->Output('drivermanagar_' . GeraLinkAmigavel($titulo) . '.pdf', 'D');
+if($_POST['Action'] == 'DOW')
+  $mpdf->Output('drivermanagar_' . GeraLinkAmigavel($titulo) . '.pdf', 'D');
+else
+  $mpdf->Output();
 ?>

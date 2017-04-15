@@ -159,7 +159,7 @@ class girafaFORM_box{
   }
 
   public function AddContentBreakLine(){
-    $html = '<div class="clearboth"></div>';
+    $html = '<div style="clear:both;margin-bottom: 10px;"></div>';
     $this->AddContent($html);
   }
 
