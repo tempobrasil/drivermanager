@@ -12,7 +12,7 @@ include(get_config('SITE_PATH') . 'includes/html.head.php');
             <img class="logo" src="<?= $SITE_URL; ?>img/logo_login.png" />
 
         </div>
-        <h3>Bem vindo ao Driver Manager <sup>for UBER</sup></h3>
+        <h3>Bem vindo ao Driver Manager</h3>
         <p>
             Preencha abaixo com suas credenciais para acessar o sistema.
         </p>
@@ -37,7 +37,7 @@ include(get_config('SITE_PATH') . 'includes/html.head.php');
             <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
             <a href="#"><small>Esqueceu sua senha?</small></a>
-            <p class="text-muted text-center"><small>É motorista UBER? Administre sua carreira com nosso sistema e ganhe ainda mais dinheiro.</small></p>
+            <p class="text-muted text-center"><small>É motorista autônomo? Administre sua carreira com nosso sistema e ganhe ainda mais dinheiro.</small></p>
             <a class="btn btn-sm btn-white btn-block" href="#">Crie uma conta agora!</a>
         </form>
 

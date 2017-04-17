@@ -14,7 +14,7 @@ template_getHeader();
             <h2><span class="text-navy">Em breve, novidades!</span>
               Logo estaremos cheio de novidades<br/> que ajudará ainda mais você a organizar sua carreira UBER.</h2>
 
-            <p>Equipe de Desenvolvimento da Driver Manager <sup>for UBER</sup></p>
+            <p>Equipe de Desenvolvimento da Driver Manager.</p>
 
 
           </div>

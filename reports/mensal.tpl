@@ -36,7 +36,7 @@
       </tr>
     </thead>
     <tr>
-      <td>Ganhos do UBER</td>
+      <td>Ganhos</td>
       <td align="center">&nbsp;</td>
       <td align="right">R$ %%DESPESA_GANHOS%%</td>
     </tr>
