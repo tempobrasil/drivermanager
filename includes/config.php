@@ -22,7 +22,7 @@ if( $_SERVER['HTTP_HOST'] == 'localhost'){
 }
 
 set_config('TITLE',                   '');
-set_config('SYSTEM_TITLE',            'Driver Manager [for UBER]');
+set_config('SYSTEM_TITLE',            'Driver Manager [Motorista Autônomo]');
 set_config('FOOTER_TEXT',            '<strong>Driver Manager [for UBER]</strong> v1 - &copy; 2017 - Todos os Direitos Reservados.');
 
 /* Banco de Dados */
