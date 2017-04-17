@@ -1,4 +1,6 @@
 <?
+$login->verify();
+
 template_getHeader();
 
 $rep = $params[1];

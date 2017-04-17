@@ -11,6 +11,7 @@
     <thead>
       <tr>
         <th  align="center" scope="col">Semana</th>
+        <th width="80" align="center" scope="col">Serviço</th>
         <th width="80" align="center" scope="col">Kms</th>
         <th width="100" align="center" scope="col">Dias Trab.</th>
         <th width="150" align="center" scope="col">Tempo Online</th>

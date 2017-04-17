@@ -46,4 +46,11 @@ function semana_getString($date, $labelShow = true){
   return $str;
 }
 
+function semana_GetNameService($abrev){
+  switch($abrev){
+    case 'PAR': return 'Particular';
+    case 'UBR': return 'Uber';
+  }
+}
+
 ?>

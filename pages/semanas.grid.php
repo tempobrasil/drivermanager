@@ -68,11 +68,7 @@ function macro_grid_before($fieldname, $reg){
     }
 
     if($fieldname == 'SERVICO'){
-
-        switch($reg->Servico){
-            case 'PAR': return 'Particular';
-            case 'UBR': return 'Uber';
-        }
+        return semana_GetNameService($reg->Servico);
     }
 
 }

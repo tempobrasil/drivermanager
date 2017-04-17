@@ -29,6 +29,7 @@ foreach($semanas as $semana){
   //Grid semanas
   $html = '<tr>
       <td align="center">' . semana_getString($semana->Data) . '</td>
+      <td align="center">' . semana_GetNameService($semana->Servico) . '</td>
       <td align="center">' . number_format($semana->TotalKms, 2, ',', '.') . '</td>
       <td align="center">' . intval($semana->TotalDiasTrabalhados) . '</td>
       <td align="center">' . semanas_intToTime($semana->TotalTempo) . '</td>
@@ -50,6 +51,7 @@ foreach($semanas as $semana){
 // Grid footer
 $semanas_lista_footer = '<tfoot>
       <tr>
+        <td align="center"></td>
         <td align="center"></td>
         <td align="center">' . number_format($total_kms, 2, ',', '.') . '</td>
         <td align="center">' . $total_dias . '</td>
