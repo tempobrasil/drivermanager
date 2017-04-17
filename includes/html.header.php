@@ -61,8 +61,8 @@ $login->verify();
         </li>
 
 
-        <li <?= GetPage() == 'relatorio'?'class="active"':null; ?>>
-          <a href="<?= GetLink('semanas'); ?>"><i class="fa fa-calculator" aria-hidden="true"></i> <span class="nav-label">Servicos</span> <span class="fa arrow"></span></a>
+        <li <?= GetPage() == 'servicos'?'class="active"':null; ?>>
+          <a href="<?= GetLink('servicos'); ?>"><i class="fa fa-calculator" aria-hidden="true"></i> <span class="nav-label">Servicos</span> <span class="fa arrow"></span></a>
           <ul class="nav nav-second-level collapse">
             <li>
 
@@ -74,6 +74,11 @@ $login->verify();
           </ul>
 
         </li>
+
+            <li <?= GetPage() == 'calculadora'?'class="active"':null; ?>>
+              <a href="<?= GetLink('calculadora'); ?>" title="Informações do Seu Carro">Calculadora</a>
+            </li>
+
           </ul>
         </li>
 
