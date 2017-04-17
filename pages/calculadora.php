@@ -12,7 +12,7 @@ $box = new girafaFORM_box('Previsão de Corrida', 'Informe abaixo os parâmetros
 //Distância
 $html  = '<label class="col-lg-3 control-label">Distância (km)</label>';
 $html .= '<div class="col-lg-3">';
-$html .= form_field_number('KM', @$_GET['KM'], null);
+$html .= form_field_number('KMS', @$_GET['KMS'], null);
 $html .= '</div>';
 $box->AddContent($html);
 
@@ -36,7 +36,7 @@ $box = new girafaFORM_box('Valores', null, 4);
 //Distância
 $html  = '<label class="col-lg-6 control-label">Valor por Quilômetro</label>';
 $html .= '<div class="col-lg-6">';
-$html .= form_field_number('ValorKM', (isset($_GET['ValorKM'])?$_GET['ValorKM']:'1.10'), null, null);
+$html .= form_field_number('ValorKMS', (isset($_GET['ValorKMS'])?$_GET['ValorKMS']:'1.10'), null, null);
 $html .= '</div>';
 $box->AddContent($html);
 
@@ -48,6 +48,99 @@ $html .= '</div>';
 $box->AddContent($html);
 
 $form->AddBox($box);
+
+
+/* ESTATÍSTICAS */
+if(isset($_GET['KMS'])) {
+
+  $kms = $_GET['KMS'];
+  $provisoes = 0.00;
+
+
+  $box = new girafaFORM_box('Custo da Viagem', 'Veja abaixo algumas informações de custos para essa corrida.', 8);
+
+  $html = '<table class="table table-hover no-margins">
+                                <thead>
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th>Observações</th>
+                                    <th>Valor</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>';
+
+
+  $combustivel_lts = carro_consumo_combustivel_litros($kms);
+  $combustivel_valor = carro_consumo_combustivel_valor($kms);
+  $provisoes += $combustivel_valor;
+  $html .= '<tr><td>Combustível</td>
+                <td> ' . number_format($combustivel_lts, 2, ',', '.') . ' litros</td>
+                <td> <span class="label label-danger">R$ ' . number_format($combustivel_valor, 2, ',', '.') . '</span></td>
+            </tr>';
+
+  $oleo = carro_consumo_oleo_valor($kms);
+  $provisoes += $oleo;
+  $html .= '<tr><td>Óleo + Filtro</td>
+                <td></td>
+                <td><span class="label label-danger">R$ ' . number_format($oleo, 2, ',', '.') . '</span></td>
+             </tr>';
+
+  $pneus = carro_consumo_pneus_valor($kms);
+  $provisoes += $pneus;
+  $html .= '<tr><td>Pneus</td>
+                <td>O jogo</td>
+                <td><span class="label label-danger">R$ ' . number_format($pneus, 2, ',', '.') . '</span></td>
+             </tr>';
+
+  $pastilhas = carro_consumo_pastilhas_valor($kms);
+  $provisoes += $pastilhas;
+  $html .= '<tr><td>Pastilhas de Freio</td>
+                <td>O jogo</td>
+                <td><span class="label label-danger">R$ ' . number_format($pastilhas, 2, ',', '.') . '</span></td>
+             </tr>';
+
+  $discos = carro_consumo_discos_valor($kms);
+  $provisoes += $discos;
+  $html .= '<tr><td>Discos de Freio</td>
+                <td>O jogo</td>
+                <td><span class="label label-danger">R$ ' . number_format($discos, 2, ',', '.') . '</span></td>
+             </tr>';
+
+  $valorProvisoes = $provisoes;
+
+
+  $html .= '
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <td><strong>Saldo da Semana</strong></td>
+                                       <td></td>
+                                       <td><span class="label label-info">R$ ' . number_format($valorProvisoes, 2, ',', '.') . '</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>';
+
+
+  $box->AddContent($html);
+
+  $form->AddBox($box);
+
+
+  $box = new girafaFORM_box('Saldo do Dia', '', 4);
+
+  $valorCobrado = ( (floatval($_GET['KMS']) * floatval($_GET['ValorKMS'])) + (floatval(semanas_timeToInt($_GET['TEMPO'])) * floatval($_GET['ValorMIN'])) );
+  $valorLucro = floatval($valorCobrado - $valorProvisoes);
+  $html = '<div class="alert alert-success" style="font-size: 20px;"><strong>R$ ' . number_format($valorCobrado, 2, ',', '.') . '</strong> - Valor à cobrar</div>';
+  $html .= '<div class="alert alert-danger"><strong>R$ ' . number_format($valorProvisoes, 2, ',', '.') . '</strong> - Provisões para o Carro</div>';
+  $html .= '<div class="alert alert-info"><strong>R$ ' . number_format($valorLucro, 2, ',', '.') . '</strong> - Lucro do motorista</div>';
+
+  $box->AddContent($html);
+
+  $form->AddBox($box);
+
+}
 
 $form->PrintHTML();
 
