@@ -115,7 +115,7 @@ if(isset($_GET['KMS'])) {
 
                                 <tfoot>
                                     <tr>
-                                        <td><strong>Saldo da Semana</strong></td>
+                                        <td><strong>Total dos custos da viagem</strong></td>
                                        <td></td>
                                        <td><span class="label label-info">R$ ' . number_format($valorProvisoes, 2, ',', '.') . '</span></td>
                                     </tr>
