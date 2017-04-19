@@ -1,23 +1,23 @@
-﻿{{TEMPLATE}}
+{{TEMPLATE}}
 <content>
 
   <p>%%CARRO%% - Placa %%CARRO_PLACA%%</p>
   <hr>
 
   <h2>Ganhos</h2>
-  <p>Confira abaixo o relatório mensal das corridas feitas pelos aplicativos.</p>
+  <p>Confira abaixo o relatório semanal das corridas feitas pelos aplicativos.</p>
 
   <table width="800" border="0" cellspacing="5">
     <thead>
-      <tr>
-        <th  align="center" scope="col">Semana</th>
-        <th width="80" align="center" scope="col">Serviço</th>
-        <th width="80" align="center" scope="col">Kms</th>
-        <th width="100" align="center" scope="col">Dias Trab.</th>
-        <th width="150" align="center" scope="col">Tempo Online</th>
-        <th width="80" align="center" scope="col">Corridas</th>
-        <th width="120" align="right" scope="col">Ganho</th>
-      </tr>
+    <tr>
+      <th  align="center" scope="col">Semana</th>
+      <th width="80" align="center" scope="col">Serviço</th>
+      <th width="80" align="center" scope="col">Kms</th>
+      <th width="100" align="center" scope="col">Dias Trab.</th>
+      <th width="150" align="center" scope="col">Tempo Online</th>
+      <th width="80" align="center" scope="col">Corridas</th>
+      <th width="120" align="right" scope="col">Ganho</th>
+    </tr>
     </thead>
     %%SEMANAS_LISTA_FOOTER%%
 
@@ -26,16 +26,16 @@
   </table>
 
   <h2>Despesas</h2>
-  <p>Confira abaixo detalhamento do custo do seu mês.</p>
+  <p>Confira abaixo detalhamento do custo da sua semana.</p>
   <table width="800" border="0" cellspacing="5">
     <thead>
-      <tr>
-        <th scope="col">Descrição</th>
-        <th align="center" scope="col">Observação</th>
-        <th width="30" align="right" scope="col">Perc.</th>
-        <th align="right" scope="col">Valor</th>
+    <tr>
+      <th scope="col">Descrição</th>
+      <th align="center" scope="col">Observação</th>
+      <th width="30" align="right" scope="col">Perc.</th>
+      <th align="right" scope="col">Valor</th>
 
-      </tr>
+    </tr>
     </thead>
     <tr>
       <td>Ganhos</td>
@@ -104,12 +104,12 @@
       <td align="right">(-) R$ %%DESPESA_DISCOS%%</td>
     </tr>
     <tfoot>
-        <tr>
-          <td>Saldo da Semana (Lucro do Motorista)</td>
-          <td align="center">&nbsp;</td>
-          <td align="right">%%SALDO_SEMANA_PERC%%</td>
-          <td align="right">R$ %%SALDO_SEMANA%%</td>
-        </tr>
+    <tr>
+      <td>Saldo da Semana (Lucro do Motorista)</td>
+      <td align="center">&nbsp;</td>
+      <td align="right">%%SALDO_SEMANA_PERC%%</td>
+      <td align="right">R$ %%SALDO_SEMANA%%</td>
+    </tr>
     </tfoot>
   </table>
   <p class="small">
@@ -118,7 +118,7 @@
 
   <hr>
 
-  <h2>Resumo do mês</h2>
+  <h2>Resumo da semana</h2>
 
   <p>Provisão do carro: R$%%PROVISAO%%</p>
   <p style="font-size: 18px;">Lucro do motorista: <strong>R$ %%LUCRO%%</strong></p>

@@ -3,16 +3,18 @@ include('../includes/autoload.php');
 
 $login->verify();
 
-if(!isset($_POST['MES']))
+if(!isset($_POST['SEMANA']))
   die('Erro ao emitir relatório!');
 
-$mes = $_POST['MES'];
-$mesObj = new girafaDate($mes . '-01', ENUM_DATE_FORMAT::YYYY_MM_DD);
+$semana = $_POST['SEMANA'];
+
+$semanaObj = new girafaDate($semana, ENUM_DATE_FORMAT::YYYY_MM_DD);
+$semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+7 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
 
 $reg_carro = LoadRecord('Carros', $login->user_id, 'Usuario');
 
 $sql  = 'SELECT * FROM Semanas';
-$sql .= " WHERE DATE_FORMAT(Data, '%Y-%m') = '" . $mes . "'";
+$sql .= " WHERE Data = '" . $semana .  "'";
 $sql .= " AND Usuario = '" . $login->user_id . "'";
 $semanas = $db->LoadObjects($sql);
 
@@ -75,9 +77,9 @@ $mpdf->SetDisplayMode('fullpage');
 $stylesheet = file_get_contents(get_config('SITE_PATH') . 'reports/reports.css');
 $mpdf->WriteHTML($stylesheet, 1);
 
-$tpl = new girafaTpl('mensal.tpl');
+$tpl = new girafaTpl('semanal.tpl');
 
-$titulo = 'Relatório do mês ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y');
+$titulo = 'Relatório Semanal<br />(de ' . $semanaObj->GetFullDateForShorten() . ' à ' . $semana_ultimo_diaObj->GetFullDateForShorten() . ') ';
 
 $tpl->setValue('%%PAGE_TITLE%%', mb_strtoupper($titulo,'UTF-8'));
 $tpl->setValue('%%CARRO%%', carro_Descricao());

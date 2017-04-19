@@ -57,6 +57,7 @@ $login->verify();
           <a href="<?= GetLink('semanas'); ?>"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="nav-label">Relatórios</span> <span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
             <li><a href="<?= GetLink('relatorio/mensal'); ?>"><i class="fa fa-file-o" aria-hidden="true"></i> Balanço Mensal</a></li>
+            <li><a href="<?= GetLink('relatorio/semanal'); ?>"><i class="fa fa-file-o" aria-hidden="true"></i> Balanço Semanal</a></li>
           </ul>
         </li>
 

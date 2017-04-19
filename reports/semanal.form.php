@@ -1,30 +1,28 @@
 <?
-$form = new girafaREPORTFORM('Balanço Mensal', 'mensal.php');
+$form = new girafaREPORTFORM('Balanço Semanal', 'semanal.php');
 $form->class = 'form_relatorio';
 
 
 $box = new girafaFORM_box('Filtros');
 
 //Mês
-$html  = '<label class="col-sm-2 control-label">Mês</label>';
+$html  = '<label class="col-sm-2 control-label">Semana</label>';
 $meses_array = array();
-$sql  = 'SELECT Data FROM Semanas ';
+$sql  = 'SELECT Data FROM Semanas';
 $sql .= " WHERE Usuario = '" . $login->user_id . "'";
-$sql .= ' GROUP BY YEAR(Data), MONTH(Data)';
+$sql .= ' GROUP BY Data ';
 $sql .= ' ORDER BY Data DESC';
-$meses = $db->LoadObjects($sql);
+$semanas = $db->LoadObjects($sql);
 
-$mesAtual = false;
-foreach($meses as $mes) {
-  $mesObj = new girafaDate($mes->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
-  $mesSeguinteObj = strtotime($mesObj->GetDate('Y-m') . '-1 +1 month');
+foreach($semanas as $semana) {
+  $semanaObj = new girafaDate($semana->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
 
-  if($mesObj->GetDate('Y-m') == date('Y-m'))
-    $mesAtual = true;
-  $meses_array[$mesObj->GetDate('Y-m')] = 'Semanas de ' . $mesObj->GetMonthNameLong() . ' de ' . $mesObj->GetDate('Y');
+  $semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+7 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
+
+  $semanas_array[$semanaObj->GetDate('Y-m-d')] = $semanaObj->GetFullDateForLong() . ' à ' . $semana_ultimo_diaObj->GetFullDateForLong();
 }
 
-$html .= '<div class="col-sm-4">' . form_field_list('MES', $meses_array, null, date('Y-m')) . '</div>';
+$html .= '<div class="col-sm-4">' . form_field_list('SEMANA', $semanas_array, null, date('Y-m')) . '</div>';
 $box->AddContent($html);
 
 $box->AddContentBreakLine();

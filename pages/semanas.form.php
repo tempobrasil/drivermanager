@@ -106,7 +106,7 @@ $form->AddBox($box);
 
 /* Estatísticas */
 
-
+/*
 if(!empty($form->reg->ID)) {
 
 
@@ -220,11 +220,11 @@ if(!empty($form->reg->ID)) {
     $form->AddBox($box);
 
 }
-
+*/
 $form->PrintHTML();
 
 template_getFooter();
-
+/*
 if(!empty($form->reg->ID)) {
     ?>
     <script>
@@ -258,6 +258,7 @@ if(!empty($form->reg->ID)) {
 
     <?
 }
+*/
 ?>
 
 
