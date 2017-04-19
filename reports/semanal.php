@@ -1,4 +1,5 @@
 <?php
+
 include('../includes/autoload.php');
 
 $login->verify();

@@ -32,6 +32,8 @@
     <script src="<?= get_config('SITE_URL'); ?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="<?= get_config('SITE_URL'); ?>js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+    <script src="<?= get_config('SITE_URL'); ?>bower_components/rhinoJS/dist/rhinoJS.js"></script>
+
     <script src="<?= get_config('SITE_URL'); ?>bower_components/jquery-mask-plugin/dist/jquery.mask.js"></script>
 
     <script src="<?= get_config('SITE_URL'); ?>bower_components/bootstrap-confirmation2/bootstrap-confirmation.js"></script>

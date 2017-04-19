@@ -14,9 +14,9 @@ if(GetParam(0) == 'add' || GetParam(0) == 'edit'){ // INSERIR E EDITAR
 
     $sql = 'DELETE FROM ' . $tabela . ' WHERE Usuario = ' . $login->user_id . ' AND ID = ' . intval(base64_decode(GetParam(1)));
     if($db->Execute($sql)){
-        $_SESSION['grid_msg'] = 'O registro foi excluído com sucesso     :)';
+        $_SESSION['grid_msg'] = 'O registro foi excluï¿½do com sucesso     :)';
     } else {
-        $_SESSION['grid_msg_error'] = 'Ops! Aconteceu um problema e não foi possível excluir esse registro.';
+        $_SESSION['grid_msg_error'] = 'Ops! Aconteceu um problema e nÃ£o foi possÃ­vel excluir esse registro.';
     }
     header('LOCATION:' . GetLink(GetPage()));
 

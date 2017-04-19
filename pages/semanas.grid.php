@@ -49,8 +49,13 @@ $field_dias->width = 85;
 $field_ganhos = new girafaGRID_field('TotalGanhos', 'Ganhos');
 $field_ganhos->isMoney();
 
+$field_relatorio = new girafaGRID_field('RELATORIO', ' ');
+$field_relatorio->isCustom();
+$field_relatorio->alignCenter();
 
-$grid->addFields(array($field_data, $field_servico, $field_kms, $field_tempo, $field_corridas, $field_dias, $field_ganhos));
+
+
+$grid->addFields(array($field_data, $field_servico, $field_kms, $field_tempo, $field_corridas, $field_dias, $field_ganhos, $field_relatorio));
 
 $grid->PrintHTML();
 
@@ -71,7 +76,20 @@ function macro_grid_before($fieldname, $reg){
         return semana_GetNameService($reg->Servico);
     }
 
+    if($fieldname == 'RELATORIO'){
+        return '<a href="javascript:emitirRelatorioSemanal(\'' . $reg->Data . '\')"  data-toggle="confirmation" data-popout="true" data-singleton="true"  data-title="Você irá emitir um relatório dessa semana, porém com todos os aplicativos em que trabalhou nessa mesma semana. Deseja continuar?"><i class="fa fa-print" aria-hidden="true"></i></a>';
+    }
+
 }
 
 template_getFooter();
 ?>
+
+<script>
+    function emitirRelatorioSemanal(data){
+
+        var parametros = {SEMANA: data};
+        Form.send('<?= get_config('SITE_URL') . 'reports/semanal.php'; ?>', parametros, 'POST', '_blank');
+
+    }
+</script>
