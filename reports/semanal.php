@@ -9,7 +9,7 @@ if(!isset($_POST['SEMANA']))
 $semana = $_POST['SEMANA'];
 
 $semanaObj = new girafaDate($semana, ENUM_DATE_FORMAT::YYYY_MM_DD);
-$semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+7 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
+$semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+6 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
 
 $reg_carro = LoadRecord('Carros', $login->user_id, 'Usuario');
 

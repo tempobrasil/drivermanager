@@ -17,7 +17,7 @@ $semanas = $db->LoadObjects($sql);
 foreach($semanas as $semana) {
   $semanaObj = new girafaDate($semana->Data, ENUM_DATE_FORMAT::YYYY_MM_DD);
 
-  $semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+7 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
+  $semana_ultimo_diaObj = new girafaDate(date('Y-m-d', strtotime($semanaObj->GetDate('Y-m-d') . '+6 days')), ENUM_DATE_FORMAT::YYYY_MM_DD);
 
   $semanas_array[$semanaObj->GetDate('Y-m-d')] = $semanaObj->GetFullDateForLong() . ' à ' . $semana_ultimo_diaObj->GetFullDateForLong();
 }
