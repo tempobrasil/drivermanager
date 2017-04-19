@@ -8,6 +8,8 @@
 
     <title><?= get_config('SYSTEM_TITLE') . ' - ' . get_config('TITLE'); ?></title>
 
+    <link rel="icon" type="image/png" href="<?= get_config('SITE_URL'); ?>/img/favicon.png" />
+
     <!-- Arquivos CSS -->
 
     <link href="<?= get_config('SITE_URL'); ?>css/bootstrap.min.css" rel="stylesheet">
