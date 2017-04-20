@@ -76,7 +76,7 @@ body {
  * links - (_document-setup) 
  * ------------------------------------------------------------------- */
 a, a:visited {
-  color: #07617d;
+  color: #1ab394;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -332,7 +332,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #07617d;
+  background: #1ab394;
   position: absolute;
   left: -17px;
   top: 11px;
@@ -341,7 +341,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #07617d;
+  color: #1ab394;
 }
 
 dd {
@@ -471,7 +471,7 @@ td:last-child {
 }
 
 .pace .pace-progress {
-  background: #f9a828;
+  background: #1ab394;
   position: fixed;
   z-index: 900;
   top: 0;
@@ -510,7 +510,7 @@ td:last-child {
   margin-left: -30px;
   margin-top: -30px;
   padding: 0;
-  background-color: #f9a828;
+  background-color: #1ab394;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
   animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -811,8 +811,8 @@ button.stroke.large, .button.stroke.large {
 }
 
 button.stroke:hover, .button.stroke:hover {
-  border: 3px solid #f9a828;
-  color: #f9a828;
+  border: 3px solid #1ab394;
+  color: #1ab394;
 }
 
 button::-moz-focus-inner,
@@ -998,7 +998,7 @@ input::-moz-focus-inner {
   color: #252525;
 }
 .stats-tabs li a:hover {
-  color: #07617d;
+  color: #1ab394;
 }
 .stats-tabs li a em {
   display: block;
@@ -1786,13 +1786,13 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   max-width: 850px;
 }
 #about span {
-  color: #07617d;
+  color: #1ab394;
 }
 #about h3 {
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  color: #1ab394;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
@@ -1809,7 +1809,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   font-family: "librebaskerville-bold", serif;
   font-size: 4rem;
   line-height: 1.8;
-  color: #2e383f;
+  color: #293846;
   margin-top: 6rem;
 }
 
@@ -1947,7 +1947,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
-  color: #f9a828;
+  color: #1ab394;
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
@@ -2194,7 +2194,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: 12px 20% 15px;
 }
 .lg-sub-html a, .lg-sub-html a:visited {
-  color: #f9a828;
+  color: #1ab394;
 }
 .lg-sub-html a:hover, .lg-sub-html a:focus {
   color: #FFFFFF;
@@ -2226,7 +2226,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
-  border-color: #f9a828;
+  border-color: #1ab394;
 }
 
 .lg-progress-bar .lg-progress {
@@ -2272,7 +2272,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.8rem;
   line-height: 1.667;
-  color: #07617d;
+  color: #1ab394;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: relative;
@@ -2584,7 +2584,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   padding: .6rem 2rem .6rem 2rem;
   margin: 0;
   color: #000000;
-  background: #f9a828;
+  background: #1ab394;
   border-radius: 3px;
 }
 #contact form .form-field label::after {
@@ -2594,7 +2594,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-top: -6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #f9a828;
+  border-bottom: 5px solid #1ab394;
   content: "";
 }
 #contact form ::-webkit-input-placeholder {
@@ -2647,7 +2647,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   line-height: 6rem;
   padding: 0 3rem;
   width: 100%;
-  background: #f9a828;
+  background: #1ab394;
   color: #000000;
   margin-top: .6rem;
 }
@@ -2668,7 +2668,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 }
 
 #message-success {
-  color: #f9a828;
+  color: #1ab394;
 }
 
 #message-warning i,
@@ -2810,7 +2810,7 @@ footer a, footer a:visited {
   color: #FFFFFF;
 }
 footer a:hover, footer a:focus {
-  color: #f9a828;
+  color: #1ab394;
 }
 footer .row {
   max-width: 1024px;
@@ -2867,7 +2867,7 @@ footer h4.h05::after {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .footer-main #mc-form button {
-  background-color: #f9a828;
+  background-color: #1ab394;
   color: #000000;
   width: 6rem;
   height: 6rem;
@@ -2889,7 +2889,7 @@ footer h4.h05::after {
   left: .2rem;
 }
 .footer-main #mc-form label {
-  color: #f9a828;
+  color: #1ab394;
   font-family: "montserrat-regular", sans-serif;
 }
 
