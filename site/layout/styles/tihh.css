@@ -38,23 +38,6 @@
   border-top-right-radius: 5px!important;
 }
 #lhc_status_container #lhc_need_help_container {
-  background-color: #299b86;
-  border: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-#lhc_status_container #lhc_need_help_container i#lhc_need_help_close {
-  background: none;
-}
-#lhc_status_container #lhc_need_help_container i#lhc_need_help_close:hover {
-  background-color: #FFF;
-  color: #299b86;
-}
-#lhc_status_container #lhc_need_help_container #lhc_need_help_triangle {
-  border-top-color: #299b86;
-}
-#lhc_status_container #lhc_need_help_container #lhc_need_help_image {
   display: none;
 }
 #lhc_status_container #online-icon {
