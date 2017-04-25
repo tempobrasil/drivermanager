@@ -32,7 +32,7 @@ $login->verify();
             </ul>
           </div>
           <div class="logo-element">
-            SM
+            <img src="<?= get_config('SITE_URL');?>/img/logo_icon.png">
           </div>
         </li>
 
