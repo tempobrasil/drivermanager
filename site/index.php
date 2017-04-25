@@ -14,7 +14,7 @@ include('inc.header.php');
       <footer>
         <ul class="nospace inline pushright">
           <li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>
-          <li><a class="btn" href="<?= GetLink('site/cadastrar'); ?>">Faça seu cadastro</a></li>
+          <li><a class="btn" href="<?= GetLink('site/cadastro'); ?>">Faça seu cadastro</a></li>
         </ul>
       </footer>
     </article>
@@ -32,20 +32,20 @@ include('inc.header.php');
     <ul class="nospace group cta">
       <li class="one_third first">
         <article><strong class="numb">01</strong>
-          <h6 class="heading font-x1"><a href="#">Vulputate ullamcorper</a></h6>
-          <p>Rutrum elit nec tincidunt sed aenean aliquet mauris accumsan eget dui id&hellip;</p>
+          <h6 class="heading font-x1"><a href="#">Cadastre-se</a></h6>
+          <p>Faça seu cadastro agora mesmo e comece a administrar sua carreira.</p>
         </article>
       </li>
       <li class="one_third">
         <article><strong class="numb">02</strong>
-          <h6 class="heading font-x1"><a href="#">Lobortis condimentum</a></h6>
-          <p>Dolor eu suscipit facilisis vestibulum vitae semper nisl vivamus a ligula&hellip;</p>
+          <h6 class="heading font-x1"><a href="#">Assista ao treinamento</a></h6>
+          <p>O treinamento é simples. Através de um vídeo aula, aprenda em minutos como utilizar nosso sistema.</p>
         </article>
       </li>
       <li class="one_third">
         <article><strong class="numb">03</strong>
-          <h6 class="heading font-x1"><a href="#">Malesuada hendrerit</a></h6>
-          <p>Nulla ut imperdiet metus aliquam iaculis mi in tortor accumsan at lobortis&hellip;</p>
+          <h6 class="heading font-x1"><a href="#">Veja sua carreira crescer!</a></h6>
+          <p>Pronto! Agora você está apto pra trabalhar com nosso sistema e o verá ajudando você crescer na sua carreira.</p>
         </article>
       </li>
     </ul>
@@ -112,9 +112,9 @@ include('inc.header.php');
 <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
   <article class="hoc container clear center"> 
     <!-- ################################################################################################ -->
-    <h2 class="font-x3">Parturient montes</h2>
-    <p class="btmspace-50">Ridiculus mus sed pretium erat quis eros imperdiet nec suscipit diam venenatis ut a ipsum pulvinar tincidunt&hellip;</p>
-    <p class="nospace"><a class="btn medium" href="#">Read More &raquo;</a></p>
+    <h2 class="font-x3">Sistema simples e intuitivo</h2>
+    <p class="btmspace-50">Desenvolvemos uma ferramenta que fosse simples e eficaz, para qualquer pessoa conseguir facilmente utilizá-lo.</p>
+    <p class="nospace"><a class="btn medium" href="#">Saiba mais &raquo;</a></p>
     <!-- ################################################################################################ -->
   </article>
 </div>

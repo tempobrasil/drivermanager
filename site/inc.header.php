@@ -9,6 +9,11 @@ Licence URI: http://www.os-templates.com/template-terms
 <html>
 <head>
   <title>Driver Manager [Sistema para Motorista Profissional]</title>
+
+  <link rel="icon" type="image/png" href="<?= get_config('SITE_URL'); ?>img/favicon.png" />
+
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -28,8 +33,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="fl_left">
       <ul class="nospace">
         <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">Sobre Nós</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Nossa Empresa</a></li>
       </ul>
     </div>
     <div class="fl_right">
@@ -49,12 +53,12 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <a href="index.php"><img src="images/logo.png" id="logo"> </a>
+      <a href="<?= GetLink('site'); ?>"><img src="images/logo.png" id="logo"> </a>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><a href="index.php">Home</a></li>
+        <li class="active"><a href="<?= GetLink('site'); ?>">Home</a></li>
         <li><a class="drop" href="#">Pages</a>
           <ul>
             <li><a href="pages/gallery.html">Gallery</a></li>
