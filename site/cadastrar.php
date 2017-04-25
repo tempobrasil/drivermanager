@@ -89,21 +89,32 @@ include('inc.header.php');
           </div>
 
           <div class="one_third first">
-            <label for="name">CNH <span>*</span></label>
+            <label for="name">
+
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento."></i>
+
+              CNH <span>*</span></label>
           </div>
           <div class="two_third">
             <input name="arquivo_cnh" id="arquivo_cnh"  required="" type="file">
           </div>
 
           <div class="one_third first">
-            <label for="name">Comprovante Residencial <span>*</span></label>
+            <label for="name">
+
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre seu documento por completo e tire uma única foto que apareça o comprovante inteiro. Utilize um comprovante emitido nos últimos 6 meses."></i>
+
+              Comprovante Residencial <span>*</span></label>
           </div>
           <div class="two_third">
             <input name="arquivo_residencial" id="arquivo_residencial"  required="" type="file">
           </div>
 
           <div class="one_third first">
-            <label for="name">Documento Veículo - CRLV<span>*</span></label>
+            <label for="name">
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento."></i>
+
+              Documento Veículo - CRLV<span>*</span></label>
           </div>
           <div class="two_third">
             <input name="arquivo_carro" id="arquivo_carro"  required="" type="file">
@@ -125,11 +136,11 @@ include('inc.header.php');
             <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
           </div>
 
-
-
-          <div style="text-align: right">
+          <div class="one_third first"></div>
+          <div class="two_third">
             <input name="submit" value="Enviar cadastro" class="btn" type="submit">
           </div>
+
         </form>
 
         <!-- ################################################################################################ -->

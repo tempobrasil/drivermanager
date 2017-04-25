@@ -67,8 +67,13 @@
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="<?= get_config('SITE_URL')?>site/layout/scripts/jquery.min.js"></script>
+<script src="<?= get_config('SITE_URL')?>site/layout/scripts/jquery.backtotop.js"></script>
+<script src="<?= get_config('SITE_URL')?>site/layout/scripts/jquery.mobilemenu.js"></script>
+
+<script src="<?= get_config('SITE_URL')?>site/bower_components/qtip2/dist/jquery.qtip.min.js"></script>
+
+<script src="<?= get_config('SITE_URL')?>site/layout/scripts/tihh.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "name": "site Driver Manager",
+  "homepage": "https://github.com/tempobrasil/drivermanager",
+  "authors": [
+    "Tihh Gonçalves <tihh.gon@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qtip2": "https://github.com/qTip2/qTip2.git#^3.0.3"
+  }
+}
