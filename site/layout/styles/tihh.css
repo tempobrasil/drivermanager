@@ -1,0 +1,14 @@
+/* Customizações @tihhgoncalves */
+/* CABEÇALHO */
+.row0 a:hover {
+  color: #299b86;
+}
+.row0 a.btn:hover {
+  color: #299b86;
+  background-color: #FFF;
+}
+/* ESTILOS PADRÃO */
+.btn-sm {
+  height: 22px;
+  padding: 0 10px;
+}
