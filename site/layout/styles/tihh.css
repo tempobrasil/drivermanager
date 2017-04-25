@@ -48,8 +48,12 @@
 #lhc_status_container #online-icon .lhc-text-status {
   color: #FFF;
 }
-#lhc_container {
-  background-color: #252525 !important;
+#lhc_container #lhc_header {
+  background-color: #299b86 !important;
+}
+/* Ajustes de CSS do Template */
+#backtotop {
+  bottom: 60px!important;
 }
 /* FORM */
 form.form {
