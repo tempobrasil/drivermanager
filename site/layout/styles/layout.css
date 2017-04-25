@@ -251,7 +251,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#299b86;}
 
 
 /* Rows */
-.row0, .row0 a{color:#7F7F7F; background-color:#141414;}
+.row0, .row0 a:not(.btn){color:#7F7F7F; background-color:#141414;}
 .row0{border-color:#299b86;}
 .row1{color:#FFFFFF; background-color:#252525;}
 .row2{color:#141414; background-color:#F3F3F3;}
@@ -399,3 +399,9 @@ table a, #comments a{background-color:inherit;}
 
 
 /* Customizações @tihhgoncalves */
+
+
+.btn-sm{
+	height: 22px;
+	padding: 0 10px;
+}

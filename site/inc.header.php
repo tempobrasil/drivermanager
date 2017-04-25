@@ -31,6 +31,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <ul class="nospace">
         <li><i class="fa fa-phone"></i> +55 (47) 9 9650-6687</li>
         <li><i class="fa fa-envelope-o"></i> <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a> </li>
+        <li><a href="<?= GetLink('login');?>" class="btn btn-sm">Entrar</a> </li>
       </ul>
     </div>
     <!-- ################################################################################################ -->
