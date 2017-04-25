@@ -153,3 +153,24 @@ include('inc.header.php');
 <?
 include('inc.footer.php');
 ?>
+
+<script>
+
+  $(document).ready(function(){
+
+    $('input#nome').focusout(function(){
+      var val = $(this).val();
+      var espacoX = val.search(' ');
+      if(espacoX > 0){
+        infoAlert('Ops!', 'Acho que você preencheu seu nome completo onde deveria ser somente seu nome. <br><br>Tudo bem, já ajeitamos pra você! :)<br>Essa mensagem é só pra te avisar.'); //blue alert
+
+        $('input#sobrenome').val(val.substring(espacoX+1));
+        $('input#nome').val(val.substring(0, espacoX));
+
+      }
+
+    });
+
+  });
+
+</script>

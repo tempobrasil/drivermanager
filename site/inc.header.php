@@ -15,6 +15,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/tihh.css" rel="stylesheet" type="text/css" media="all">
 
   <link href="<?= get_config('SITE_URL')?>site/bower_components/qtip2/dist/jquery.qtip.min.css" rel="stylesheet" type="text/css" media="all">
+  <link href="<?= get_config('SITE_URL')?>site/bower_components/jAlert/dist/jAlert.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 <body id="top">

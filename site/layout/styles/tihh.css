@@ -12,6 +12,18 @@
   height: 22px;
   padding: 0 10px;
 }
+/* plugin qTip */
+.qtip.qtip-default {
+  background-color: #299b86;
+  border: 0;
+  color: #FFF;
+  line-height: 20px;
+}
+/* plugin jAlert */
+.jAlert.ja_blue {
+  background-color: #299b86 !important;
+}
+/* FORM */
 form.form {
   display: block;
   width: 90%;
