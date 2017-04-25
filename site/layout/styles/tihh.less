@@ -1,5 +1,6 @@
 /* Customizações @tihhgoncalves */
 @cor_principal: #299b86;
+@cor_cinza_escuro: #252525;
 
 /* CABEÇALHO */
 .row0{
@@ -40,6 +41,65 @@
   &.ja_blue{
     background-color: @cor_principal!important;
   }
+}
+
+/* Atendimento Online */
+#lhc_status_container{
+  width: 125px!important;
+  box-shadow: none!important;
+  right: 20px!important;
+  background-color: @cor_principal!important;
+  border: 0!important;
+
+  -webkit-border-top-left-radius: 5px!important;
+  -webkit-border-top-right-radius: 5px!important;
+  -moz-border-radius-topleft: 5px!important;
+  -moz-border-radius-topright: 5px!important;
+  border-top-left-radius: 5px!important;
+  border-top-right-radius: 5px!important;
+
+  #lhc_need_help_container{
+    background-color: @cor_principal;
+    border: 0;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    i#lhc_need_help_close{
+      background: none;
+
+      &:hover{
+        background-color: #FFF;
+        color: @cor_principal;
+      }
+    }
+
+    #lhc_need_help_triangle{
+      border-top-color: @cor_principal;
+
+
+    }
+
+    #lhc_need_help_image{
+      display: none;
+    }
+  }
+
+  #online-icon{
+    background-image: none;
+    padding: 5px;
+    width: auto;
+
+    .lhc-text-status{
+      color: #FFF;
+    }
+  }
+
+}
+
+#lhc_container{
+  background-color: @cor_cinza_escuro!important;
 }
 
 /* FORM */

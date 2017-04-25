@@ -23,6 +23,51 @@
 .jAlert.ja_blue {
   background-color: #299b86 !important;
 }
+/* Atendimento Online */
+#lhc_status_container {
+  width: 125px!important;
+  box-shadow: none!important;
+  right: 20px!important;
+  background-color: #299b86 !important;
+  border: 0!important;
+  -webkit-border-top-left-radius: 5px!important;
+  -webkit-border-top-right-radius: 5px!important;
+  -moz-border-radius-topleft: 5px!important;
+  -moz-border-radius-topright: 5px!important;
+  border-top-left-radius: 5px!important;
+  border-top-right-radius: 5px!important;
+}
+#lhc_status_container #lhc_need_help_container {
+  background-color: #299b86;
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#lhc_status_container #lhc_need_help_container i#lhc_need_help_close {
+  background: none;
+}
+#lhc_status_container #lhc_need_help_container i#lhc_need_help_close:hover {
+  background-color: #FFF;
+  color: #299b86;
+}
+#lhc_status_container #lhc_need_help_container #lhc_need_help_triangle {
+  border-top-color: #299b86;
+}
+#lhc_status_container #lhc_need_help_container #lhc_need_help_image {
+  display: none;
+}
+#lhc_status_container #online-icon {
+  background-image: none;
+  padding: 5px;
+  width: auto;
+}
+#lhc_status_container #online-icon .lhc-text-status {
+  color: #FFF;
+}
+#lhc_container {
+  background-color: #252525 !important;
+}
 /* FORM */
 form.form {
   display: block;

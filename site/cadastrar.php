@@ -130,7 +130,7 @@ include('inc.header.php');
           </div>
 
           <div class="one_third first">
-            <label for="name">CNH <span>*</span></label>
+
           </div>
           <div class="two_third">
             <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
