@@ -13,8 +13,8 @@ include('inc.header.php');
       </div>
       <footer>
         <ul class="nospace inline pushright">
-          <li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Quero ser motorista</a></li>
-          <li><a class="btn" href="#">Já sou motorista</a></li>
+          <li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>
+          <li><a class="btn" href="<?= GetLink('site/cadastrar'); ?>">Faça seu cadastro</a></li>
         </ul>
       </footer>
     </article>

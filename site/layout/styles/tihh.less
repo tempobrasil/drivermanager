@@ -1,15 +1,15 @@
 /* Customizações @tihhgoncalves */
-
+@cor_principal: #299b86;
 
 /* CABEÇALHO */
 .row0{
 
   a:hover{
-    color: #299b86;
+    color: @cor_principal;
   }
 
   a.btn:hover{
-    color: #299b86;
+    color: @cor_principal;
     background-color: #FFF;
   }
 
@@ -21,5 +21,58 @@
 .btn-sm{
   height: 22px;
   padding: 0 10px;
+}
+
+
+form.form{
+
+  display: block;
+  width: 90%;
+  margin: auto;
+
+  label{
+    text-align: right;
+    padding: 10px 0;
+
+    span{
+      color:@cor_principal!important;
+    }
+  }
+
+  input, textarea {
+    border: 1px solid;
+    padding: 10px;
+    width: 100%;
+    border-color: #d7d7d7;
+  }
+  textarea {
+    overflow: auto;
+  }
+  div {
+    margin-bottom: 15px;
+  }
+  input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    min-width: 150px;
+    width: auto;
+  }
+
+  h4{
+    font-size: 15px;
+    margin: 2px 0;
+    color: @cor_principal;
+  }
+  p{
+    margin: 2px 0
+  }
+
+  hr{
+    display: block;
+    clear: both;
+    margin-top: 15px;
+  }
+
 }
 

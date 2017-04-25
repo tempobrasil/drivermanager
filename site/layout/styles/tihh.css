@@ -12,3 +12,49 @@
   height: 22px;
   padding: 0 10px;
 }
+form.form {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+form.form label {
+  text-align: right;
+  padding: 10px 0;
+}
+form.form label span {
+  color: #299b86 !important;
+}
+form.form input,
+form.form textarea {
+  border: 1px solid;
+  padding: 10px;
+  width: 100%;
+  border-color: #d7d7d7;
+}
+form.form textarea {
+  overflow: auto;
+}
+form.form div {
+  margin-bottom: 15px;
+}
+form.form input[type="submit"],
+form.form input[type="reset"] {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  min-width: 150px;
+  width: auto;
+}
+form.form h4 {
+  font-size: 15px;
+  margin: 2px 0;
+  color: #299b86;
+}
+form.form p {
+  margin: 2px 0;
+}
+form.form hr {
+  display: block;
+  clear: both;
+  margin-top: 15px;
+}
