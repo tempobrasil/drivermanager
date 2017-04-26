@@ -1,4 +1,8 @@
 <?
+site_setSubTitle('Depoimentos');
+site_setDescription('Conheça a história de algumas pessoas que melhoraram de vida depois que conheceram a Driver Manager.');
+site_setTags('depoimentos, testemunho, carro, motorista profissional');
+
 include('inc.header.php');
 ?>
 
@@ -27,7 +31,7 @@ include('inc.header.php');
       <!-- ################################################################################################ -->
       <div id="comments" class="content">
         <!-- ################################################################################################ -->
-        <h1><i class="fa fa-like" aria-hidden="true"></i> Convênios</h1>
+        <h1><i class="fa fa-like" aria-hidden="true"></i> Depoimentos</h1>
 
           <ul>
             <li>
