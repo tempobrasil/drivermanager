@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "qtip2": "https://github.com/qTip2/qTip2.git#^3.0.3",
-    "jAlert": "https://github.com/VersatilityWerks/jAlert.git#^4.5.1"
+    "jAlert": "https://github.com/VersatilityWerks/jAlert.git#^4.5.1",
+    "components-font-awesome": "^4.7.0"
   }
 }

@@ -36,7 +36,7 @@ Licence URI: http://www.os-templates.com/template-terms
   -->
 
 
-
+  <link href="<?= get_config('SITE_URL')?>site/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/tihh.css" rel="stylesheet" type="text/css" media="all">
 
@@ -82,6 +82,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <li class="<?= (GetPage() == 'home'?'active':null); ?>"><a href="<?= GetLink('site/home'); ?>">Home</a></li>
         <li class="<?= (GetPage() == 'aplicativo'?'active':null); ?>"><a href="<?= GetLink('site/aplicativo'); ?>">O Aplicativo</a></li>
         <li class="<?= (GetPage() == 'depoimentos'?'active':null); ?>"><a href="<?= GetLink('site/depoimentos'); ?>">Depoimentos</a></li>
+        <li class="<?= (GetPage() == 'convenios'?'active':null); ?>"><a href="<?= GetLink('site/convenios'); ?>">Convênios</a></li>
         <li class="<?= (GetPage() == 'preco'?'active':null); ?>"><a href="<?= GetLink('site/preco'); ?>">Preço</a></li>
 
       </ul>
