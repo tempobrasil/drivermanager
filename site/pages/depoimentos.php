@@ -33,42 +33,39 @@ include('inc.header.php');
             <li>
               <article>
                 <header>
-                  <figure class="avatar"><img src="<?= get_config('SITE_URL')?>site/images/demo/avatar.png" alt="Template Demo Image"></figure>
+                  <figure class="avatar" style="background-image: url('https://scontent.fbfh1-1.fna.fbcdn.net/v/t1.0-9/13006638_1089638244428870_2004149798583037994_n.jpg?oh=72b54e09243761b8144e5ad2a8484381&oe=599561C6');"></figure>
                   <address>
-                    By <a href="http://www.os-templates.com/free-website-templates">A Name</a>
+                    <span>Bruno</span>, de Blumenau, SC
                   </address>
-                  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
                 </header>
                 <div class="comcont">
-                  <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+                  <p>"Comecei a dirigir depois que um amigo me mostrou o Driver Manager e gostei da ideia de poder ganhar dinheiro com o meu próprio carro. Depois de apenas duas semanas vi que isso era algo que eu queria fazer de forma permanente."</p>
                 </div>
               </article>
             </li>
             <li>
               <article>
                 <header>
-                  <figure class="avatar"><img src="<?= get_config('SITE_URL')?>site/images/demo/avatar.png" alt="Template Demo Image"></figure>
+                  <figure class="avatar" style="background-image: url('https://scontent.fbfh1-1.fna.fbcdn.net/v/t1.0-9/15401035_10154618570160225_2188961139855822375_n.jpg?oh=4f8a0ec7cd98afb51e7f8afce7512ad6&oe=597A5C02');"></figure>
                   <address>
-                    By <a href="http://www.os-templates.com/free-website-templates">A Name</a>
+                    <a href="http://www.os-templates.com/free-website-templates">Tuca</a>, de Balneário Camboriú, SC
                   </address>
-                  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
                 </header>
                 <div class="comcont">
-                  <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+                  <p>"Eu queria algo que me fizesse sair de casa e conhecer novas pessoas. A Driver Manager me ajudou das duas formas e além disso, estou conhecendo algumas partes da cidade que eu nunca tinha visto antes!"</p>
                 </div>
               </article>
             </li>
             <li>
               <article>
                 <header>
-                  <figure class="avatar"><img src="<?= get_config('SITE_URL')?>site/images/demo/avatar.png" alt="Template Demo Image"></figure>
+                  <figure class="avatar"  style="background-image: url('https://scontent.fbfh1-1.fna.fbcdn.net/v/t1.0-9/1383969_10204724278806161_4479477534017654785_n.jpg?oh=278759114481a1fd84924907de7aa775&oe=59785493');"></figure>
                   <address>
-                    By <a href="http://www.os-templates.com/free-website-templates">A Name</a>
+                    <a href="http://www.os-templates.com/free-website-templates">Tiago</a>, de São Paulo, SP
                   </address>
-                  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
                 </header>
                 <div class="comcont">
-                  <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+                  <p>"Com a Driver Manager eu consigo atingir meus objetivos. Posso correr atrás dos meus sonhos. Consigo compartilhar experiências musicais incríveis com o mundo."</p>
                 </div>
               </article>
             </li>

@@ -106,3 +106,23 @@ form.form hr {
   clear: both;
   margin-top: 15px;
 }
+#comments ul li figure.avatar {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#comments ul li address {
+  font-weight: normal;
+  font-size: 16px;
+  color: #999;
+}
+#comments ul li address span,
+#comments ul li address a {
+  color: #299b86;
+  font-weight: bold;
+}
+#comments ul li .comcont {
+  font-style: italic;
+}
