@@ -1,4 +1,8 @@
 <?
+site_setSubTitle('Convênios');
+site_setDescription('Conheça quem são os parceiro da Driver Manager que você pode contar na sua carreira como Motorista Profissional.');
+site_setTags('convênio, parceria, benefício');
+
 include('inc.header.php');
 ?>
 
