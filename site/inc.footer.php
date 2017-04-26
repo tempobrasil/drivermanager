@@ -57,8 +57,8 @@
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2017 - Todos os direitos reservados a <a href="http://www.zbraestudio.com.br" target="_blank" title="Z.BRA Estúdio (Balneário Camboriú, SC)">Z.BRA Estúdio</a>.</p>
+    <!--<p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>-->
     <!-- ################################################################################################ -->
   </div>
 </div>

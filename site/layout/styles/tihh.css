@@ -7,6 +7,10 @@
   color: #299b86;
   background-color: #FFF;
 }
+/* RODAPÉ */
+#copyright a {
+  color: #299b86 !important;
+}
 /* ESTILOS PADRÃO */
 .btn-sm {
   height: 22px;
