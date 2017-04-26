@@ -1,5 +1,8 @@
 <?
-include('../includes/autoload.php');
+site_setSubTitle('Cadastro');
+site_setDescription('Faça seu cadastro e comece sua carreira como Motorista Profissional hoje mesmo.');
+site_setTags('cadastro, quero, iniciar, hoje, como, como ser, quero ser');
+
 include('inc.header.php');
 ?>
 
@@ -167,6 +170,21 @@ include('inc.footer.php');
         $('input#sobrenome').val(val.substring(espacoX+1));
         $('input#nome').val(val.substring(0, espacoX));
 
+      }
+
+    });
+
+
+    $('#arquivo_cnh').bind('change', function() {
+
+      var size = this.files[0].size;
+
+      var max = (1024 * 1024);
+
+      if(size > max) {
+        infoAlert('Ops!', 'Desculpe, mas seu arquivo ultrapassou o tamanho máximo, de 1mb');
+
+        $(this).val('');
       }
 
     });

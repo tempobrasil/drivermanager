@@ -30,20 +30,20 @@
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">Justo efficitur ultrices</h6>
+      <h6 class="title">Últimas do aplicativo</h6>
       <ul class="nospace linklist">
         <li>
           <article>
-            <h2 class="nospace font-x1"><a href="#">Vel diam neque nunc</a></h2>
+            <h2 class="nospace font-x1"><a href="#">Versão 1.0.12</a></h2>
             <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            <p class="nospace">Vitae feugiat nisi eget magna at arcu viverra posuere donec aliquam&hellip;</p>
+            <p class="nospace">Versão recheada de novidades.</p>
           </article>
         </li>
         <li>
           <article>
-            <h2 class="nospace font-x1"><a href="#">Quis hendrerit libero</a></h2>
+            <h2 class="nospace font-x1"><a href="#">Versão 1.0.11</a></h2>
             <time class="font-xs block btmspace-10" datetime="2045-04-05">Thirsday, 5<sup>th</sup> April 2045</time>
-            <p class="nospace">Cras auctor metus vel augue gravida ultrices maecenas consectetur&hellip;</p>
+            <p class="nospace">Correção na sessão do sistema.</p>
           </article>
         </li>
       </ul>

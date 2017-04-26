@@ -1,3 +1,6 @@
+<?
+global $params;
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Nodelle
@@ -8,14 +11,32 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html>
 <head>
-  <title>Driver Manager [Sistema para Motorista Profissional]</title>
-
-  <link rel="icon" type="image/png" href="<?= get_config('SITE_URL'); ?>img/favicon.png" />
-
-
-
+  <title><?= get_config('SITE_TITLE'); ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href="<?= get_config('SITE_URL'); ?>img/favicon.png" />
+
+  <!-- Parâmetros da Página -->
+  <link rel="icon" href="<?= get_config('SITE_URL'); ?>img/favicon.png">
+  <meta name="keywords" content="<?= get_config('SITE_TAGS'); ?>">
+  <meta name="description" content="<?= get_config('SITE_DESCRIPTION'); ?>">
+  <meta name="author" content="Z.BRA Estúdio (Balneário Camboriú, SC)">
+
+  <!-- Metas do Facebook -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="<?= (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
+  <meta property="og:title" content="<?= get_config('SITE_TITLE'); ?>">
+  <meta property="og:description" content="<?= get_config('SITE_DESCRIPTION'); ?>">
+  <meta property="og:site_name" content="<?= get_config('SITE_TITLE'); ?>">
+
+  <!--
+  <meta property="og:image" content="http://www.livresweb.com/images/shared2.jpg">
+  <meta property="og:image:width" content="-1">
+  <meta property="og:image:height" content="-1">
+  -->
+
+
+
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
   <link href="<?= get_config('SITE_URL')?>site/layout/styles/tihh.css" rel="stylesheet" type="text/css" media="all">
 
@@ -32,8 +53,8 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="fl_left">
       <ul class="nospace">
-        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">Nossa Empresa</a></li>
+        <li><a href="<?= GetLink('site'); ?>"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="<?= GetLink('site/empresa'); ?>">Nossa Empresa</a></li>
       </ul>
     </div>
     <div class="fl_right">
@@ -58,31 +79,11 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><a href="<?= GetLink('site'); ?>">Home</a></li>
-        <li><a class="drop" href="#">Pages</a>
-          <ul>
-            <li><a href="pages/gallery.html">Gallery</a></li>
-            <li><a href="pages/full-width.html">Full Width</a></li>
-            <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-            <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-            <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-          </ul>
-        </li>
-        <li><a class="drop" href="#">Dropdown</a>
-          <ul>
-            <li><a href="#">Level 2</a></li>
-            <li><a class="drop" href="#">Level 2 + Drop</a>
-              <ul>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="#">Level 3</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Level 2</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Link Text</a></li>
-        <li><a href="#">Link Text</a></li>
+        <li class="<?= (GetPage() == 'home'?'active':null); ?>"><a href="<?= GetLink('site/home'); ?>">Home</a></li>
+        <li class="<?= (GetPage() == 'aplicativo'?'active':null); ?>"><a href="<?= GetLink('site/aplicativo'); ?>">O Aplicativo</a></li>
+        <li class="<?= (GetPage() == 'depoimentos'?'active':null); ?>"><a href="<?= GetLink('site/depoimentos'); ?>">Depoimentos</a></li>
+        <li class="<?= (GetPage() == 'preco'?'active':null); ?>"><a href="<?= GetLink('site/preco'); ?>">Preço</a></li>
+
       </ul>
     </nav>
     <!-- ################################################################################################ -->

@@ -8,7 +8,7 @@ if(empty($_GET['url'])){
     if($login->verify(false))
         header('LOCATION: ' . get_config('SITE_URL') . 'dashboard');
     else
-        header('LOCATION: ' . get_config('SITE_URL') . 'site');
+        header('LOCATION: ' . get_config('SITE_URL') . 'site/home');
 
 }
 

@@ -25,6 +25,10 @@ set_config('TITLE',                   '');
 set_config('SYSTEM_TITLE',            'Driver Manager [Motorista Autônomo]');
 set_config('FOOTER_TEXT',            '<strong>Driver Manager [for UBER]</strong> v1 - &copy; 2017 - Todos os Direitos Reservados.');
 
+set_config('SITE_TITLE',              'Site Manager (Sistema para Motorista Profissional)');
+set_config('SITE_DESCRIPTION',               'Sistema para Motorista Profissional');
+set_config('SITE_TAGS',               'sistema, motorista, UEBR, 99');
+
 /* Banco de Dados */
 if( $_SERVER['HTTP_HOST'] == 'localhost')
   set_config('DB_HOST'          , 'nbz.net.br');

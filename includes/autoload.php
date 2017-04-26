@@ -5,20 +5,20 @@ date_default_timezone_set('America/Sao_Paulo');
 include('mpdf60/mpdf.php');
 
 include('config.php');
-include('functions.php');
-include('functions.form.php');
-include('functions.carro.php');
-include('functions.semanas.php');
+include(get_config('SITE_PATH') . 'includes/functions.php');
+include(get_config('SITE_PATH') . 'includes/functions.form.php');
+include(get_config('SITE_PATH') . 'includes/functions.carro.php');
+include(get_config('SITE_PATH') . 'includes/functions.semanas.php');
 
-include('girafa.login.php');
-include('girafa.db.php');
-include('girafa.tablepost.php');
-include('girafa.date.php');
+include(get_config('SITE_PATH') . 'includes/girafa.login.php');
+include(get_config('SITE_PATH') . 'includes/girafa.db.php');
+include(get_config('SITE_PATH') . 'includes/girafa.tablepost.php');
+include(get_config('SITE_PATH') . 'includes/girafa.date.php');
 
-include('obj.grid.php');
-include('obj.form.php');
-include('obj.reports.php');
-include('obj.tpl.php');
+include(get_config('SITE_PATH') . 'includes/obj.grid.php');
+include(get_config('SITE_PATH') . 'includes/obj.form.php');
+include(get_config('SITE_PATH') . 'includes/obj.reports.php');
+include(get_config('SITE_PATH') . 'includes/obj.tpl.php');
 
 /* Objetos Girafa */
 $db = new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('DB_USER'), get_config('DB_PASS'));

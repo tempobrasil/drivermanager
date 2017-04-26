@@ -6,4 +6,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 #Reescrever URL, adicionando o query string
-RewriteRule ^(.*) ./$1.php [QSA]
+RewriteRule ^(.*) ./index.php?url=$1 [QSA]
