@@ -11,13 +11,13 @@ function get_config($key){
 /* Caminhos */
 if( $_SERVER['HTTP_HOST'] == 'localhost'){
 
-  set_config('SITE_URL'         , 'http://localhost/github/drivermanager/');
-  set_config('SITE_PATH'        , 'D:/github/drivermanager/');
+  set_config('SITE_URL'         , 'http://localhost/github/driverup/');
+  set_config('SITE_PATH'        , 'D:/github/driverup/');
 
 } else {
 
-  set_config('SITE_URL'         , 'http://drivermanager.zbraestudio.com.br/');
-  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/drivermanager/');
+  set_config('SITE_URL'         , 'http://driverup.zbraestudio.com.br/');
+  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/driverup/');
 
 }
 
@@ -37,7 +37,7 @@ else
 
 set_config('DB_USER'          , 'root');
 set_config('DB_PASS'          , 'polly');
-set_config('DB_DB'            , 'zbraestudio.com.br_drivermanager');
+set_config('DB_DB'            , 'zbraestudio.com.br_driverup');
 
 
 
