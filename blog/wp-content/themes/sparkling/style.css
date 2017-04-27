@@ -849,6 +849,9 @@ button:hover, .button:hover {
   font-size: 20px;
   margin: 13px 0;
   font-family: 'Roboto Slab', serif;
+  height: auto;
+  padding: 0;
+  margin: 20px 0;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
