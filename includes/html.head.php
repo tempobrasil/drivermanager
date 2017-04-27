@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?= get_config('SYSTEM_TITLE') . ' - ' . get_config('TITLE'); ?></title>
+    <title><?= get_config('TITLE') . ' ' . get_config('SYSTEM_TITLE');  ?></title>
 
     <link rel="icon" type="image/png" href="<?= get_config('SITE_URL'); ?>/img/favicon.png" />
 
