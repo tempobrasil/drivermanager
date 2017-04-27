@@ -22,11 +22,11 @@ if( $_SERVER['HTTP_HOST'] == 'localhost'){
 }
 
 set_config('TITLE',                   '');
-set_config('SYSTEM_TITLE',            'Driver UP [Motorista Profissional]');
+set_config('SYSTEM_TITLE',            '[Driver UP]');
 set_config('FOOTER_TEXT',            '<strong>Driver UP</strong> v1 - &copy; 2017 - Todos os Direitos Reservados.');
 
-set_config('SITE_TITLE',              'Site Manager (Sistema para Motorista Profissional)');
-set_config('SITE_DESCRIPTION',               'Sistema para Motorista Profissional');
+set_config('SITE_TITLE',              'Driver UP (Sistema para Motorista Profissional)');
+set_config('SITE_DESCRIPTION',        'Sistema para Motorista Profissional');
 set_config('SITE_TAGS',               'sistema, motorista, UEBR, 99');
 
 /* Banco de Dados */
