@@ -448,3 +448,49 @@ function get_layout_class () {
 }
 
 endif;
+
+
+
+/* Customizações @tihhgoncalves */
+
+function wordpress_PegaURLAtual(){
+  /* pega URL */
+  if(is_home()){
+
+    $url = get_bloginfo("url");
+
+  }elseif(is_single() || is_page()){
+
+    global $post;
+    $url = get_permalink($post->ID);
+
+  }elseif(is_category()){
+
+    $category = get_category( get_query_var( 'cat' ) );
+    $cat_id = $category->cat_ID;
+    $url = get_category_link( $cat_id );
+
+  }elseif(is_tag()){
+
+    $tag = get_query_var('tag');
+    $url = get_bloginfo('url') . "/tag/" . $tag;
+
+  }elseif(is_date()){
+
+    $date = get_query_var('year')."/". zeroise(get_query_var('monthnum'), 2);
+    $url = get_bloginfo('url') . "/" . $date;
+
+  }elseif(is_author()){
+
+    $author = get_query_var('author');
+
+    $user = get_the_author_meta('user_nicename',$author);
+    $url = get_bloginfo('url') . "/" . $user;
+
+  }elseif(is_search()) {
+    $busca = get_search_query();
+    $url = get_bloginfo('url') . "/?s=" . urlencode($busca);
+  }
+
+  return $url;
+}

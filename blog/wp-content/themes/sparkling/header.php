@@ -1,4 +1,22 @@
 <?php
+session_start();
+//print_r($_SESSION);exit;
+/* VERIFICA SE ESTÀ LOGADO */
+if(!isset($_SESSION['SM_login']['user_id'])){
+
+	$_SESSION['login_msg'] = 'Antes de acessar o Blog, faça seu login.';
+
+	$url = wordpress_PegaURLAtual();
+
+	$_SESSION['login_after_url'] = $url;
+
+	if( $_SERVER['HTTP_HOST'] == 'localhost')
+		header('LOCATION: http://localhost/github/driverup/login');
+	else
+		header('LOCATION: http://driverup.zbraestudio.com.br/login');
+
+}
+
 /* *
  * The Header for our theme.
  *
