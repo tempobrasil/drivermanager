@@ -18,6 +18,13 @@
  * @package WordPress
  */
 
+// Se for um teste local, forçar as URLs...
+if( $_SERVER['HTTP_HOST'] == 'localhost') {
+	define('WP_HOME', 'http://localhost/github/driverup/blog/');
+	define('WP_SITEURL', 'http://localhost/github/driverup/blog/');
+}
+
+
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
@@ -30,7 +37,10 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'polly');
 
 /** Nome do host do MySQL */
-define('DB_HOST', 'nbz.net.br');
+if( $_SERVER['HTTP_HOST'] == 'localhost')
+	define('DB_HOST', 'nbz.net.br');
+else
+	define('DB_HOST', 'localhost');
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8mb4');
