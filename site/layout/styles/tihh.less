@@ -1,6 +1,9 @@
 /* Customizações @tihhgoncalves */
 @cor_principal: #299b86;
 @cor_cinza_escuro: #252525;
+@cor_cinza_claro: #f3f3f3;
+
+@fonte_principal:'Varela Round', sans-serif;
 
 /* CABEÇALHO */
 .row0{
@@ -91,6 +94,12 @@
 #backtotop{
   bottom: 60px!important;
 }
+
+
+h1{
+  font-size: 25px;
+}
+
 /* FORM */
 form.form{
 
@@ -176,5 +185,115 @@ form.form{
     }
 
   }
+
+}
+
+
+/* Página PREÇO */
+
+div#valores{
+
+  margin: 25px 0;
+
+
+  .txt_h1{
+    background-color: @cor_cinza_escuro;
+    color: #FFF;
+    padding: 5px;
+    text-align: center;
+    line-height: 30px;
+
+    text-transform: uppercase;
+  }
+
+  .preco-velho{
+    text-transform: uppercase;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 13px;
+
+    strike {
+      font-weight: 600;
+      position: relative;
+      text-decoration: none;
+
+      &::before {
+        background-color: red;
+        content: "";
+        height: 2px;
+        left: 0;
+        opacity: 0.6;
+        position: absolute;
+        top: 50%;
+        transform: rotate(-10deg);
+        width: 100%;
+      }
+
+    }
+  }
+
+  .preco-novo{
+    text-align: center;
+    color: @cor_principal;
+    font-family: @fonte_principal;
+    font-size: 50px;
+    sup{
+      font-size: 20px;
+    }
+    sub{
+      color: #777;
+      font-size: 14px;
+      margin-left: -37px;
+      position: relative;
+      bottom: 7px;
+    }
+  }
+
+
+  .desc{
+    background-color: @cor_cinza_claro;
+    text-align: center;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 5px;
+    color: @cor_cinza_escuro;
+  }
+
+  .infos{
+    padding: 15px;
+    color: @cor_cinza_escuro;
+    font-size: 11px;
+    line-height: 15px;
+    font-style: italic;
+  }
+
+  .btn{
+    margin: auto;
+    display: block;
+    text-align: center;
+    background-color: @cor_cinza_claro;
+    color: @cor_principal;
+    border: 0;
+
+    &:hover, &:focus{
+      background-color: @cor_principal;
+      color: #FFF;
+    }
+
+    &.destaque{
+      font-weight: bold;
+      background-color: @cor_principal;
+      color: #FFF;
+    }
+  }
+
+  .btn-info{
+    color: @cor_principal;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+
 
 }

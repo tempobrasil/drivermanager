@@ -59,6 +59,9 @@
 #backtotop {
   bottom: 60px!important;
 }
+h1 {
+  font-size: 25px;
+}
 /* FORM */
 form.form {
   display: block;
@@ -125,4 +128,93 @@ form.form hr {
 }
 #comments ul li .comcont {
   font-style: italic;
+}
+/* Página PREÇO */
+div#valores {
+  margin: 25px 0;
+}
+div#valores .txt_h1 {
+  background-color: #252525;
+  color: #FFF;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+div#valores .preco-velho {
+  text-transform: uppercase;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 13px;
+}
+div#valores .preco-velho strike {
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+}
+div#valores .preco-velho strike::before {
+  background-color: red;
+  content: "";
+  height: 2px;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-10deg);
+  width: 100%;
+}
+div#valores .preco-novo {
+  text-align: center;
+  color: #299b86;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 50px;
+}
+div#valores .preco-novo sup {
+  font-size: 20px;
+}
+div#valores .preco-novo sub {
+  color: #777;
+  font-size: 14px;
+  margin-left: -37px;
+  position: relative;
+  bottom: 7px;
+}
+div#valores .desc {
+  background-color: #f3f3f3;
+  text-align: center;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 5px;
+  color: #252525;
+}
+div#valores .infos {
+  padding: 15px;
+  color: #252525;
+  font-size: 11px;
+  line-height: 15px;
+  font-style: italic;
+}
+div#valores .btn {
+  margin: auto;
+  display: block;
+  text-align: center;
+  background-color: #f3f3f3;
+  color: #299b86;
+  border: 0;
+}
+div#valores .btn:hover,
+div#valores .btn:focus {
+  background-color: #299b86;
+  color: #FFF;
+}
+div#valores .btn.destaque {
+  font-weight: bold;
+  background-color: #299b86;
+  color: #FFF;
+}
+div#valores .btn-info {
+  color: #299b86;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
 }

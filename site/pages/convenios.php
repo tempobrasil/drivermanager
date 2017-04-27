@@ -31,7 +31,7 @@ include('inc.header.php');
       <!-- ################################################################################################ -->
       <div class="content">
         <!-- ################################################################################################ -->
-        <h1><i class="fa fa-handshake-o" aria-hidden="true"></i> Convênios</h1>
+        <h1>Convênios</h1>
         <p>Somos mais do que um aplicativo para administrar a carreira de um motorista profissional.
           Somos uma assessoria que irá ajudar a você crescer profissionalmente e, consequentemente, financeiramente.
           Com isso, estamos firmando parcerias por diversas cidades do Brasil e em breve teremos alguns convênios para oferecer a você.</p>
