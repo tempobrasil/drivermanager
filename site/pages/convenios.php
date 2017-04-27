@@ -1,6 +1,6 @@
 <?
 site_setSubTitle('Convênios');
-site_setDescription('Conheça quem são os parceiro da Driver Manager que você pode contar na sua carreira como Motorista Profissional.');
+site_setDescription('Conheça quem são os parceiro da Driver UP que você pode contar na sua carreira como Motorista Profissional.');
 site_setTags('convênio, parceria, benefício');
 
 include('inc.header.php');
@@ -37,7 +37,7 @@ include('inc.header.php');
           Com isso, estamos firmando parcerias por diversas cidades do Brasil e em breve teremos alguns convênios para oferecer a você.</p>
         <p>Fique de olho! O que já é bom vai ficar ainda melhor.</p>
         <p>Abraços,<br>
-          <a href="<?= GetLink('site/home'); ?>">Equipe Driver Manager</a></p>
+          <a href="<?= GetLink('site/home'); ?>">Equipe Driver UP</a></p>
         </p>
 
         <!-- ################################################################################################ -->

@@ -1,6 +1,6 @@
 <?
 site_setSubTitle('Depoimentos');
-site_setDescription('Conheça a história de algumas pessoas que melhoraram de vida depois que conheceram a Driver Manager.');
+site_setDescription('Conheça a história de algumas pessoas que melhoraram de vida depois que conheceram a Driver UP.');
 site_setTags('depoimentos, testemunho, carro, motorista profissional');
 
 include('inc.header.php');
@@ -43,7 +43,7 @@ include('inc.header.php');
                   </address>
                 </header>
                 <div class="comcont">
-                  <p>"Comecei a dirigir depois que um amigo me mostrou o Driver Manager e gostei da ideia de poder ganhar dinheiro com o meu próprio carro. Depois de apenas duas semanas vi que isso era algo que eu queria fazer de forma permanente."</p>
+                  <p>"Comecei a dirigir depois que um amigo me mostrou o Driver UP e gostei da ideia de poder ganhar dinheiro com o meu próprio carro. Depois de apenas duas semanas vi que isso era algo que eu queria fazer de forma permanente."</p>
                 </div>
               </article>
             </li>
@@ -56,7 +56,7 @@ include('inc.header.php');
                   </address>
                 </header>
                 <div class="comcont">
-                  <p>"Eu queria algo que me fizesse sair de casa e conhecer novas pessoas. A Driver Manager me ajudou das duas formas e além disso, estou conhecendo algumas partes da cidade que eu nunca tinha visto antes!"</p>
+                  <p>"Eu queria algo que me fizesse sair de casa e conhecer novas pessoas. A Driver UP me ajudou das duas formas e além disso, estou conhecendo algumas partes da cidade que eu nunca tinha visto antes!"</p>
                 </div>
               </article>
             </li>
@@ -69,7 +69,7 @@ include('inc.header.php');
                   </address>
                 </header>
                 <div class="comcont">
-                  <p>"Com a Driver Manager eu consigo atingir meus objetivos. Posso correr atrás dos meus sonhos. Consigo compartilhar experiências musicais incríveis com o mundo."</p>
+                  <p>"Com a Driver UP eu consigo atingir meus objetivos. Posso correr atrás dos meus sonhos. Consigo compartilhar experiências musicais incríveis com o mundo."</p>
                 </div>
               </article>
             </li>
