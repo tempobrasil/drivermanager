@@ -10,7 +10,7 @@ if(!isset($_SESSION['SM_login']['user_id'])){
 
 	$_SESSION['login_after_url'] = $url;
 
-	if(isLocalhost())
+	if($_SERVER['HTTP_HOST'] == 'localhost')
 		header('LOCATION: http://localhost/github/driverup/login');
 	else
 		header('LOCATION: http://driverup.zbraestudio.com.br/login');
