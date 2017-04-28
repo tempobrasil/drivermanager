@@ -1,4 +1,9 @@
 <?
+
+//se já estiver logado, redireciona pro dashboard
+if($login->verify(false, false))
+    header('LOCATION:' . GetLink('dashboard'));
+
 set_config('TITLE', 'Login');
 include(get_config('SITE_PATH') . 'includes/html.head.php');
 ?>

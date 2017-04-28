@@ -55,7 +55,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <ul class="nospace">
         <li><a href="<?= GetLink('site'); ?>"><i class="fa fa-lg fa-home"></i></a></li>
         <li><a href="<?= GetLink('site/empresa'); ?>">Nossa Empresa</a></li>
-        <li><a href="<?= GetLink('site/empresa'); ?>">Blog</a></li>
+        <li><a href="<?= GetLink('blog'); ?>">Blog</a></li>
       </ul>
     </div>
     <div class="fl_right">

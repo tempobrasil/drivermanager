@@ -9,7 +9,7 @@ function get_config($key){
 
 
 /* Caminhos */
-if( $_SERVER['HTTP_HOST'] == 'localhost'){
+if(isLocalhost()){
 
   set_config('SITE_URL'         , 'http://localhost/github/driverup/');
   set_config('SITE_PATH'        , 'D:/github/driverup/');
@@ -30,7 +30,7 @@ set_config('SITE_DESCRIPTION',        'Sistema para Motorista Profissional');
 set_config('SITE_TAGS',               'sistema, motorista, UEBR, 99');
 
 /* Banco de Dados */
-if( $_SERVER['HTTP_HOST'] == 'localhost')
+if(isLocalhost())
   set_config('DB_HOST'          , 'nbz.net.br');
 else
   set_config('DB_HOST'          , 'localhost');

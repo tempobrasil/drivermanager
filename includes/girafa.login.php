@@ -69,14 +69,16 @@ class girafaLOGIN{
     $this->destroySession();
   }
 
-  public function verify($redirect = true){
+  public function verify($redirect = true, $reportMessageError = true){
 
     global $login;
 
     if(!isset($_SESSION['SM_login']['user_id'])){
 
       $login->logout();
-      $_SESSION['login_msg'] = 'Você não está logado para acessar esse link';
+
+      if($reportMessageError)
+        $_SESSION['login_msg'] = 'Você não está logado para acessar esse link';
 
       if($redirect)
         header('LOCATION: ' . GetLink('login'));
