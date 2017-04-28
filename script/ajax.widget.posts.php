@@ -14,20 +14,17 @@ while($recent->have_posts()) {
 
   $data = new girafaDate($dataPub, ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
   ?>
-  <div class="feed-element">
     <div>
       <a href="<?php the_permalink(); ?>" target="_blank">
         <div class="thumb"
              style="background-image: url('<?= the_post_thumbnail_url(); ?>');"></div>
-        <small class="pull-right text-navy">há <?=  tempo_corrido($dataPub); ?></small>
         <strong class="title"><?php the_title(); ?></strong>
 
         <div><?= the_excerpt(); ?></div>
+        <small class="pull-right text-navy">há <?=  tempo_corrido($dataPub); ?></small>
         <small class="text-muted"><?= $data->GetDayOfWeekLong() . ', ' . $data->GetFullDateForLong() ?></small>
       </a>
     </div>
-  </div>
-
 <?
 }
 ?>
