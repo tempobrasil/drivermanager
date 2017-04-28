@@ -1,9 +1,9 @@
 <?
 //Carrega biblioteca do Wordpress
-require( dirname( __FILE__ ) . '/../blog/wp-load.php' );
+require('../blog/wp-load.php' );
 
 //Carrega biblioteca do Sistema
-require( dirname( __FILE__ ) . '/../includes/autoload.php' );
+require('../includes/autoload.php' );
 
 //Pega 5 ultimos posts
 $recent = new WP_Query("showposts=5");
