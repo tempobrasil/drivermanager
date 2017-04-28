@@ -10,7 +10,7 @@ if($login->login($mail, $pass)){
 
   //verifica se foi espeficiada pra qual URL deve ir depois do login
 
-  if(!empty(@$_SESSION['login_after_url'])) {
+  if(!empty($_SESSION['login_after_url'])) {
     header('LOCATION:' . $_SESSION['login_after_url']);
     unset($_SESSION['login_after_url']);
   } else
