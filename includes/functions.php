@@ -147,16 +147,6 @@ function StartOfDayWeek($nroSemana, $ano, $comecaSeg = false){
   die($day);
 }
 
-function blog_getPosts(){
-
-  $rss = simplexml_load_file(GetLink('blog/feed/rss'));
-  //die(GetLink('blog/feed') . '<<>>' . print_r($rss, false) . '<<');
-
-  return $rss->channel->item;
-
-
-}
-
 function tempo_corrido($time) {
 
   $now = strtotime(date('m/d/Y H:i:s'));
