@@ -150,7 +150,7 @@ function StartOfDayWeek($nroSemana, $ano, $comecaSeg = false){
 function blog_getPosts(){
 
   $rss = simplexml_load_file(GetLink('blog/feed'));
-  die('>>' . print_r($rss, false) . '<<');
+  die(GetLink('blog/feed') . '<<>>' . print_r($rss, false) . '<<');
 
   return $rss->channel->item;
 
