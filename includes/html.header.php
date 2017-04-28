@@ -83,6 +83,10 @@ $login->verify();
           </ul>
         </li>
 
+        <li>
+          <a href="<?= GetLink('blog'); ?>" target="_blank" title="Blog"><i class="fa fa-rss"></i> <span class="nav-label">Blog</span></a>
+        </li>
+
 
 
       </ul>

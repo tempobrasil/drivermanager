@@ -146,3 +146,20 @@ label.control-label input {
 body.pg_login img.logo {
   margin: 50px 0;
 }
+.widget-blog a {
+  color: #333;
+}
+.widget-blog a div.thumb {
+  background-image: url(http://localhost/github/driverup/blog/wp-content/uploads/2017/04/driverup-blog-topo-750x410.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 50px;
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 5px;
+}
+.widget-blog a:focus .title,
+.widget-blog a:hover .title {
+  color: #1ab394;
+}

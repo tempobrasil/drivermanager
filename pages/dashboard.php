@@ -88,6 +88,54 @@ template_getHeader();
 
         </div>
 
+        <div class="col-lg-4 widget-blog">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Últimas do Blog</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="feed-activity-list">
+
+                        <?
+                        $posts = blog_getPosts();
+                        //print_r($posts);exit;
+                        for($i = 0; ($i < 3 & $i < count($posts)); $i++){
+
+                            $post = $posts[$i];
+
+                            $dataPub = strtotime($post->pubDate);
+                            $data = new girafaDate(date('Y-m-d H:i:s', $dataPub), ENUM_DATE_FORMAT::YYYY_MM_DD_HH_II_SS);
+                            ?>
+                            <div class="feed-element">
+                                <div>
+                                    <a href="<?= $post->link; ?>" target="_blank">
+                                    <div class="thumb"></div>
+                                    <small class="pull-right text-navy">há <?= tempo_corrido($post->pubDate); ?></small>
+                                    <strong class="title"><?= $post->title; ?></strong>
+
+                                    <div><?= $post->description; ?></div>
+                                    <small class="text-muted"><?= $data->GetDayOfWeekLong() . ', ' .  $data->GetFullDateForLong() ?></small>
+                                    </a>
+                                </div>
+                            </div>
+                        <?
+                        }
+                        ?>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
