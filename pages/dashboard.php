@@ -117,7 +117,7 @@ template_getHeader();
                             <div class="feed-element">
                                 <div>
                                     <a href="<?= $post->link; ?>" target="_blank">
-                                    <div class="thumb"></div>
+                                    <div class="thumb" style="background-image: url(http://localhost/github/driverup/blog/wp-content/uploads/2017/04/driverup-blog-topo-750x410.jpg);"></div>
                                     <small class="pull-right text-navy">há <?= tempo_corrido($post->pubDate); ?></small>
                                     <strong class="title"><?= $post->title; ?></strong>
 
