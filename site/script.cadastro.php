@@ -1,10 +1,38 @@
 <?php
 print_r($_POST);
 print_r($_FILES);
-exit;
+//exit;
+
+$nome						= $_POST['nome'];
+$sobrenome			= $_POST['sobrenome'];
+$email					= $_POST['email'];
+$telefone				= $_POST['telefone'];
+$senha					= $_POST['senha'];
+$pgto						= $_POST['pgto'];
+$obs						= (empty($_POST['obs'])?'(nenhuma observação)':$_POST['obs']);
+
+$mensagem = "Olá, sou $nome e gostaria de contratar o DriverUP.
+Abaixo seguem as especificações a minha solicitação:
+
+ - Nome: $nome
+ - Sobrenome: $sobrenome
+ - E-mail: $email
+ - Telefone: $telefone
+ - Senha: $senha
+ - Forma de Pagamento: $pgto
+ - Observações: $obs
+
+Junto a minha solicitação, segue minha foto da minha documentação.
+Obrigado!
+
+***************************************************************
+Esse ticket foi criado automaticamente, a partir de uma solicitação no formulário de Cadastro do site DriverUP.
+Caso não tenha sido você que fez o cadastro, responda a essa mensagem nos informando.
+Equipe DriverUP.
+ ";
 
 $hesk_path= dirname(dirname(dirname(__FILE__))) . '/suporte';
-
+die($hesk_path);
 
 define('IN_SCRIPT',1);
 define('HESK_PATH', $hesk_path . '/');
@@ -44,7 +72,13 @@ for($x=1; (!$trackIdUNICO); $x++){
 
 /* Imagens */
 
+foreach ($_FILES as $file) {
+	echo('{' . key($file) . '}');
+}
+
+die('EXIT');
 //EXEMPLOS
+/*
 $myatt['real_name'] = 'a2.jpg';
 $v['stored_name'] = '/dados/http/zbraestudio.com.br/driverup/img/a2.jpg';
 
@@ -67,19 +101,19 @@ $sql = "INSERT INTO `".hesk_dbEscape($hesk_settings['db_pfix'])."attachments` (`
 hesk_dbQuery($sql);
 $tmpvar['attachments'] .= hesk_dbInsertID() . '#' . $myatt['real_name'] .',';
 //die($tmpvar['attachments']);
-
+*/
 /* MODELO - FIM */
 $ticket = array();
 $ticket['trackid']			= $trackid;
-$ticket['name']				= 'Motorista123';
-$ticket['email']			= 'motorista@dominio.com';
+$ticket['name']				= $nome . ' ' . $sobrenome;
+$ticket['email']			= $email;
 $ticket['category']			= null;
 $ticket['priority']			= 0;
 $ticket['subject']			= 'Quero contratar o DriverUP';
 $ticket['message']			= 'Teste de mensagem';
 
-$ticket['owner']			= null;
-$ticket['attachments']		= $tmpvar['attachments'];
+$ticket['owner']				= null;
+$ticket['attachments']	= $tmpvar['attachments'];
 
 $ticket['history']			= null;
 

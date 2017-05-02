@@ -96,9 +96,9 @@ include('inc.header.php');
           </div>
           <div class="two_third">
             <select name="pgto" id="pgto" class="chosen" required="">
-              <option value="trimestral">Trimestral (experimente por 30 dias)</option>
-              <option value="semestral">Semestral</option>
-              <option value="anual">Anual</option>
+              <option value="Trimestral">Trimestral (experimente por 30 dias)</option>
+              <option value="Semestral">Semestral</option>
+              <option value="Anual">Anual</option>
             </select>
           </div>
 
