@@ -1,4 +1,6 @@
 <?
+$version = '1.0.beta';
+
 function set_config($key, $val){
   $GLOBALS[$key] = $val;
 }
@@ -23,7 +25,7 @@ if(isLocalhost()){
 
 set_config('TITLE',                   '');
 set_config('SYSTEM_TITLE',            '[Driver UP]');
-set_config('FOOTER_TEXT',            '<strong>Driver UP</strong> v1 - &copy; 2017 - Todos os Direitos Reservados.');
+set_config('FOOTER_TEXT',            '<strong>Driver UP</strong> v' . $version . ' - &copy; 2017 - Todos os Direitos Reservados.');
 
 set_config('SITE_TITLE',              'Driver UP (Sistema para Motorista Profissional)');
 set_config('SITE_DESCRIPTION',        'Sistema para Motorista Profissional');

@@ -77,6 +77,9 @@
 
 <script src="<?= get_config('SITE_URL')?>site/layout/scripts/tihh.js"></script>
 
+
+<script src="<?= get_config('SITE_URL')?>site/layout/scripts/chosen/chosen.jquery.js"></script>
+
 </body>
 </html>
 

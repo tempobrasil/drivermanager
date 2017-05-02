@@ -87,6 +87,25 @@ include('inc.header.php');
 
           <div class="one_third first"></div>
           <div class="two_third">
+            <h4>Pagamento</h4>
+            <p>Agora precisamos da cópia de uns documentos seus. É simples! Tire uma foto (com seu celular mesmo) e anexe nos campos abaixo.</p>
+          </div>
+
+          <div class="one_third first">
+
+          </div>
+          <div class="two_third">
+            <select name="pgto" id="pgto" class="chosen" required="">
+              <option value="trimestral">Trimestral (experimente por 30 dias)</option>
+              <option value="semestral">Semestral</option>
+              <option value="anual">Anual</option>
+            </select>
+          </div>
+
+          <hr>
+
+          <div class="one_third first"></div>
+          <div class="two_third">
             <h4>Documentação</h4>
             <p>Agora precisamos da cópia de uns documentos seus. É simples! Tire uma foto (com seu celular mesmo) e anexe nos campos abaixo.</p>
           </div>
