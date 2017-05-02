@@ -1,6 +1,6 @@
 <?php
-print_r($_POST);
-print_r($_FILES);
+//print_r($_POST);
+//print_r($_FILES);
 //exit;
 
 $nome						= $_POST['nome'];
@@ -11,28 +11,28 @@ $senha					= $_POST['senha'];
 $pgto						= $_POST['pgto'];
 $obs						= (empty($_POST['obs'])?'(nenhuma observação)':$_POST['obs']);
 
-$mensagem = "Olá, sou $nome e gostaria de contratar o DriverUP.
-Abaixo seguem as especificações a minha solicitação:
-
- - Nome: $nome
- - Sobrenome: $sobrenome
- - E-mail: $email
- - Telefone: $telefone
- - Senha: $senha
- - Forma de Pagamento: $pgto
- - Observações: $obs
-
-Junto a minha solicitação, segue minha foto da minha documentação.
-Obrigado!
-
-***************************************************************
-Esse ticket foi criado automaticamente, a partir de uma solicitação no formulário de Cadastro do site DriverUP.
-Caso não tenha sido você que fez o cadastro, responda a essa mensagem nos informando.
-Equipe DriverUP.
+$mensagem = "Olá, sou $nome e gostaria de contratar o DriverUP. <br>
+Abaixo seguem as especificações a minha solicitação: <br>
+ <br>
+ - <strong>Nome:</strong> $nome <br>
+ - <strong>Sobrenome:</strong> $sobrenome <br>
+ - <strong>E-mail:</strong> $email <br>
+ - <strong>Telefone:</strong> $telefone <br>
+ - <strong>Senha:</strong> $senha <br>
+ - <strong>Forma de Pagamento:</strong> $pgto <br>
+ - <strong>Observações:</strong> $obs <br>
+ <br>
+Junto a minha solicitação, segue minha foto da minha documentação. <br>
+Obrigado! <br>
+ <br>
+*************************************************************** <br>
+Esse ticket foi criado automaticamente, a partir de uma solicitação no formulário de Cadastro do site DriverUP. <br>
+Caso não tenha sido você que fez o cadastro, responda a essa mensagem nos informando. <br>
+Equipe DriverUP. <br>
  ";
 
 $hesk_path= dirname(dirname(dirname(__FILE__))) . '/suporte';
-die($hesk_path);
+//die($hesk_path);
 
 define('IN_SCRIPT',1);
 define('HESK_PATH', $hesk_path . '/');
@@ -56,10 +56,8 @@ for($x=1; (!$trackIdUNICO); $x++){
 	$sql = "SELECT * FROM `".hesk_dbEscape($hesk_settings['db_pfix'])."tickets` WHERE `trackid`='".$trackid."' LIMIT 1";
 	if($nx == 2)
 		die($sql);
-//	die($sql);
-	$res = hesk_dbQuery($sql);
 
-//	die('x:' . hesk_dbNumRows($res));
+  $res = hesk_dbQuery($sql);
 
 	if(hesk_dbNumRows($res) == 0){
 		$trackIdUNICO = true;
@@ -71,37 +69,39 @@ for($x=1; (!$trackIdUNICO); $x++){
 //die($trackid);
 
 /* Imagens */
+$anexos = null;
+foreach ($_FILES as $x=>$file) {
 
-foreach ($_FILES as $file) {
-	echo('{' . key($file) . '}');
-}
+  $file_name = $file['name'];
+  $file_size = $file['size'];
+  $file_tmp_name = $file['tmp_name'];
 
-die('EXIT');
-//EXEMPLOS
-/*
-$myatt['real_name'] = 'a2.jpg';
-$v['stored_name'] = '/dados/http/zbraestudio.com.br/driverup/img/a2.jpg';
+  $ext = strtolower(strrchr($file_name, "."));
 
-$ext = strtolower(strrchr($myatt['real_name'], "."));
-$useChars='AEUYBDGHJLMNPQRSTVWXZ123456789';
-$tmp = $useChars{mt_rand(0,29)};
-for($j=1;$j<10;$j++) {
-	$tmp .= $useChars{mt_rand(0,29)};
-}
+  $useChars='AEUYBDGHJLMNPQRSTVWXZ123456789';
+  $tmp = $useChars{mt_rand(0,29)};
 
-$myatt['saved_name'] = substr($tmpvar['trackid'] . '_' . md5($tmp . $myatt['real_name']), 0, 200) . $ext;
+  for($j=1;$j<10;$j++) {
+    $tmp .= $useChars{mt_rand(0,29)};
+  }
 
-// Rename the temporary file
-die($v['stored_name']);
-rename($v['stored_name'],HESK_PATH.$hesk_settings['attach_dir'].'/'.$myatt['saved_name']);
 
-// Insert into database
-$sql = "INSERT INTO `".hesk_dbEscape($hesk_settings['db_pfix'])."attachments` (`ticket_id`,`saved_name`,`real_name`,`size`) VALUES ('".hesk_dbEscape($tmpvar['trackid'])."','".hesk_dbEscape($myatt['saved_name'])."','".hesk_dbEscape($myatt['real_name'])."','".intval($myatt['size'])."')";
+  $file_save = substr($trackid . '_' . $x . '_' . md5($tmp . $file_name), 0, 200) . $ext;
 
-hesk_dbQuery($sql);
-$tmpvar['attachments'] .= hesk_dbInsertID() . '#' . $myatt['real_name'] .',';
+  //move definitivo
+//  die(HESK_PATH . $hesk_settings['attach_dir'] . '/' . $file_save);
+  rename($file_tmp_name, HESK_PATH . $hesk_settings['attach_dir'] . '/' . $file_save);
+
+  //registra no HESK
+  $sql = "INSERT INTO `".hesk_dbEscape($hesk_settings['db_pfix'])."attachments` (`ticket_id`,`saved_name`,`real_name`,`size`) VALUES ('".hesk_dbEscape($trackid)."','".hesk_dbEscape($file_save)."','".hesk_dbEscape($file_nam)."','".intval($file_size)."')";
+
+  hesk_dbQuery($sql);
+
+  $anexos .= hesk_dbInsertID() . '#' . $file_name .',';
 //die($tmpvar['attachments']);
-*/
+
+}
+
 /* MODELO - FIM */
 $ticket = array();
 $ticket['trackid']			= $trackid;
@@ -110,10 +110,10 @@ $ticket['email']			= $email;
 $ticket['category']			= null;
 $ticket['priority']			= 0;
 $ticket['subject']			= 'Quero contratar o DriverUP';
-$ticket['message']			= 'Teste de mensagem';
+$ticket['message']			= $mensagem;
 
 $ticket['owner']				= null;
-$ticket['attachments']	= $tmpvar['attachments'];
+$ticket['attachments']	= $anexos;
 
 $ticket['history']			= null;
 
