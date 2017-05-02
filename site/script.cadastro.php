@@ -1,5 +1,8 @@
 <?php
-print_r($_POST);exit;
+print_r($_POST);
+print_r($_FILES);
+exit;
+
 $hesk_path= dirname(dirname(dirname(__FILE__))) . '/suporte';
 
 

@@ -36,7 +36,7 @@ include('inc.header.php');
 
 
 
-        <form action="#" method="post" class="form">
+        <form action="<?= GetLink('site/script.cadastro.php'); ?>" method="post" class="form" enctype="multipart/form-data">
 
           <hr>
 
@@ -155,7 +155,7 @@ include('inc.header.php');
 
           </div>
           <div class="two_third">
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            <textarea name="obs" id="obs" cols="25" rows="10"></textarea>
           </div>
 
           <div class="one_third first"></div>
