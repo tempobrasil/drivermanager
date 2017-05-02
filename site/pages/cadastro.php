@@ -194,7 +194,7 @@ include('inc.footer.php');
     });
 
 
-    $('#arquivo_cnh').bind('change', function() {
+    $('#arquivo_cnh, #arquivo_residencial, #arquivo_carro').bind('change', function() {
 
       var size = this.files[0].size;
 
