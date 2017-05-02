@@ -118,7 +118,9 @@ $ticket['attachments']	= $anexos;
 $ticket['history']			= null;
 
 if(hesk_newTicket($ticket)){
-  die('Enviado!');
+  $_SESSION['msg'][0] = 'Cadastro enviado com sucesso!';
+  $_SESSION['msg'][1] = 'Opa, já recebemos seu cadastro e em breve estaremos entrando em contato com vocês para agilizar a liberação do seu acesso. Fique tranquilo, qualquer problema a gente conversa com você. Abraços!';
 } else {
-  die('ERRO!');
+  $_SESSION['msg'][0] = 'Deu erro!   :(';
+  $_SESSION['msg'][1] = 'Eita! Deu problema pra gente receber seu cadastro. Tente novamente e se acontecer de novo, entre em contato com nosso suporte: <a href="mailto:suporte@zbraestudio.com.br">mailto:suporte@zbraestudio.com.br</a>.';
 }
