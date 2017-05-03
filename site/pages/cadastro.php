@@ -6,6 +6,7 @@ site_setTags('cadastro, quero, iniciar, hoje, como, como ser, quero ser');
 include('inc.header.php');
 
 init_set('upload_max_filesize', '5M');
+$maxFile = upload_max_filesize();
 ?>
 
   <!-- ################################################################################################ -->
@@ -115,7 +116,7 @@ init_set('upload_max_filesize', '5M');
           <div class="one_third first">
             <label for="name">
 
-              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento."></i>
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento. (enviar arquivo até <?= getFileSize($maxFile); ?>)"></i>
 
               CNH <span>*</span></label>
           </div>
@@ -126,7 +127,7 @@ init_set('upload_max_filesize', '5M');
           <div class="one_third first">
             <label for="name">
 
-              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre seu documento por completo e tire uma única foto que apareça o comprovante inteiro. Utilize um comprovante emitido nos últimos 6 meses."></i>
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre seu documento por completo e tire uma única foto que apareça o comprovante inteiro. Utilize um comprovante emitido nos últimos 6 meses. (enviar arquivo até <?= getFileSize($maxFile); ?>)"></i>
 
               Comprovante Residencial <span>*</span></label>
           </div>
@@ -136,7 +137,7 @@ init_set('upload_max_filesize', '5M');
 
           <div class="one_third first">
             <label for="name">
-              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento."></i>
+              <i class="fa fa-question-circle tooltip" aria-hidden="true" title="Abre o documento por completo e tire uma única foto que apareça os 2 lados do documento. (enviar arquivo até <?= getFileSize($maxFile); ?>)"></i>
 
               Documento Veículo - CRLV<span>*</span></label>
           </div>
@@ -176,8 +177,6 @@ init_set('upload_max_filesize', '5M');
   </div>
 <?
 include('inc.footer.php');
-
-$maxFile = upload_max_filesize();
 ?>
 
 <script>
