@@ -30,21 +30,11 @@
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">Últimas do aplicativo</h6>
-      <ul class="nospace linklist">
+      <h6 class="title">Últimas do Blog</h6>
+      <ul class="nospace linklist" id="blog">
+
         <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">Versão 1.0.12</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
-            <p class="nospace">Versão recheada de novidades.</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h2 class="nospace font-x1"><a href="#">Versão 1.0.11</a></h2>
-            <time class="font-xs block btmspace-10" datetime="2045-04-05">Thirsday, 5<sup>th</sup> April 2045</time>
-            <p class="nospace">Correção na sessão do sistema.</p>
-          </article>
+          Carregando...
         </li>
       </ul>
     </div>
@@ -83,6 +73,15 @@
 </body>
 </html>
 
+<!-- Últimas do Blog - rodapé -->
+<script>
+
+  $(document).ready(function(){
+    $('ul#blog').load('<?= GetLink('site/ajax.widget.posts.php'); ?>');
+
+  });
+
+</script>
 
 <!-- Atendimento Online -->
 <script type="text/javascript">
@@ -96,3 +95,4 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
+
