@@ -7,8 +7,8 @@ include('inc.header.php');
     <!-- ################################################################################################ -->
     <article>
       <div>
-        <p class="heading">Você dono do seu próprio negócio</p>
-        <h2 class="heading">Seja um motorista</h2>
+        <p class="heading">Assesoria ao Motorista Profissional</p>
+        <h2 class="heading">Cuidando da sua carreira</h2>
         <p>O que faltava para sua independência financeira e você crescer na sua carreria como motorista profissional.</p>
       </div>
       <footer>
