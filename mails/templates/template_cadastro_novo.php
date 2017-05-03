@@ -1,5 +1,4 @@
 <?
-
 function mail_cadastro_novo_getHtml($nome, $email, $trackID){
 
   $html = '<html>
@@ -56,10 +55,11 @@ function mail_cadastro_novo_send($nome, $email, $trackID){
   global $mailer;
 
   $mailer->addAddress($email);
+
   $mailer->addCC('tiago@zbraestudio.com.br');
 
   $mailer->Subject = 'Já recebemos seu cadastro!  :)';
-  $mailer->Body    = mail_cadastro_novo_getHtml($nome, $email, $trackID);
+$mailer->Body    = mail_cadastro_novo_getHtml($nome, $email, $trackID);
 
   if($mailer->send())
     return true;
