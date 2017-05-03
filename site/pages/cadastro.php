@@ -5,7 +5,9 @@ site_setTags('cadastro, quero, iniciar, hoje, como, como ser, quero ser');
 
 include('inc.header.php');
 
-init_set('upload_max_filesize', '5M');
+ini_set("upload_max_filesize", "5M");
+ini_set("post_max_size", "5M");
+ini_set("memory_limit", "5");
 $maxFile = upload_max_filesize();
 ?>
 
