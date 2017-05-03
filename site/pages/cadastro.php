@@ -174,6 +174,8 @@ include('inc.header.php');
   </div>
 <?
 include('inc.footer.php');
+
+$maxFile = upload_max_filesize();
 ?>
 
 <script>
@@ -198,10 +200,10 @@ include('inc.footer.php');
 
       var size = this.files[0].size;
 
-      var max = (1024 * 1024);
+      var max = <?= $maxFile; ?>; //<?= ini_get('upload_max_filesize') ; ?>
 
       if(size > max) {
-        infoAlert('Ops!', 'Desculpe, mas seu arquivo ultrapassou o tamanho máximo, de 1mb');
+        infoAlert('Ops!', 'Desculpe, mas seu arquivo ultrapassou o tamanho máximo, de <?= getFileSize($maxFile); ?>');
 
         $(this).val('');
       }

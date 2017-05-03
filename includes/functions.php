@@ -171,5 +171,31 @@ function tempo_corrido($time) {
   else return $years == 1 ? 'um ano atrás':$years.' anos atrás';
 }
 
+function upload_max_filesize()
+{
+  $val  = trim(ini_get('upload_max_filesize'));
+
+  $last = strtolower($val[strlen($val)-1]);
+  $val  = substr($val, 0, -1);
+
+  switch($last) {
+    // The 'G' modifier is available since PHP 5.1.0
+    case 'g':
+      $val *= 1024;
+    case 'm':
+      $val *= 1024;
+    case 'k':
+      $val *= 1024;
+  }
+
+  return $val;
+}
+
+function getFileSize($bytes, $precision = 2) {
+  $base = log($bytes, 1024);
+  $suffixes = array('', 'K', 'M', 'G', 'T');
+
+  return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+}
 
 ?>
