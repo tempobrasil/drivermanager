@@ -32,8 +32,10 @@ function mail_cadastro_novo_getHtml($nome, $email, $trackID){
           <li><strong>Ticket ID:</strong> ' . $trackID . '</li>
         </ul>
 
-        <p>Bom, é isso! Estou muito feliz em tê-lo com a gente. Qualquer dúvida, entre em contato com nosso suporte.</p>
-        <p>Grande abraço, <br><i>Tihh Gonçalves</i>(Diretor)<br></p>
+        <p>Bom, é isso! Estou muito feliz em tê-lo com a gente.<br>
+        Qualquer dúvida, entre em contato com nosso suporte.</p>
+
+        <p>Grande abraço! <br><i>Tihh Gonçalves</i><br>(Diretor)<br></p>
       </td>
     </tr>
   </table>
