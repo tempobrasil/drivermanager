@@ -4,6 +4,8 @@ site_setDescription('Faça seu cadastro e comece sua carreira como Motorista Pro
 site_setTags('cadastro, quero, iniciar, hoje, como, como ser, quero ser');
 
 include('inc.header.php');
+
+init_set('upload_max_filesize', '5M');
 ?>
 
   <!-- ################################################################################################ -->

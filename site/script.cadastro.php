@@ -3,6 +3,9 @@
 //print_r($_FILES);
 //exit;
 
+init_set('upload_max_filesize', '5M');
+
+
 session_start();
 
 $nome						= $_POST['nome'];
