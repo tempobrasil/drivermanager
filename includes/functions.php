@@ -193,7 +193,7 @@ function upload_max_filesize()
 
 function getFileSize($bytes, $precision = 2) {
   $base = log($bytes, 1024);
-  $suffixes = array('', 'K', 'M', 'G', 'T');
+  $suffixes = array('by', 'kb', 'mb', 'gb', 'tb');
 
   return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
 }
