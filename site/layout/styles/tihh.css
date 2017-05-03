@@ -62,6 +62,19 @@
 h1 {
   font-size: 25px;
 }
+h2 {
+  text-transform: none;
+  margin-top: 25px;
+}
+h3 {
+  font-size: 16px;
+  margin-top: 25px;
+}
+h4 {
+  font-size: 16px;
+  text-transform: none;
+  margin-top: 25px;
+}
 /* FORM */
 form.form {
   display: block;
