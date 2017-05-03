@@ -53,7 +53,12 @@ hesk_dbConnect();
 $trackIdUNICO = false;
 for($x=1; (!$trackIdUNICO); $x++){
 
-	$trackid = 'DRV-' . date('ym-') . (strlen($x) == 1 ? '0'.$x : $x);
+  if(strlen($x) == 1)
+    $num = '00' . $x;
+  else if(strlen($x) == 2)
+    $num = '0' . $x;
+
+	$trackid = 'DRV-' . $num . '-' . date('ym');
 
 	$sql = "SELECT * FROM `".hesk_dbEscape($hesk_settings['db_pfix'])."tickets` WHERE `trackid`='".$trackid."' LIMIT 1";
 	if($nx == 2)
@@ -111,7 +116,7 @@ $ticket['name']				= $nome . ' ' . $sobrenome;
 $ticket['email']			= $email;
 $ticket['category']			= null;
 $ticket['priority']			= 0;
-$ticket['subject']			= "[#$trackid] Quero contratar o DriverUP";
+$ticket['subject']			= 'Quero contratar o DriverUP';
 $ticket['message']			= $mensagem;
 
 $ticket['owner']				= null;
