@@ -124,7 +124,8 @@ if(hesk_newTicket($ticket)){
   $_SESSION['msg'][1] = 'Opa, já recebemos seu cadastro e em breve estaremos entrando em contato com vocês para agilizar a liberação do seu acesso. Fique tranquilo, qualquer problema a gente conversa com você. Abraços!';
 
   //Envia e-mail avisando Equipe
-  include(get_config('SITE_PATH') . 'mails/templates/template_cadastro_novo.php');
+  include(dirname(dirname(__FILE__)) . 'autoload.phpmailer.php');
+  include(dirname(dirname(__FILE__)) . 'mails/templates/template_cadastro_novo.php');
   $res = mail_cadastro_novo_send($nome, $email, $trackid);
 
 } else {

@@ -28,26 +28,13 @@ include(get_config('SITE_PATH') . 'includes/obj.tpl.php');
 $db = new girafaDB(get_config('DB_HOST'), get_config('DB_DB'), get_config('DB_USER'), get_config('DB_PASS'));
 $login = new girafaLOGIN();
 
-/* Envia E-mail */
-require_once(get_config('SITE_PATH') . 'bower_components/PHPMailer/PHPMailerAutoload.php');
+
+include(get_config('SITE_PATH') . 'includes/autoload.phpmailer.php');
 
 /* E-mails */
 /*
 include(SITE_PATH . '/mails/templates/template_aula_assistindo.php');
 include(SITE_PATH . '/mails/templates/template_aula_respostas.php');
 */
-$mailer = new PHPMailer;
 
-$mailer->isSMTP();
-$mailer->Host =             'smtp.gmail.com';
-$mailer->SMTPAuth =          true;
-$mailer->Username =         'zbra.enviador@gmail.com';
-$mailer->Password =         'zbrazbra';
-$mailer->SMTPSecure =       'ssl';
-$mailer->Port =             465;
-
-$mailer->CharSet = "UTF-8";
-$mailer->addEmbeddedImage(get_config('SITE_PATH') . 'mails/templates/images/logo.png', 'logo');
-$mailer->setFrom('driverup@zbraestudio.com.br', 'DriverUP');
-$mailer->isHTML(true);
 ?>
