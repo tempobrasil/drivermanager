@@ -26,21 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mensagem.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/site/pages/mensagem.php">
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/autoload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.045152724">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state vertical-scroll-proportion="-20.461538">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -49,12 +39,51 @@
       <file leaf-file-name="script.cadastro.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/script.cadastro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state vertical-scroll-proportion="-22.423077">
+              <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
               <folding>
-                <marker date="1493779628395" expanded="true" signature="1703:1809" placeholder="SELECT * FRO..." />
-                <marker date="1493779628395" expanded="true" signature="2674:2916" placeholder="INSERT INTO ..." />
+                <marker date="1493784889244" expanded="true" signature="1703:1809" placeholder="SELECT * FRO..." />
+                <marker date="1493784889244" expanded="true" signature="2674:2916" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template_cadastro_novo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mails/templates/template_cadastro_novo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7675963">
+              <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
+              <folding>
+                <marker date="1493785270988" expanded="true" signature="83:2217" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="92:175" placeholder="..." />
+                <marker date="1493785270988" expanded="false" signature="192:271" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="272:2207" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="338:1993" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="347:630" placeholder="..." />
+                <marker date="1493785270988" expanded="false" signature="366:585" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="586:620" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="639:1982" placeholder="..." />
+                <marker date="1493785270988" expanded="false" signature="658:752" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="753:768" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="753:1972" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="816:1029" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="1042:1321" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="1576:1769" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="2017:2197" placeholder="..." />
+                <marker date="1493785270988" expanded="false" signature="2032:2083" placeholder="..." />
+                <marker date="1493785270988" expanded="true" signature="2084:2185" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teste.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site/teste.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,10 +98,14 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
-        <option value="$PROJECT_DIR$/site/pages/cadastro.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/site/script.cadastro.php" />
         <option value="$PROJECT_DIR$/site/pages/mensagem.php" />
+        <option value="$PROJECT_DIR$/site/pages/cadastro.php" />
+        <option value="$PROJECT_DIR$/mails/script.cadastro.novo.php" />
+        <option value="$PROJECT_DIR$/site/teste.php" />
+        <option value="$PROJECT_DIR$/includes/autoload.php" />
+        <option value="$PROJECT_DIR$/site/script.cadastro.php" />
+        <option value="$PROJECT_DIR$/mails/templates/template_cadastro_novo.php" />
       </list>
     </option>
   </component>
@@ -155,11 +188,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="mails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -173,7 +202,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="mails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -187,6 +220,28 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
@@ -246,14 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/pages/cadastro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33287293">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6162019">
@@ -272,22 +319,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/script.cadastro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <marker date="1493779628395" expanded="true" signature="1703:1809" placeholder="SELECT * FRO..." />
-            <marker date="1493779628395" expanded="true" signature="2674:2916" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/pages/mensagem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.045152724">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/pages/cadastro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022576362">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mails/templates/template_contato.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7861886">
+          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1471888856150" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mails/script.contato.send.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20318726">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.461538">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/teste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/script.cadastro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.423077">
+          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+          <folding>
+            <marker date="1493784889244" expanded="true" signature="1703:1809" placeholder="SELECT * FRO..." />
+            <marker date="1493784889244" expanded="true" signature="2674:2916" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mails/templates/template_cadastro_novo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7675963">
+          <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
+          <folding>
+            <marker date="1493785270988" expanded="true" signature="83:2217" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="92:175" placeholder="..." />
+            <marker date="1493785270988" expanded="false" signature="192:271" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="272:2207" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="338:1993" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="347:630" placeholder="..." />
+            <marker date="1493785270988" expanded="false" signature="366:585" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="586:620" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="639:1982" placeholder="..." />
+            <marker date="1493785270988" expanded="false" signature="658:752" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="753:768" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="753:1972" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="816:1029" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="1042:1321" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="1576:1769" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="2017:2197" placeholder="..." />
+            <marker date="1493785270988" expanded="false" signature="2032:2083" placeholder="..." />
+            <marker date="1493785270988" expanded="true" signature="2084:2185" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
