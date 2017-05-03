@@ -3,7 +3,7 @@
 //print_r($_FILES);
 //exit;
 
-
+session_start();
 
 $nome						= $_POST['nome'];
 $sobrenome			= $_POST['sobrenome'];

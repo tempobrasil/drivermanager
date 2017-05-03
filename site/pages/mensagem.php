@@ -1,6 +1,6 @@
 <?
 site_setSubTitle('Mensagem');
-print_r($_SESSION['msg']);
+//print_r($_SESSION['msg']);
 if(!isset($_SESSION['msg'])){
   header('LOCATION: ' . GetLink('site/home'));
 }
