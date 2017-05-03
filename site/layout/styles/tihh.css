@@ -251,3 +251,15 @@ div#valores .btn-info {
   text-align: center;
   margin-top: 5px;
 }
+img.img-left {
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+img.img-right {
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
