@@ -126,3 +126,5 @@ if(hesk_newTicket($ticket)){
   $_SESSION['msg'][0] = 'Deu erro!   :(';
   $_SESSION['msg'][1] = 'Eita! Deu problema pra gente receber seu cadastro. Tente novamente e se acontecer de novo, entre em contato com nosso suporte: <a href="mailto:suporte@zbraestudio.com.br">mailto:suporte@zbraestudio.com.br</a>.';
 }
+
+header('LOCATION: ' . GetLink('site/mensagem'));
