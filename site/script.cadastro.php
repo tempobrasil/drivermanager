@@ -119,12 +119,11 @@ $ticket['priority']			= 0;
 $ticket['subject']			= 'Quero contratar o DriverUP';
 $ticket['message']			= $mensagem;
 $ticket['openby']   		= -2;
-$ticket['history']   		= '<li class="smaller"> 0' . date('d/m/Y H:i:s') . ' | ticket criado por ' . $nome . ' (' . $email . ') </li>';
 
 $ticket['owner']				= null;
 $ticket['attachments']	= $anexos;
 
-$ticket['history']			= null;
+$ticket['history']   		= '<li class="smaller"> 0' . date('d/m/Y H:i:s') . ' | ticket criado por ' . $nome . ' (' . $email . ') </li>';
 
 if(hesk_newTicket($ticket)){
   $_SESSION['msg'][0] = 'Cadastro enviado com sucesso!';
