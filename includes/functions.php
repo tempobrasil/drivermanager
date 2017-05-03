@@ -195,7 +195,7 @@ function getFileSize($bytes, $precision = 2) {
   $base = log($bytes, 1024);
   $suffixes = array('by', 'kb', 'mb', 'gb', 'tb');
 
-  return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+  return round(pow(1024, $base - floor($base)), $precision) .''. $suffixes[floor($base)];
 }
 
 ?>
