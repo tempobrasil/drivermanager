@@ -127,7 +127,6 @@ if(hesk_newTicket($ticket)){
   include(get_config('SITE_PATH') . 'mails/templates/template_cadastro_novo.php');
   $res = mail_cadastro_novo_send($nome, $email, $trackid);
 
-
 } else {
   $_SESSION['msg'][0] = 'Deu erro!   :(';
   $_SESSION['msg'][1] = 'Eita! Deu problema pra gente receber seu cadastro. Tente novamente e se acontecer de novo, entre em contato com nosso suporte: <a href="mailto:suporte@zbraestudio.com.br">mailto:suporte@zbraestudio.com.br</a>.';
