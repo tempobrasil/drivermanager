@@ -114,10 +114,12 @@ $ticket = array();
 $ticket['trackid']			= $trackid;
 $ticket['name']				= $nome . ' ' . $sobrenome;
 $ticket['email']			= $email;
-$ticket['category']			= null;
+$ticket['category']			= 8; //DriverUP - Administração
 $ticket['priority']			= 0;
 $ticket['subject']			= 'Quero contratar o DriverUP';
 $ticket['message']			= $mensagem;
+$ticket['openby']   		= -2;
+$ticket['history']   		= '<li class="smaller"> 0' . date('d/m/Y H:i:s') . ' | ticket criado por ' . $nome . ' (' . $email . ') </li>';
 
 $ticket['owner']				= null;
 $ticket['attachments']	= $anexos;
