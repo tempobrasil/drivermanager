@@ -1,5 +1,4 @@
 <?
-session_start();
 include('includes/autoload.php');
 
 //se for em branco, redireciona pro /home

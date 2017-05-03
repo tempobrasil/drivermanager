@@ -1,9 +1,8 @@
 <?
-
+session_start();
 function isLocalhost(){
   return ( $_SERVER['HTTP_HOST'] == 'localhost');
 }
-session_start();
 date_default_timezone_set('America/Sao_Paulo');
 
 include('mpdf60/mpdf.php');
