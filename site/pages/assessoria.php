@@ -25,7 +25,7 @@ include('inc.header.php');
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
-  <div class="wrapper row3">
+  <div class="wrapper row3" id="pg_assessoria">
     <main class="hoc container clear">
       <!-- main body -->
       <!-- ################################################################################################ -->
@@ -35,7 +35,12 @@ include('inc.header.php');
         <h1>A Assessoria</h1>
         <p>Mais do que um aplicativo ou convênio, mas uma verdadeira assessoria profissional. Isso mesmo. É assim que queremos ser lembrados por você, como seu melhor parceiro. A Driver UP é uma Assessoria para Motoristas Profissionais. Em outras palavras, a gente se dedica pra contribuir para que você tenha uma grande uma carreira profissional e isso tanto pra você que já é motorista e quer crescer ainda mais, quanto pra você que está pensando em iniciar agora com esse trabalho.</p>
           <p>Nosso ponto forte é o relacionamento. Além de oferecermos uma série de ferramentas pra você e ajudar no seu dia a dia como motorista profissional, fazemos questão de estabelecer uma parceria a nível pessoal com nossos assessorados. Isso significa que toda nossa equipe está a sua disposição, pronto para ajudar você no que for preciso.</p>
-          <p>Confira abaixo as principais vantagens de ser um assessorado Driver UP. Conte com a gente e entre pro time ainda hoje!</p>
+        <p>Veja abaixo os principais aplicativos que nossa assessoria atende:</p>
+        <p>
+            <a href="https://www.uber.com/" target="_blank"><img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_uber_grande.png" class="assessoria_logos_app" title="UBER"></a>
+            <a href="https://cabify.com/" target="_blank"><img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_cabify_grande.png" class="assessoria_logos_app" title="Cabify"></a>
+            <a href="https://willgobrasil.com.br/" target="_blank"><img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_willgo_grande.png" class="assessoria_logos_app" title="WillGo"></a>
+          </p>
 
         <div class="clearboth"></div>
 

@@ -58,12 +58,16 @@ Licence URI: http://www.os-templates.com/template-terms
         <li><a href="<?= GetLink('site'); ?>"><i class="fa fa-lg fa-home"></i></a></li>
         <li><a href="<?= GetLink('site/empresa'); ?>">Nossa Empresa</a></li>
         <li><a href="<?= GetLink('blog'); ?>">Blog</a></li>
+        <li><i class="fa fa-envelope-o"></i> <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a> </li>
       </ul>
     </div>
     <div class="fl_right">
       <ul class="nospace">
-        <li><i class="fa fa-phone"></i> +55 (47) 9 9650-6687</li>
-        <li><i class="fa fa-envelope-o"></i> <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a> </li>
+        <li>
+          <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_uber.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em UBER">
+          <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_cabify.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em Cabify">
+          <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_willgo.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em WillGo">
+        </li>
         <li><a href="<?= GetLink('login');?>" class="btn btn-sm">Entrar</a> </li>
       </ul>
     </div>
@@ -77,7 +81,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <a href="<?= GetLink('site'); ?>"><img src="images/logo.png" id="logo"> </a>
+      <a href="<?= GetLink('site'); ?>"><img src="<?= get_config('SITE_URL'); ?>site/images/logo.png" id="logo"> </a>
     </div>
     <!-- ################################################################################################ -->
     <nav id="mainav" class="fl_right">

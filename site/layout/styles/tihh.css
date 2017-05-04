@@ -7,6 +7,9 @@
   color: #299b86;
   background-color: #FFF;
 }
+.row0 .apps_logo {
+  margin: 0 6px!important;
+}
 /* RODAPÉ */
 #copyright a {
   color: #299b86 !important;
@@ -266,4 +269,7 @@ img.img-right {
 .clearboth {
   clear: both;
   margin-bottom: 50px;
+}
+#pg_assessoria .assessoria_logos_app {
+  margin: 10px;
 }
