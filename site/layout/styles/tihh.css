@@ -263,3 +263,7 @@ img.img-right {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.clearboth {
+  clear: both;
+  margin-bottom: 50px;
+}
