@@ -10,6 +10,9 @@
 .row0 .apps_logo {
   margin: 0 6px!important;
 }
+#header #logo {
+  margin-top: 5px!important;
+}
 /* RODAPÉ */
 #copyright a {
   color: #299b86 !important;
