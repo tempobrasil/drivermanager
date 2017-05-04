@@ -13,7 +13,7 @@ $senha					= $_POST['senha'];
 $pgto						= $_POST['pgto'];
 $obs						= (empty($_POST['obs'])?'(nenhuma observação)':$_POST['obs']);
 
-$mensagem = "Olá, sou $nome e gostaria de contratar o DriverUP. <br>
+$mensagem = "Olá, sou $nome e gostaria de contratar a Lunar. <br>
 Abaixo seguem as especificações a minha solicitação: <br>
  <br>
  - <strong>Nome:</strong> $nome <br>
@@ -28,9 +28,9 @@ Junto a minha solicitação, segue minha foto da minha documentação. <br>
 Obrigado! <br>
  <br>
 *************************************************************** <br>
-Esse ticket foi criado automaticamente, a partir de uma solicitação no formulário de Cadastro do site DriverUP. <br>
+Esse ticket foi criado automaticamente, a partir de uma solicitação no formulário de Cadastro do site Lunar. <br>
 Caso não tenha sido você que fez o cadastro, responda a essa mensagem nos informando. <br>
-Equipe DriverUP. <br>
+Equipe Lunar. <br>
  ";
 
 $hesk_path= dirname(dirname(dirname(__FILE__))) . '/suporte';
@@ -114,9 +114,9 @@ $ticket = array();
 $ticket['trackid']			= $trackid;
 $ticket['name']				= $nome . ' ' . $sobrenome;
 $ticket['email']			= $email;
-$ticket['category']			= 8; //DriverUP - Administração
+$ticket['category']			= 8; //Lunar - Administração
 $ticket['priority']			= 0;
-$ticket['subject']			= 'Quero contratar o DriverUP';
+$ticket['subject']			= 'Quero contratar a Lunar';
 $ticket['message']			= $mensagem;
 $ticket['openby']   		= -2;
 

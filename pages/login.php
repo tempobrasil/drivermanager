@@ -17,7 +17,7 @@ include(get_config('SITE_PATH') . 'includes/html.head.php');
             <img class="logo" src="<?= $SITE_URL; ?>img/logo_login.png" />
 
         </div>
-        <h3>Bem vindo ao Driver UP</h3>
+        <h3>Bem vindo a Lunar</h3>
         <p>
             Preencha abaixo com suas credenciais para acessar o sistema.
         </p>

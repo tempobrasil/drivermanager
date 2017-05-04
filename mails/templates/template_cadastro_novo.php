@@ -43,7 +43,7 @@ function mail_cadastro_novo_getHtml($nome, $email, $trackID){
   <center>
 <span style="font-style:italic; font-size: 11px; margin-top:5px;">
 Esta é uma mensagem automática, por favor não responda este e-mail.
-Copyright 2017 DriverUP.
+Copyright 2017 Lunar.
 </span>
   </center>
   </body>

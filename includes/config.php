@@ -13,23 +13,23 @@ function get_config($key){
 /* Caminhos */
 if(isLocalhost()){
 
-  set_config('SITE_URL'         , 'http://localhost/github/driverup/');
-  set_config('SITE_PATH'        , 'D:/github/driverup/');
+  set_config('SITE_URL'         , 'http://localhost/github/lunar/');
+  set_config('SITE_PATH'        , 'D:/github/lunar/');
 
 } else {
 
-  set_config('SITE_URL'         , 'http://driverup.zbraestudio.com.br/');
-  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/driverup/');
+  set_config('SITE_URL'         , 'http://lunar.zbraestudio.com.br/');
+  set_config('SITE_PATH'        , '/dados/http/zbraestudio.com.br/lunar/');
 
 }
 
 set_config('TITLE',                   '');
-set_config('SYSTEM_TITLE',            '[Driver UP]');
-set_config('FOOTER_TEXT',            '<strong>Driver UP</strong> v' . $version . ' - &copy; 2017 - Todos os Direitos Reservados.');
+set_config('SYSTEM_TITLE',            '[Lunar]');
+set_config('FOOTER_TEXT',            '<strong>Lunar</strong> v' . $version . ' - &copy; 2017 - Todos os Direitos Reservados.');
 
-set_config('SITE_TITLE',              'Driver UP (Sistema para Motorista Profissional)');
+set_config('SITE_TITLE',              'Lunar (Sistema para Motorista Profissional)');
 set_config('SITE_DESCRIPTION',        'Sistema para Motorista Profissional');
-set_config('SITE_TAGS',               'sistema, motorista, UEBR, 99');
+set_config('SITE_TAGS',               'sistema, motorista, UBER, 99');
 
 /* Banco de Dados */
 if(isLocalhost())
@@ -39,7 +39,7 @@ else
 
 set_config('DB_USER'          , 'root');
 set_config('DB_PASS'          , 'polly');
-set_config('DB_DB'            , 'zbraestudio.com.br_driverup');
+set_config('DB_DB'            , 'zbraestudio.com.br_lunar');
 
 
 

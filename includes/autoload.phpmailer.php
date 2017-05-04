@@ -15,6 +15,6 @@ $mailer->Port =             465;
 
 $mailer->CharSet = "UTF-8";
 $mailer->addEmbeddedImage(dirname(dirname(__FILE__)) . '/mails/templates/images/logo.png', 'logo');
-$mailer->setFrom('driverup@zbraestudio.com.br', 'DriverUP');
+$mailer->setFrom('lunar@zbraestudio.com.br', 'Lunar');
 $mailer->isHTML(true);
 ?>
