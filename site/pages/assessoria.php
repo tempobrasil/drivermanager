@@ -76,5 +76,6 @@ include('inc.header.php');
     </main>
   </div>
 <?
+
 include('inc.footer.php');
 ?>
