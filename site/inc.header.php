@@ -63,7 +63,7 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <div class="fl_right">
       <ul class="nospace">
-        <li>
+        <li class="logos_apps">
           <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_uber.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em UBER">
           <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_cabify.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em Cabify">
           <img src="<?= get_config('SITE_URL'); ?>site/images/app_logo_willgo.png" id="logo_uber" class="apps_logo" title="Assessoria especializada em WillGo">
