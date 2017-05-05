@@ -68,6 +68,7 @@ include('inc.header.php');
 
         <h2>Outros Serviços</h2>
 
+        <img src="<?= get_config('SITE_URL')?>site/images/assessoria-papelaria.jpg" class="img-left">
         <p>Bom, como se já não fosse suficiente tudo o que oferecemos a você, dispomos ainda de alguns serviços específicos que agregarão ainda mais na sua carreira. Desde cartões de visita personalizados de qualidade, até alguns produtos especiais para motoristas profissionais usarem no seu carro.</p>
         <p>Definitivamente, nosso negócio é fazer o seu dar certo. Queremos de todas as formas ajudar você a crescer profissionalmente. Hoje, esses são os principais serviços que oferecemos aos nossos motoristas assessorados, mas estamos trabalhando todos os dias para oferecer ainda mais benefícios e ajudas à você, além de melhor a qualidade do que já oferecemos.</p>
         <p>Somos a Driver UP e queremos <i>dar um up</i> na sua carreira como motorista profissional, conte com a gente!</p>
