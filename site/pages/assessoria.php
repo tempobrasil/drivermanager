@@ -1,6 +1,6 @@
 <?
 site_setSubTitle('A Assessoria');
-site_setDescription('Conheça todas as vantagens de você ter assessoria da Lunar.');
+site_setDescription('Conheça todas as vantagens de você ter assessoria da Driver UP.');
 site_setTags('benefícios, assessoria, ventagens');
 
 include('inc.header.php');
@@ -33,7 +33,7 @@ include('inc.header.php');
         <!-- ################################################################################################ -->
 
         <h1>A Assessoria</h1>
-        <p>Mais do que um aplicativo ou convênio, mas uma verdadeira assessoria profissional. Isso mesmo. É assim que queremos ser lembrados por você, como seu melhor parceiro. A Lunar é uma Assessoria para Motoristas Profissionais. Em outras palavras, a gente se dedica pra contribuir para que você tenha uma grande uma carreira profissional e isso tanto pra você que já é motorista e quer crescer ainda mais, quanto pra você que está pensando em iniciar agora com esse trabalho.</p>
+        <p>Mais do que um aplicativo ou convênio, mas uma verdadeira assessoria profissional. Isso mesmo. É assim que queremos ser lembrados por você, como seu melhor parceiro. A Driver UP é uma Assessoria para Motoristas Profissionais. Em outras palavras, a gente se dedica pra contribuir para que você tenha uma grande uma carreira profissional e isso tanto pra você que já é motorista e quer crescer ainda mais, quanto pra você que está pensando em iniciar agora com esse trabalho.</p>
           <p>Nosso ponto forte é o relacionamento. Além de oferecermos uma série de ferramentas pra você e ajudar no seu dia a dia como motorista profissional, fazemos questão de estabelecer uma parceria a nível pessoal com nossos assessorados. Isso significa que toda nossa equipe está a sua disposição, pronto para ajudar você no que for preciso.</p>
         <p>Veja abaixo os principais aplicativos que nossa assessoria atende:</p>
         <p>
@@ -53,7 +53,7 @@ include('inc.header.php');
 
         <h2>Convênios</h2>
         <img src="<?= get_config('SITE_URL')?>site/images/assessoria-lavacao.jpg" class="img-left">
-        <p>Ter uma carreira como Motorista Profissional de destaque é algo que exige alguns cuidados que você deve seguir à risca. Desde ter seu carro sempre limpo e cheiroso, até ter um bom seguro e um bom mecânico a disposição quando você precisar. Nós, da Lunar, estamos fechando parcerias pelo Brasil inteiro para manter a sua disposição diversos serviços com preços diferenciados e atendimento especial. </p>
+        <p>Ter uma carreira como Motorista Profissional de destaque é algo que exige alguns cuidados que você deve seguir à risca. Desde ter seu carro sempre limpo e cheiroso, até ter um bom seguro e um bom mecânico a disposição quando você precisar. Nós, da Driver UP, estamos fechando parcerias pelo Brasil inteiro para manter a sua disposição diversos serviços com preços diferenciados e atendimento especial. </p>
         <p>Estamos empenhados a dar a você toda assistência que você precisa pra ser um dos melhores profissionais da sua região. Queremos ajudar você a cuidar e investir no seu carro, que é agora seu instrumento de trabalho. Queremos ser a assessoria que você pode contar diante de toda e qualquer situação que na sua carreira.</p>
 
         <div class="clearboth"></div>
@@ -70,7 +70,7 @@ include('inc.header.php');
 
         <p>Bom, como se já não fosse suficiente tudo o que oferecemos a você, dispomos ainda de alguns serviços específicos que agregarão ainda mais na sua carreira. Desde cartões de visita personalizados de qualidade, até alguns produtos especiais para motoristas profissionais usarem no seu carro.</p>
         <p>Definitivamente, nosso negócio é fazer o seu dar certo. Queremos de todas as formas ajudar você a crescer profissionalmente. Hoje, esses são os principais serviços que oferecemos aos nossos motoristas assessorados, mas estamos trabalhando todos os dias para oferecer ainda mais benefícios e ajudas à você, além de melhor a qualidade do que já oferecemos.</p>
-        <p>Somos a Lunar e queremos <i>dar um up</i> na sua carreira como motorista profissional, conte com a gente!</p>
+        <p>Somos a Driver UP e queremos <i>dar um up</i> na sua carreira como motorista profissional, conte com a gente!</p>
 
 
         <!-- ################################################################################################ -->

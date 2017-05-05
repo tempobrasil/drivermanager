@@ -20,15 +20,15 @@
 
 // Se for um teste local, forçar as URLs...
 if( $_SERVER['HTTP_HOST'] == 'localhost') {
-	define('WP_HOME', 'http://localhost/github/lunar/blog/');
-	define('WP_SITEURL', 'http://localhost/github/lunar/blog/');
+	define('WP_HOME', 'http://localhost/github/driverup/blog/');
+	define('WP_SITEURL', 'http://localhost/github/driverup/blog/');
 }
 
 
 // ** Configurações do MySQL - Você pode pegar estas informações
 // com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'zbraestudio.com.br_lunar_blog');
+define('DB_NAME', 'zbraestudio.com.br_driverup_blog');
 
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');

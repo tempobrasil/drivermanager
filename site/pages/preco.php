@@ -1,6 +1,6 @@
 <?
 site_setSubTitle('Preço');
-site_setDescription('Veja como é barato ser um motorista assessorado pela Lunar.');
+site_setDescription('Veja como é barato ser um motorista assessorado pela Driver UP.');
 site_setTags('preço, barato, investimento');
 
 include('inc.header.php');
@@ -32,7 +32,7 @@ include('inc.header.php');
       <div class="content">
         <!-- ################################################################################################ -->
         <h1>Preço</h1>
-        <p>Veja abaixo como é barato de você se tornar um Motorista Profissional assessorado pela Lunar. Nosso preço é único, ou seja, você paga e dispões de todos os benefícios que nossa empresa oferece. As variações de valores abaixo é somente de desconto, de acordo com o meio de pagamento que escolher ( trimestral, semestral ou anual).
+        <p>Veja abaixo como é barato de você se tornar um Motorista Profissional assessorado pela Driver UP. Nosso preço é único, ou seja, você paga e dispões de todos os benefícios que nossa empresa oferece. As variações de valores abaixo é somente de desconto, de acordo com o meio de pagamento que escolher ( trimestral, semestral ou anual).
         </p>
 
         <div id="valores">
@@ -57,7 +57,7 @@ include('inc.header.php');
             </div>
 
             <div class="infos">
-              * Contempla todos os benefícios de um Motorista Lunar: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
+              * Contempla todos os benefícios de um Motorista Driver UP: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
             </div>
 
             <a href="#" class="btn destaque">Experimente de graça*</a>
@@ -86,7 +86,7 @@ include('inc.header.php');
             </div>
 
             <div class="infos">
-              * Contempla todos os benefícios de um Motorista Lunar: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
+              * Contempla todos os benefícios de um Motorista Driver UP: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
             </div>
 
             <a href="#" class="btn">Contratar agora!</a>
@@ -113,7 +113,7 @@ include('inc.header.php');
             </div>
 
             <div class="infos">
-              * Contempla todos os benefícios de um Motorista Lunar: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
+              * Contempla todos os benefícios de um Motorista Driver UP: Sistema, Convênios, Suporte, Suporte e acesso ao Blog.
             </div>
 
             <a href="#" class="btn">Contratar agora!</a>
