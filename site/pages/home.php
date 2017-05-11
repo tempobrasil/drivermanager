@@ -9,11 +9,11 @@ include('inc.header.php');
       <div>
         <p class="heading">Alcance sua Independência Financeira</p>
         <h2 class="heading">Seja um motorista profissional</h2>
-        <p class="heading heading2">Vamos ajudar você a crescer profissionalmente, com convênios, ferramentas, treinamentos e todo suporte necessário para você ser um dos melhores Motoristas Profissionais da sua cidade..</p>
+        <p class="heading heading2">Vamos ajudar você a crescer profissionalmente, com convênios, ferramentas, treinamentos e todo suporte necessário para você ser um dos melhores Motoristas Profissionais da sua região.</p>
       </div>
       <footer>
         <ul class="nospace inline pushright">
-          <li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>
+          <!--<li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>-->
           <li><a class="btn" href="<?= GetLink('site/cadastro'); ?>">Faça seu cadastro</a></li>
         </ul>
       </footer>
@@ -45,7 +45,7 @@ include('inc.header.php');
       <li class="one_third">
         <article><strong class="numb">03</strong>
           <h6 class="heading font-x1"><a href="#">Veja sua carreira crescer!</a></h6>
-          <p>Pronto! Agora você está apto pra trabalhar com nosso sistema e o verá ajudando você crescer na sua carreira.</p>
+          <p>Pronto! Agora você está pronto pra trabalhar e ajudaremos você ser um dos melhores profissionais da sua região.</p>
         </article>
       </li>
     </ul>

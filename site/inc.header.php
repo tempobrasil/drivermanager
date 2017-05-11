@@ -56,7 +56,7 @@ Licence URI: http://www.os-templates.com/template-terms
     <div class="fl_left">
       <ul class="nospace">
         <li><a href="<?= GetLink('site'); ?>"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="<?= GetLink('site/empresa'); ?>">Nossa Empresa</a></li>
+        <li><a href="http://www.zbraestudio.com.br" target="_blank" title="Z.BRA Estúdio (Balneário Camboriú, SC)">Empresa</a></li>
         <li><a href="<?= GetLink('blog'); ?>">Blog</a></li>
         <li><i class="fa fa-envelope-o"></i> <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a> </li>
       </ul>
@@ -88,7 +88,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <ul class="clear">
         <li class="<?= (GetPage() == 'home'?'active':null); ?>"><a href="<?= GetLink('site/home'); ?>">Home</a></li>
         <li class="<?= (GetPage() == 'assessoria'?'active':null); ?>"><a href="<?= GetLink('site/assessoria'); ?>">A Assessoria</a></li>
-        <li class="<?= (GetPage() == 'depoimentos'?'active':null); ?>"><a href="<?= GetLink('site/depoimentos'); ?>">Depoimentos</a></li>
+        <!--<li class="<?= (GetPage() == 'depoimentos'?'active':null); ?>"><a href="<?= GetLink('site/depoimentos'); ?>">Depoimentos</a></li>-->
         <li class="<?= (GetPage() == 'convenios'?'active':null); ?>"><a href="<?= GetLink('site/convenios'); ?>">Convênios</a></li>
         <!--<li class="<?= (GetPage() == 'preco'?'active':null); ?>"><a href="<?= GetLink('site/preco'); ?>">Preço</a></li>-->
 

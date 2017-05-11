@@ -9,12 +9,9 @@
       <h6 class="title">Acompanhe</h6>
       <p>Acompanhe abaixo todos os canais oficiais de nossa empreesa.</p>
       <ul class="faico clear">
-        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
-        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+        <li><a class="faicon-facebook" href="https://www.facebook.com/driverupbr" title="Curta nossa FanPage" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="https://twitter.com/driverupbr" target="_blank" title="Siga nosso perfil no Twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-facebookgroups" href="https://www.facebook.com/driverupbr/groups" title="Participe dos nosso Grupos de Facebook" target="_blank"><i class="fa fa-users"></i></a></li>
       </ul>
     </div>
     <div class="one_third">

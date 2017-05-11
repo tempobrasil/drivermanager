@@ -22,6 +22,12 @@
   margin-top: 5px!important;
 }
 /* RODAPÉ */
+#footer .faico a {
+  color: #252525;
+}
+#footer .faico a.faicon-facebookgroups:hover {
+  background-color: #3B5998!important;
+}
 #copyright a {
   color: #299b86 !important;
 }
