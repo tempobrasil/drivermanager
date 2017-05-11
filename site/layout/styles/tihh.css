@@ -99,13 +99,13 @@ form.form label {
   text-align: right;
   padding: 10px 0;
 }
-form.form label span {
-  color: #299b86 !important;
-}
 @media screen and (min-width: 750px) {
   form.form label {
     text-align: left!important;
   }
+}
+form.form label span {
+  color: #299b86 !important;
 }
 form.form input,
 form.form textarea {
@@ -285,6 +285,11 @@ img.img-right {
 .clearboth {
   clear: both;
   margin-bottom: 50px;
+}
+.heading.heading2 {
+  font-size: 18px !important;
+  text-transform: none!important;
+  line-height: 25px!important;
 }
 #pg_assessoria .assessoria_logos_app {
   margin: 10px;

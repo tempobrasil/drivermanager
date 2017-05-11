@@ -150,13 +150,15 @@ form.form{
     text-align: right;
     padding: 10px 0;
 
+    @media screen and (min-width: 750px) {
+      text-align: left!important;
+    }
+
     span{
       color:@cor_principal!important;
     }
 
-    @media screen and (min-width: 750px) {
-      text-align: left!important;
-    }
+
   }
 
   input, textarea {
@@ -400,6 +402,16 @@ img{
 .clearboth{
   clear: both;
   margin-bottom: 50px;
+}
+
+.heading{
+
+  &.heading2 {
+    font-size: 18px !important;
+    text-transform: none!important;
+    line-height: 25px!important;
+  }
+
 }
 
 

@@ -7,9 +7,9 @@ include('inc.header.php');
     <!-- ################################################################################################ -->
     <article>
       <div>
-        <p class="heading">Assesoria ao Motorista Profissional</p>
-        <h2 class="heading">Cuidando da sua carreira</h2>
-        <p>O que faltava para sua independência financeira e você crescer na sua carreria como motorista profissional.</p>
+        <p class="heading">Alcance sua Independência Financeira</p>
+        <h2 class="heading">Seja um motorista profissional</h2>
+        <p class="heading heading2">Vamos ajudar você a crescer profissionalmente, com convênios, ferramentas, treinamentos e todo suporte necessário para você ser um dos melhores Motoristas Profissionais da sua cidade..</p>
       </div>
       <footer>
         <ul class="nospace inline pushright">
