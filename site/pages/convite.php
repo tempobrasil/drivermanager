@@ -155,6 +155,7 @@ include('inc.footer.php');
       if(reCaptcha.length <= 0){
         infoAlert('Ops!', 'Desculpa, mas precisamos saber se você é um humano mesmo.<br>Isso é importante porque recebemos diariamente muitas mensagens enviadas de robôs fingindo ser pessoas.<br>Nos desculpe por essa situaçao chata, mas é rapidinho. :)');
         $('.label-recaptcha').css('color', 'red');
+        return false;
       }
 
     });
