@@ -45,7 +45,7 @@ function mail_convite_send($nome, $email){
 
   $mailer->addAddress($email);
 
-  $mailer->addCC('tiago@zbraestudio.com.br');
+  $mailer->addCC('driverup@zbraestudio.com.br');
 
   $mailer->Subject = 'Já recebemos seu cadastro!  :)';
   $mailer->Body    = mail_convite_getHtml($nome);
