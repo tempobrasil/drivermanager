@@ -153,7 +153,7 @@ include('inc.footer.php');
       var reCaptcha = $('#g-recaptcha-response').val();
 
       if(reCaptcha.length <= 0){
-        infoAlert('Ops!', 'Desculpa, mas precisamos saber se você é um humano mesmo.<br>Isso é importante porque recebemos diariamente muitas mensagens enviadas de robôs fingindo ser pessoas.<br>Nos desculpe por essa situaçao chata, mas é rapidinho. :)');
+        infoAlert('Ops!', 'Desculpe, mas precisamos saber se você realmente é uma pessoa.<br><br>Deixe eu te explicar o porquê dessa verificação: Diariamente recebemos muitas solicitações enviadas de robôs fingindo ser pessoas.');
         $('.label-recaptcha').css('color', 'red');
         return false;
       }

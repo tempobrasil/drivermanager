@@ -8,15 +8,14 @@ include('functions.php');
 include(dirname(dirname(__FILE__)) . '/includes/autoload.phpmailer.php');
 include(dirname(dirname(__FILE__)) . '/mails/templates/template_convite.php');
 
-include('recaptchalib.php');
-
 //reCAPTCHA
-// sua chave secreta
+include('recaptchalib.php');
 $secret = "6LdeXyEUAAAAAFmX0DZQhEtAka7_KdZrfmwqJCfN";
 
 // verifique a chave secreta
 $reCaptcha = new ReCaptcha($secret);
 
+//verifica campo enviado pelo formulário
 $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"],$_POST["g-recaptcha-response"]);
 
 if (!($response != null && $response->success)) {
@@ -25,8 +24,6 @@ if (!($response != null && $response->success)) {
   header('LOCATION: ./mensagem');
   exit;
 }
-
-die('terminou');
 
 //die(print_r($_POST, true));
 
