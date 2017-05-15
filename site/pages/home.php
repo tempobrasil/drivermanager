@@ -14,7 +14,7 @@ include('inc.header.php');
       <footer>
         <ul class="nospace inline pushright">
           <!--<li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>-->
-          <li><a class="btn" href="<?= GetLink('site/convite'); ?>">Faça seu cadastro</a></li>
+          <li><a class="btn" href="<?= GetLink('site/convite'); ?>">Solicite seu convite</a></li>
         </ul>
       </footer>
     </article>
@@ -32,8 +32,8 @@ include('inc.header.php');
     <ul class="nospace group cta">
       <li class="one_third first">
         <article><strong class="numb">01</strong>
-          <h6 class="heading font-x1"><a href="#">Cadastre-se</a></h6>
-          <p>Faça seu cadastro agora mesmo. É simples e fácil.</p>
+          <h6 class="heading font-x1"><a href="#">Convite para testar</a></h6>
+          <p>Solicite seu convite para testar nosso serviço agora mesmo. É simples, rápido e fácil.</p>
         </article>
       </li>
       <li class="one_third">
