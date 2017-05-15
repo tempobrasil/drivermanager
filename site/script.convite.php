@@ -79,7 +79,6 @@ if(count($emails) > 0){
   $db->Execute($post->GetSql());
 
   $res = mail_convite_send($nome, $email);
-  die('E-mail:' . $res);
 
   $_SESSION['msg'][0] = 'Sua solicitação de convite foi enviada com sucesso! :)';
   $_SESSION['msg'][1] = 'Bacana! Já recebemos sua solicitação e em breve nossa equipe entrará em contato com você.';

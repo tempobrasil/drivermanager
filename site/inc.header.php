@@ -60,7 +60,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <ul class="nospace">
         <li><a href="<?= GetLink('site'); ?>"><i class="fa fa-lg fa-home"></i></a></li>
         <li><a href="http://www.zbraestudio.com.br" target="_blank" title="Z.BRA Estúdio (Balneário Camboriú, SC)">Empresa</a></li>
-        <li><a href="<?= GetLink('blog'); ?>">Blog</a></li>
+        <li><a href="<?= GetLink('blog'); ?>" target="_blank">Blog</a></li>
         <li><i class="fa fa-envelope-o"></i> <a href="mailto:suporte@zbraestudio.com.br">suporte@zbraestudio.com.br</a> </li>
       </ul>
     </div>
