@@ -1,5 +1,5 @@
 <?
-function mail_cadastro_novo_getHtml($nome, $email){
+function mail_convite_getHtml($nome){
 
   $html = '<html>
   <head>
@@ -9,7 +9,7 @@ function mail_cadastro_novo_getHtml($nome, $email){
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td style="background-color: #F8F8F8; border: 1px solid #EEEEEE;; background-image: url(cid:logo); background-repeat:no-repeat; background-position: 15px center; line-height:72px;padding-left: 285px; font-size:20px;color: #666666;">
-        NOVO CADASTRO
+        CONVITE
       </td>
     </tr>
     <tr>
@@ -40,15 +40,15 @@ Copyright 2017 Driver UP.
 
 }
 
-function mail_cadastro_novo_send($nome, $email){
+function mail_convite_send($nome, $email){
   global $mailer;
 
   $mailer->addAddress($email);
 
   $mailer->addCC('tiago@zbraestudio.com.br');
 
-  $mailer->Subject = 'Já recebemos convite!  :)';
-$mailer->Body    = mail_cadastro_novo_getHtml($nome, $email);
+  $mailer->Subject = 'Já recebemos seu cadastro!  :)';
+  $mailer->Body    = mail_convite_getHtml($nome);
 
   if($mailer->send())
     return true;

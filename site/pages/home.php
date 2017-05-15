@@ -14,7 +14,7 @@ include('inc.header.php');
       <footer>
         <ul class="nospace inline pushright">
           <!--<li><a class="btn inverse" href="<?= GetLink('site/seja-motorista'); ?>">Saiba como se tornar um motorista</a></li>-->
-          <li><a class="btn" href="<?= GetLink('site/cadastro'); ?>">Faça seu cadastro</a></li>
+          <li><a class="btn" href="<?= GetLink('site/convite'); ?>">Faça seu cadastro</a></li>
         </ul>
       </footer>
     </article>

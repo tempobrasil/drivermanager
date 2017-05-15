@@ -45,6 +45,9 @@ Licence URI: http://www.os-templates.com/template-terms
 
   <link href="<?= get_config('SITE_URL')?>site/layout/scripts/chosen/chosen.min.css" rel="stylesheet" type="text/css" media="all">
 
+  <!-- Google reCAPTCHA -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->

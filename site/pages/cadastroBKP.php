@@ -38,7 +38,7 @@ $maxFile = upload_max_filesize();
 
 
 
-        <form action="<?= GetLink('site/script.cadastro.php'); ?>" method="post" class="form" enctype="multipart/form-data">
+        <form action="<?= GetLink('site/script.cadastroBKP.php'); ?>" method="post" class="form" enctype="multipart/form-data">
 
           <hr>
 
