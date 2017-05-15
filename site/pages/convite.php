@@ -39,7 +39,7 @@ $maxFile = upload_max_filesize();
 
 
 
-      <form action="<?= GetLink('site/script.convite.php'); ?>" method="post" class="form" enctype="multipart/form-data">
+      <form action="<?= GetLink('site/script.convite.php'); ?>" method="post" class="form form-convite" enctype="multipart/form-data">
 
         <hr>
 
@@ -88,7 +88,7 @@ $maxFile = upload_max_filesize();
 
         <hr>
         <div class="one_third first">
-          <label for="name">Você é uma pessoa?</label>
+          <label for="name" class="label-recaptcha">Você é uma pessoa?</label>
         </div>
         <div class="one_third">
           <div class="g-recaptcha" data-sitekey="6LdeXyEUAAAAAOql07vG6E101hmPZjfE0HFB5DkJ"></div>
@@ -143,6 +143,18 @@ include('inc.footer.php');
         infoAlert('Ops!', 'Desculpe, mas seu arquivo ultrapassou o tamanho máximo, de <?= getFileSize($maxFile); ?>');
 
         $(this).val('');
+      }
+
+    });
+
+
+    $('.form-convite').submit(function(){
+
+      var reCaptcha = $('#g-recaptcha-response').val();
+
+      if(reCaptcha.length <= 0){
+        infoAlert('Ops!', 'Desculpa, mas precisamos saber se você é um humano mesmo.<br>Isso é importante porque recebemos diariamente muitas mensagens enviadas de robôs fingindo ser pessoas.<br>Nos desculpe por essa situaçao chata, mas é rapidinho. :)');
+        $('.label-recaptcha').css('color', 'red');
       }
 
     });

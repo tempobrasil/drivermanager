@@ -21,7 +21,7 @@ $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"],$_POST["g-recaptc
 
 if (!($response != null && $response->success)) {
   $_SESSION['msg'][0] = 'Erro de verificação humana!';
-  $_SESSION['msg'][1] = 'ocorreu um erro ao tentar verificar se você é um humano ou um robô. Caso você realmente seja um humano, procure nosso suporte.';
+  $_SESSION['msg'][1] = 'Ocorreu um erro ao tentar verificar se você é um humano ou um robô. Caso você realmente seja um humano, procure nosso suporte.';
   header('LOCATION: ./mensagem');
   exit;
 }
