@@ -92,7 +92,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <li class="<?= (GetPage() == 'home'?'active':null); ?>"><a href="<?= GetLink('site/home'); ?>">Home</a></li>
         <li class="<?= (GetPage() == 'assessoria'?'active':null); ?>"><a href="<?= GetLink('site/assessoria'); ?>">A Assessoria</a></li>
         <!--<li class="<?= (GetPage() == 'depoimentos'?'active':null); ?>"><a href="<?= GetLink('site/depoimentos'); ?>">Depoimentos</a></li>-->
-        <li class="<?= (GetPage() == 'convenios'?'active':null); ?>"><a href="<?= GetLink('site/convenios'); ?>">Convênios</a></li>
+        <!--<li class="<?= (GetPage() == 'convenios'?'active':null); ?>"><a href="<?= GetLink('site/convenios'); ?>">Convênios</a></li>-->
         <!--<li class="<?= (GetPage() == 'preco'?'active':null); ?>"><a href="<?= GetLink('site/preco'); ?>">Preço</a></li>-->
 
       </ul>
