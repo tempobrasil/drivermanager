@@ -23,12 +23,16 @@ if(isLocalhost()){
 
 }
 
+set_config('SITE_SHARED',       get_config('SITE_URL') . 'site/images/shared.jpg');
+set_config('SITE_SHARED_W',     '851px');
+set_config('SITE_SHARED_H',     '315px');
+
 set_config('TITLE',                   '');
 set_config('SYSTEM_TITLE',            '[Driver UP]');
 set_config('FOOTER_TEXT',            '<strong>Driver UP</strong> v' . $version . ' - &copy; 2017 - Todos os Direitos Reservados.');
 
-set_config('SITE_TITLE',              'Driver UP (Sistema para Motorista Profissional)');
-set_config('SITE_DESCRIPTION',        'Sistema para Motorista Profissional');
+set_config('SITE_TITLE',              'Driver UP (Assessoria para Motorista Profissional)');
+set_config('SITE_DESCRIPTION',        'Sobre uma empresa de Assessoria a Morotistas Profissionais. Queremos ajudar você a ser um dos melhores motoristas da sua região.');
 set_config('SITE_TAGS',               'sistema, motorista, UBER, 99');
 
 /* Banco de Dados */

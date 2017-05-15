@@ -29,11 +29,9 @@ Licence URI: http://www.os-templates.com/template-terms
   <meta property="og:description" content="<?= get_config('SITE_DESCRIPTION'); ?>">
   <meta property="og:site_name" content="<?= get_config('SITE_TITLE'); ?>">
 
-  <!--
-  <meta property="og:image" content="http://www.livresweb.com/images/shared2.jpg">
-  <meta property="og:image:width" content="-1">
-  <meta property="og:image:height" content="-1">
-  -->
+  <meta property="og:image" content="<?= get_config('SITE_SHARED'); ?>">
+  <meta property="og:image:width" content="<?= get_config('SITE_SHARED_W'); ?>">
+  <meta property="og:image:height" content="<?= get_config('SITE_SHARED_H'); ?>">
 
 
   <link href="<?= get_config('SITE_URL')?>site/bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
