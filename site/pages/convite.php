@@ -94,7 +94,6 @@ $maxFile = upload_max_filesize();
             <option value=""></option>
             <option value="S">Sim, já trabalho como motorista.</option>
             <option value="N">Ainda não.</option>
-            <option value="Anual">Anual</option>
           </select>
         </div>
 
