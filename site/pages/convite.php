@@ -86,6 +86,18 @@ $maxFile = upload_max_filesize();
           <input name="cidadeUF" id="cidadeUF" value="" size="150" required="" placeholder="Balneário Camboriu, SC" type="text">
         </div>
 
+        <div class="one_third first">
+          <label for="name">Você já é motorista? <span>*</span></label>
+        </div>
+        <div class="two_third">
+          <select name="motorista" id="motorista" class="chosen" required="" data-placeholder="Selecione uma opção">
+            <option value=""></option>
+            <option value="S">Sim, já trabalho como motorista.</option>
+            <option value="N">Ainda não.</option>
+            <option value="Anual">Anual</option>
+          </select>
+        </div>
+
         <hr>
         <div class="one_third first">
           <label for="name" class="label-recaptcha">Você é uma pessoa?</label>

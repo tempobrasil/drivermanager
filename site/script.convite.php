@@ -34,6 +34,7 @@ $sobrenome			= $_POST['sobrenome'];
 $email					= $_POST['email'];
 $telefone				= $_POST['telefone'];
 $cidadeUF				= $_POST['cidadeUF'];
+$motorista			= $_POST['motorista'];
 
 
 //Verifica se já estou cadastrado...
@@ -74,7 +75,8 @@ if(count($emails) > 0){
   $post->AddFieldString('Email',      $email);
   $post->AddFieldString('Telefone',   $telefone);
   $post->AddFieldString('CidadeUF',   $cidadeUF);
-  $post->AddFieldString('Cancelado', 'N');
+  $post->AddFieldString('Cancelado',  'N');
+  $post->AddFieldString('EhMotorista',$motorista);
 
   $db->Execute($post->GetSql());
 
